@@ -1,7 +1,7 @@
 // Mermaid dark mode auto-adapt + source protection
 (function() {
     var MERMAID_CDN_LIST = [
-        'https://cdn.bootcdn.net/ajax/libs/mermaid/11.4.1/dist/mermaid.min.js',
+        'assets/libs/mermaid.min.js',
         'https://unpkg.com/mermaid@11/dist/mermaid.min.js',
         'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js'
     ];
