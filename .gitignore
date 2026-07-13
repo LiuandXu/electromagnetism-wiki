@@ -11,3 +11,7 @@ Thumbs.db
 ppt-master-main/
 电磁场历年试卷.zip
 *.zip
+
+# 排除IDE和工具目录
+.trae/
+.uploads/
