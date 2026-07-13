@@ -43,12 +43,12 @@
 **圆柱坐标系 $(\rho, \phi, z)$：**
 - 坐标变换：$x = \rho\cos\phi,\; y = \rho\sin\phi,\; z = z$
 - 适用于圆柱形边界问题（如同轴线、圆波导）
-- 线元：$\mathrm{d}\mathbf{l} = \mathrm{d}\rho\,\hat{\boldsymbol{\rho}} + \rho\mathrm{d}\phi\,\hat{\boldsymbol{\phi}} + \mathrm{d}z\,\hat{\mathbf{z}}$
+- 线元：$\mathrm{d}\mathbf{l} = \mathrm{d}\rho\,\hat{\bm{\rho}} + \rho\mathrm{d}\phi\,\hat{\bm{\phi}} + \mathrm{d}z\,\hat{\mathbf{z}}$
 
 **球坐标系 $(r, \theta, \phi)$：**
 - 坐标变换：$x = r\sin\theta\cos\phi,\; y = r\sin\theta\sin\phi,\; z = r\cos\theta$
 - 适用于球对称问题（如天线辐射）
-- 线元：$\mathrm{d}\mathbf{l} = \mathrm{d}r\,\hat{\mathbf{r}} + r\mathrm{d}\theta\,\hat{\boldsymbol{\theta}} + r\sin\theta\mathrm{d}\phi\,\hat{\boldsymbol{\phi}}$
+- 线元：$\mathrm{d}\mathbf{l} = \mathrm{d}r\,\hat{\mathbf{r}} + r\mathrm{d}\theta\,\hat{\bm{\theta}} + r\sin\theta\mathrm{d}\phi\,\hat{\bm{\phi}}$
 
 ### 1.4 标量场的梯度
 
@@ -56,9 +56,9 @@
 
 $$\nabla u = \frac{\partial u}{\partial x}\hat{\mathbf{x}} + \frac{\partial u}{\partial y}\hat{\mathbf{y}} + \frac{\partial u}{\partial z}\hat{\mathbf{z}} \quad (\text{直角坐标})$$
 
-$$\nabla u = \frac{\partial u}{\partial \rho}\hat{\boldsymbol{\rho}} + \frac{1}{\rho}\frac{\partial u}{\partial \phi}\hat{\boldsymbol{\phi}} + \frac{\partial u}{\partial z}\hat{\mathbf{z}} \quad (\text{圆柱坐标})$$
+$$\nabla u = \frac{\partial u}{\partial \rho}\hat{\bm{\rho}} + \frac{1}{\rho}\frac{\partial u}{\partial \phi}\hat{\bm{\phi}} + \frac{\partial u}{\partial z}\hat{\mathbf{z}} \quad (\text{圆柱坐标})$$
 
-$$\nabla u = \frac{\partial u}{\partial r}\hat{\mathbf{r}} + \frac{1}{r}\frac{\partial u}{\partial \theta}\hat{\boldsymbol{\theta}} + \frac{1}{r\sin\theta}\frac{\partial u}{\partial \phi}\hat{\boldsymbol{\phi}} \quad (\text{球坐标})$$
+$$\nabla u = \frac{\partial u}{\partial r}\hat{\mathbf{r}} + \frac{1}{r}\frac{\partial u}{\partial \theta}\hat{\bm{\theta}} + \frac{1}{r\sin\theta}\frac{\partial u}{\partial \phi}\hat{\bm{\phi}} \quad (\text{球坐标})$$
 
 **梯度的重要性质：**
 - 梯度方向是标量函数变化率最大的方向
@@ -91,7 +91,7 @@ $$\oint_S \mathbf{A} \cdot \mathrm{d}\mathbf{S} = \int_V \nabla \cdot \mathbf{A}
 
 $$\nabla \times \mathbf{A} = \begin{vmatrix} \hat{\mathbf{x}} & \hat{\mathbf{y}} & \hat{\mathbf{z}} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ A_x & A_y & A_z \end{vmatrix} \quad (\text{直角坐标})$$
 
-$$\nabla \times \mathbf{A} = \left(\frac{1}{\rho}\frac{\partial A_z}{\partial \phi} - \frac{\partial A_\phi}{\partial z}\right)\hat{\boldsymbol{\rho}} + \left(\frac{\partial A_\rho}{\partial z} - \frac{\partial A_z}{\partial \rho}\right)\hat{\boldsymbol{\phi}} + \frac{1}{\rho}\left(\frac{\partial(\rho A_\phi)}{\partial \rho} - \frac{\partial A_\rho}{\partial \phi}\right)\hat{\mathbf{z}}$$
+$$\nabla \times \mathbf{A} = \left(\frac{1}{\rho}\frac{\partial A_z}{\partial \phi} - \frac{\partial A_\phi}{\partial z}\right)\hat{\bm{\rho}} + \left(\frac{\partial A_\rho}{\partial z} - \frac{\partial A_z}{\partial \rho}\right)\hat{\bm{\phi}} + \frac{1}{\rho}\left(\frac{\partial(\rho A_\phi)}{\partial \rho} - \frac{\partial A_\rho}{\partial \phi}\right)\hat{\mathbf{z}}$$
 
 **斯托克斯定理：**
 
