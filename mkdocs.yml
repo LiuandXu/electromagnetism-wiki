@@ -1,0 +1,60 @@
+site_name: 电磁场与电磁波 Wiki
+site_description: 电磁场与电磁波课程知识库 - 2026春
+theme:
+  name: material
+  features:
+  - navigation.tabs
+  - navigation.sections
+  - navigation.top
+  - navigation.footer
+  - navigation.instant
+  - search.suggest
+  - search.highlight
+  - search.share
+  - content.code.copy
+  - toc.follow
+  palette:
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    primary: indigo
+    accent: indigo
+    toggle:
+      icon: material/brightness-7
+      name: 切换至暗色模式
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
+    primary: indigo
+    accent: indigo
+    toggle:
+      icon: material/brightness-4
+      name: 切换至亮色模式
+extra_css:
+- assets/css/extra.css
+extra_javascript:
+- assets/js/mathjax.js
+- https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+- assets/js/mermaid.js?v=1
+markdown_extensions:
+- pymdownx.arithmatex:
+    generic: true
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: '!!python/name:pymdownx.superfences.fence_div_format'
+- pymdownx.tabbed
+- pymdownx.details
+- admonition
+- toc
+nav:
+- 首页: index.md
+- 第一章 绪论与矢量分析: 01-绪论与矢量分析/index.md
+- 第二章 电磁场基本规律: 02-电磁场基本规律/index.md
+- 第三章 静态电磁场及其解法: 03-静态电磁场及其解法/index.md
+- 第四章 时变电磁场: 04-时变电磁场/index.md
+- 第五章 均匀平面波: 05-均匀平面波/index.md
+- 第六章 均匀平面波的反射与透射: 06-均匀平面波的反射与透射/index.md
+- 第七章 导行电磁波: 07-导行电磁波/index.md
+- 第八章 电磁辐射: 08-电磁辐射/index.md
+- 课程案例仿真与实践: 09-课程案例仿真/index.md
+docs_dir: docs
