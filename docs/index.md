@@ -45,16 +45,16 @@ flowchart LR
 
 | 定律/定理 | 公式 |
 |-----------|------|
-| Maxwell方程组 | $\\nabla \\times \\mathbf{H} = \\mathbf{J} + \\frac{\\partial \\mathbf{D}}{\\partial t}$ |
-| 高斯定理 | $\\nabla \\cdot \\mathbf{D} = \\rho$ |
-| 法拉第定律 | $\\nabla \\times \\mathbf{E} = -\\frac{\\partial \\mathbf{B}}{\\partial t}$ |
-| 磁通连续性 | $\\nabla \\cdot \\mathbf{B} = 0$ |
-| 波动方程 | $\\nabla^2 \\mathbf{E} - \\mu\\varepsilon\\frac{\\partial^2\\mathbf{E}}{\\partial t^2} = 0$ |
-| 真空中波速 | $c = 1/\\sqrt{\\mu_0\\varepsilon_0} \\approx 3\\times 10^8 \\ \\mathrm{m/s}$ |
-| 真空中波阻抗 | $\\eta_0 = \\sqrt{\\mu_0/\\varepsilon_0} \\approx 377\\ \\Omega$ |
-| 坡印廷矢量 | $\\mathbf{S} = \\mathbf{E} \\times \\mathbf{H}$ |
-| 趋肤深度 | $\\delta = \\sqrt{2/(\\omega\\mu\\sigma)}$ |
-| 反射系数 | $\\Gamma = (\\eta_2 - \\eta_1)/(\\eta_2 + \\eta_1)$ |
+| Maxwell方程组 | $\nabla \times \mathbf{H} = \mathbf{J} + \frac{\partial \mathbf{D}}{\partial t}$ |
+| 高斯定理 | $\nabla \cdot \mathbf{D} = \rho$ |
+| 法拉第定律 | $\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$ |
+| 磁通连续性 | $\nabla \cdot \mathbf{B} = 0$ |
+| 波动方程 | $\nabla^2 \mathbf{E} - \mu\varepsilon\frac{\partial^2\mathbf{E}}{\partial t^2} = 0$ |
+| 真空中波速 | $c = 1/\sqrt{\mu_0\varepsilon_0} \approx 3\times 10^8 \ \mathrm{m/s}$ |
+| 真空中波阻抗 | $\eta_0 = \sqrt{\mu_0/\varepsilon_0} \approx 377\ \Omega$ |
+| 坡印廷矢量 | $\mathbf{S} = \mathbf{E} \times \mathbf{H}$ |
+| 趋肤深度 | $\delta = \sqrt{2/(\omega\mu\sigma)}$ |
+| 反射系数 | $\Gamma = (\eta_2 - \eta_1)/(\eta_2 + \eta_1)$ |
 
 ## 章节导航
 
