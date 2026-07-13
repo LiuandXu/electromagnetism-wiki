@@ -1,97 +1,51 @@
-// Mermaid loader - simplified for v11 compatibility
+// Mermaid init + render (library loaded via extra_javascript)
 (function() {
-    var CDN_LIST = [
-        'https://unpkg.com/mermaid@11/dist/mermaid.min.js',
-        'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js'
-    ];
-    var STORE = {};
-    var loaded = false;
-
-    function getSource(el) {
-        var txt = el.textContent || '';
-        if (/^\s*</.test(el.innerHTML || '')) return '';
-        return txt.trim() ? txt : '';
+    function getSrc(el) {
+        var t = el.textContent || '';
+        return t.trim() && !/^\s*</.test(el.innerHTML || '') ? t.trim() : '';
     }
 
+    var STORE = {};
     function capture() {
         document.querySelectorAll('.mermaid').forEach(function(el) {
-            var key = el.dataset.mid || (el.dataset.mid = 'm' + Math.random().toString(36).slice(2));
-            if (!STORE[key]) {
-                var src = getSource(el);
-                if (src) STORE[key] = src;
+            if (!el.dataset.mid) el.dataset.mid = 'm' + Math.random().toString(36).slice(2);
+            if (!STORE[el.dataset.mid]) {
+                var s = getSrc(el);
+                if (s) STORE[el.dataset.mid] = s;
             }
         });
     }
 
     function render() {
-        if (!loaded || !window.mermaid) return;
-        var isDark = document.body.getAttribute('data-md-color-scheme') === 'slate';
+        if (!window.mermaid) return;
+        var dark = document.body.getAttribute('data-md-color-scheme') === 'slate';
         try {
-            mermaid.initialize({
-                startOnLoad: false,
-                theme: isDark ? 'dark' : 'default',
-                securityLevel: 'loose'
-            });
+            mermaid.initialize({ startOnLoad: false, theme: dark ? 'dark' : 'default', securityLevel: 'loose' });
         } catch(e) {
-            // v11 getThemeColors bug - fallback without theme
-            try { mermaid.initialize({ startOnLoad: false, securityLevel: 'loose' }); } catch(e2) {}
+            try { mermaid.initialize({ startOnLoad: false, securityLevel: 'loose' }); } catch(_) {}
         }
-        var hadSrc = false;
+        var any = false;
         document.querySelectorAll('.mermaid').forEach(function(el) {
-            var key = el.dataset.mid;
-            if (key && STORE[key]) {
-                el.textContent = STORE[key];
-                el.removeAttribute('data-processed');
-                el.innerHTML = '';
-                el.textContent = STORE[key];
-                hadSrc = true;
-            }
+            var s = STORE[el.dataset.mid];
+            if (s) { el.textContent = s; el.removeAttribute('data-processed'); any = true; }
         });
-        if (hadSrc) {
-            try { mermaid.run({ querySelector: '.mermaid' }); }
-            catch(e) { console.error('Mermaid render error', e); }
-        }
+        if (any) try { mermaid.run({ querySelector: '.mermaid' }); } catch(e) { console.error(e); }
     }
 
-    function load(idx) {
-        if (window.mermaid) { loaded = true; render(); return; }
-        idx = idx || 0;
-        if (idx >= CDN_LIST.length) { console.error('All Mermaid CDNs failed'); return; }
-        var s = document.createElement('script');
-        s.async = false;
-        s.src = CDN_LIST[idx];
-        s.onload = function() { loaded = true; render(); };
-        s.onerror = function() {
-            console.warn('Mermaid CDN failed: ' + CDN_LIST[idx]);
-            load(idx + 1);
-        };
-        document.head.appendChild(s);
-    }
-
-    function start() {
+    function check() {
         capture();
-        var els = document.querySelectorAll('.mermaid');
-        if (!els.length) return;
-        var ready = true;
-        for (var i = 0; i < els.length; i++) {
-            var k = els[i].dataset.mid;
-            if (!k || !STORE[k]) { ready = false; break; }
-        }
-        if (ready) { load(); } else { setTimeout(start, 100); }
+        if (window.mermaid) render();
     }
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', start);
-    } else { start(); }
+        document.addEventListener('DOMContentLoaded', check);
+    } else { check(); }
 
-    // Re-render on theme toggle and navigation.instant page changes
-    var timer;
+    // Handle navigation.instant + theme toggle
+    var t;
     new MutationObserver(function() {
-        clearTimeout(timer);
-        timer = setTimeout(function() {
-            capture();
-            if (loaded) render(); else start();
-        }, 100);
+        clearTimeout(t);
+        t = setTimeout(check, 200);
     }).observe(document.body, {
         attributes: true, attributeFilter: ['data-md-color-scheme'],
         subtree: true, childList: true
