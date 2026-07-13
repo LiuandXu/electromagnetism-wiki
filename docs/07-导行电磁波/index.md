@@ -1,42 +1,159 @@
-# 第七章 导行电磁波
+# 第7章 导行电磁波
 
 ## 课件下载
-
 [📄 19第七章导行电磁波1-导行波概论](../课程资料/19第七章导行电磁波1-导行波概论.pdf)
 [📄 20第七章导行电磁波2-矩形波导1](../课程资料/20第七章导行电磁波2-矩形波导1.pdf)
 [📄 21第七章导行电磁波3-矩形波导2](../课程资料/21第七章导行电磁波3-矩形波导2.pdf)
 [📄 22第七章导行电磁波4-圆波导-同轴线](../课程资料/22第七章导行电磁波4-圆波导-同轴线.pdf)
 [📄 23第七章导行电磁波5-传输线](../课程资料/23第七章导行电磁波5-传输线.pdf)
 
-## 核心知识点
+## 课程内容
 
-### 1. 导行波概论
-- TEM波、TE波、TM波的概念
-- 截止频率与截止波长
-- 相速度和群速度
+### 7.1 导行波基本概念
 
-### 2. 矩形波导
-- TE$_{mn}$模式与TM$_{mn}$模式
-- 截止波数：$k_c = \sqrt{(m\pi/a)^2 + (n\pi/b)^2}$
-- 主模TE$_{10}$的特性
-- 单模传输条件
+导行电磁波是沿传输结构定向传播的电磁波。常用导波系统：
 
-### 3. 圆波导
-- 三种常用模式：TE$_{11}$、TM$_{01}$、TE$_{01}$
-- 截止频率的确定（贝塞尔函数根）
+| 类型 | 结构 | 工作模式 | 频段 |
+|------|------|---------|------|
+| TEM传输线 | 同轴线、双导线 | TEM | DC~微波 |
+| 金属波导 | 矩形/圆形波导 | TE/TM | 微波 |
+| 介质波导 | 光纤 | 混合模 | 红外/可见光 |
+| 平面传输线 | 微带线、带状线 | 准TEM | 微波/毫米波 |
 
-### 4. 同轴线
-- TEM模为主模
-- 特性阻抗：$Z_0 = \frac{60}{\sqrt{\varepsilon_r}}\ln\frac{b}{a}$
+**纵向场法：**
 
-### 5. 传输线理论
-- 电报方程
-- 特性阻抗与传播常数
-- 反射系数与输入阻抗
-- 史密斯圆图
-- 阻抗匹配
+将场分解为横向和纵向分量，从麦克斯韦方程组导出横向场与纵向场的关系：
 
+$$\mathbf{E}_t = -\frac{1}{k_c^2}\left(\gamma\nabla_t E_z + j\omega\mu\,\hat{\mathbf{z}} \times \nabla_t H_z\right)$$
+
+$$\mathbf{H}_t = -\frac{1}{k_c^2}\left(\gamma\nabla_t H_z - j\omega\varepsilon\,\hat{\mathbf{z}} \times \nabla_t E_z\right)$$
+
+$k_c^2 = \gamma^2 + k^2$ 为截止波数。
+
+**模式分类：**
+- TEM：$E_z = H_z = 0$（需两个以上导体）
+- TE（H模）：$E_z = 0, H_z \neq 0$
+- TM（E模）：$H_z = 0, E_z \neq 0$
+
+**传播常数：** $\gamma = \sqrt{k_c^2 - \omega^2\mu\varepsilon}$
+
+- $f > f_c$（$k > k_c$）：$\gamma = j\beta$，传播
+- $f < f_c$：$\gamma = \alpha$，截止衰减
+
+截止频率 $f_c = k_c/(2\pi\sqrt{\mu\varepsilon})$
+
+导波波长：$\lambda_g = \frac{2\pi}{\beta} = \frac{\lambda}{\sqrt{1 - (f_c/f)^2}} > \lambda$
+
+### 7.2 矩形波导
+
+矩形波导宽边 $a$，窄边 $b$（$a > b$）。
+
+**TE$_{mn}$ 模：** $E_z = 0$
+
+$$H_z = H_0\cos\left(\frac{m\pi x}{a}\right)\cos\left(\frac{n\pi y}{b}\right)e^{-j\beta z}$$
+
+$$k_c = \sqrt{\left(\frac{m\pi}{a}\right)^2 + \left(\frac{n\pi}{b}\right)^2}$$
+
+**TM$_{mn}$ 模：** $H_z = 0$
+
+$$E_z = E_0\sin\left(\frac{m\pi x}{a}\right)\sin\left(\frac{n\pi y}{b}\right)e^{-j\beta z}$$
+
+**主模 TE$_{10}$（$m=1, n=0$）：**
+
+- 截止波数 $k_c = \pi/a$
+- 截止波长 $\lambda_c = 2a$
+- 截止频率 $f_c = 1/(2a\sqrt{\mu\varepsilon})$
+
+单模传输条件：$a < \lambda < 2a$
+
+**TE$_{10}$ 场分布：**
+
+$$E_y = -\frac{j\omega\mu a}{\pi}H_0\sin\left(\frac{\pi x}{a}\right)e^{-j\beta z}$$
+
+$$H_x = \frac{j\beta a}{\pi}H_0\sin\left(\frac{\pi x}{a}\right)e^{-j\beta z}$$
+
+$$H_z = H_0\cos\left(\frac{\pi x}{a}\right)e^{-j\beta z}$$
+
+宽壁中央 $x = a/2$ 处 $E_y$ 最大，窄壁 $x = 0, a$ 处 $E_y = 0$。
+
+**波导壁电流（TE$_{10}$）：** $\mathbf{J}_s = \hat{\mathbf{n}} \times \mathbf{H}|_{\text{壁}}$
+
+宽壁中央电流沿纵向。开槽/缝隙天线必须沿电流方向切割。
+
+### 7.3 圆波导
+
+圆波导半径 $a$。
+
+**TE$_{mn}$ 模：**
+
+$$H_z = H_0 J_m(k_c\rho)\cos(m\phi),\quad J_m'(k_c a) = 0$$
+
+$k_c = p'_{mn}/a$，$p'_{mn}$ 为 $J_m'(x) = 0$ 的第 $n$ 个根。
+
+**TM$_{mn}$ 模：**
+
+$$E_z = E_0 J_m(k_c\rho)\cos(m\phi),\quad J_m(k_c a) = 0$$
+
+$k_c = p_{mn}/a$，$p_{mn}$ 为 $J_m(x) = 0$ 的第 $n$ 个根。
+
+**常用模式：**
+
+| 模式 | $k_c a$ | $\lambda_c$ | 特点 |
+|------|---------|-------------|------|
+| TE$_{11}$ | 1.841 | $3.41a$ | 主模，有极化简并 |
+| TM$_{01}$ | 2.405 | $2.61a$ | 轴对称场，旋转关节 |
+| TE$_{01}$ | 3.832 | $1.64a$ | 低损耗，远距离传输 |
+
+### 7.4 同轴线
+
+同轴线可传播 TEM 模（主模）。
+
+内外导体间电压满足：$V(\rho) = V_0\frac{\ln(b/\rho)}{\ln(b/a)}$
+
+场分布：
+$$E_\rho = \frac{V_0}{\rho\ln(b/a)},\quad H_\phi = \frac{I}{2\pi\rho}$$
+
+**特性阻抗：**
+
+$$Z_0 = \frac{60}{\sqrt{\varepsilon_r}}\ln\left(\frac{b}{a}\right)\,\Omega$$
+
+常用值：$50\,\Omega$（微波）、$75\,\Omega$（视频/有线电视）
+
+高次模抑制条件：$\lambda > \pi(a + b)$
+
+### 7.5 传输线理论
+
+传输线是分布参数电路，适用于 TEM 导波结构。
+
+**电报方程（时域）：**
+
+$$\frac{\partial v}{\partial z} = -Ri - L\frac{\partial i}{\partial t},\quad \frac{\partial i}{\partial z} = -Gv - C\frac{\partial v}{\partial t}$$
+
+**频域解（无耗线 $R=0, G=0$）：**
+
+$$\gamma = j\beta = j\omega\sqrt{LC},\quad Z_0 = \sqrt{\frac{L}{C}}$$
+
+$$V(z) = V_0^+ e^{-j\beta z} + V_0^- e^{+j\beta z}$$
+
+$$I(z) = \frac{V_0^+}{Z_0} e^{-j\beta z} - \frac{V_0^-}{Z_0} e^{+j\beta z}$$
+
+**终端接负载 $Z_L$ 时输入阻抗：**
+
+$$Z_{in}(l) = Z_0\frac{Z_L + jZ_0\tan(\beta l)}{Z_0 + jZ_L\tan(\beta l)}$$
+
+**特殊情况：**
+- 短路（$Z_L = 0$）：$Z_{in} = jZ_0\tan(\beta l)$
+- 开路（$Z_L = \infty$）：$Z_{in} = -jZ_0\cot(\beta l)$
+- $\lambda/4$ 变换器（$l = \lambda/4$）：$Z_{in} = Z_0^2/Z_L$
+
+**反射系数与阻抗关系：**
+
+$$\Gamma(l) = \frac{Z_{in}(l) - Z_0}{Z_{in}(l) + Z_0} = \Gamma_L e^{-2j\beta l}$$
+
+Smith 圆图是处理传输线阻抗匹配的图形工具，将复反射系数和归一化阻抗的映射关系可视化。
 
 ---
 
+[← 上一章: 第6章 均匀平面波的反射与透射](../06-均匀平面波的反射与透射/index.md)
 [← 返回首页](../index.md)
+[→ 下一章: 第8章 电磁辐射](../08-电磁辐射/index.md)
