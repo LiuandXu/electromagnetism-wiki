@@ -4,3 +4,10 @@ __pycache__/
 .python-version
 .DS_Store
 Thumbs.db
+
+# 排除非Wiki相关的大文件和目录
+课程资料/
+历年真题/
+ppt-master-main/
+电磁场历年试卷.zip
+*.zip

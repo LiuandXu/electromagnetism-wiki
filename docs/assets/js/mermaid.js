@@ -1,6 +1,10 @@
 // Mermaid dark mode auto-adapt + source protection
 (function() {
-    var MERMAID_SRC = 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js';
+    var MERMAID_CDN_LIST = [
+        'https://cdn.bootcdn.net/ajax/libs/mermaid/11.4.1/dist/mermaid.min.js',
+        'https://unpkg.com/mermaid@11/dist/mermaid.min.js',
+        'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js'
+    ];
     var STORE = {};
     window.__mermaidSource = STORE;
     var loaded = false;
@@ -61,13 +65,21 @@
         }
     }
 
-    function loadMermaid() {
+    function loadMermaid(idx) {
         if (window.mermaid) { loaded = true; render(); return; }
+        idx = idx || 0;
+        if (idx >= MERMAID_CDN_LIST.length) {
+            console.error('All Mermaid CDNs failed');
+            return;
+        }
         var script = document.createElement('script');
         script.async = false;
-        script.src = MERMAID_SRC;
+        script.src = MERMAID_CDN_LIST[idx];
         script.onload = function() { loaded = true; render(); };
-        script.onerror = function() { console.error('Failed to load Mermaid'); };
+        script.onerror = function() {
+            console.warn('Mermaid CDN failed: ' + MERMAID_CDN_LIST[idx]);
+            loadMermaid(idx + 1);
+        };
         document.head.appendChild(script);
     }
 
