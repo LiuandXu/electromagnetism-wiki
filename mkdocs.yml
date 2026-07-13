@@ -33,7 +33,7 @@ extra_css:
 extra_javascript:
 - assets/js/mathjax.js
 - https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
-- assets/js/mermaid.js?v=4
+- assets/js/mermaid.js?v=5
 markdown_extensions:
 - pymdownx.arithmatex:
     generic: true
