@@ -1,8 +1,5 @@
 # 第2章 电磁场基本规律
 
-
-## 课程内容
-
 ### 2.1 电荷守恒定律
 
 电荷守恒定律是电磁理论的基本定律之一，表述为：在任何物理过程中，电荷既不能被创造也不能被消灭。
@@ -165,6 +162,44 @@ $$\mathbf{D} = \varepsilon \mathbf{E},\quad \mathbf{B} = \mu \mathbf{H},\quad \m
 
 麦克斯韦方程组预言了电磁波的存在，并指出光是一种电磁波。
 
+**例题：**
+
+**例题 2.1**
+**题目：** 在无源自由空间，已知磁场强度为 $\mathbf{H} = \hat{\mathbf{y}}\,2.63\times10^7\cos(3\times10^9 t - 10z)$（A/m），求位移电流密度 $\mathbf{J}_d$。
+
+**解：**
+
+由于是无源空间，传导电流 $\mathbf{J} = 0$，由安培环路定律：
+
+$$\nabla \times \mathbf{H} = \mathbf{J} + \frac{\partial \mathbf{D}}{\partial t} = \mathbf{J}_d$$
+
+计算旋度（$\mathbf{H}$ 仅有 $y$ 分量且只与 $z$、$t$ 有关）：
+
+$$\nabla \times \mathbf{H} = -\frac{\partial H_y}{\partial z}\hat{\mathbf{x}}$$
+
+$$\frac{\partial H_y}{\partial z} = 2.63\times10^7 \cdot 10\sin(3\times10^9 t - 10z) = 2.63\times10^8\sin(3\times10^9 t - 10z)$$
+
+因此位移电流密度为：
+
+$$\mathbf{J}_d = -\hat{\mathbf{x}}\,2.63\times10^8\sin(3\times10^9 t - 10z) \quad (\text{A/m}^2)$$
+
+**真题：**
+
+**真题 2.1（来源：2024春季B卷）**
+**题目：** 在金属铜中，电场强度为 $\mathbf{E} = \hat{\mathbf{x}} E_0 \sin(\omega t)$（V/m），铜的电导率为 $\sigma$、介电常数为 $\varepsilon$。求铜中的传导电流密度和位移电流密度。
+
+**解：**
+
+**传导电流密度**由欧姆定律给出：
+
+$$\mathbf{J}_c = \sigma \mathbf{E} = \hat{\mathbf{x}}\, \sigma E_0 \sin(\omega t) \quad (\text{A/m}^2)$$
+
+**位移电流密度**由电位移矢量随时间的变化率定义：
+
+$$\mathbf{J}_d = \frac{\partial \mathbf{D}}{\partial t} = \varepsilon \frac{\partial \mathbf{E}}{\partial t} = \hat{\mathbf{x}}\, \varepsilon \omega E_0 \cos(\omega t) \quad (\text{A/m}^2)$$
+
+可见传导电流与电场同相位，而位移电流超前电场 $90°$。两者之比为 $|\mathbf{J}_c| / |\mathbf{J}_d| = \sigma / (\omega \varepsilon)$，在良导体中 $\sigma \gg \omega \varepsilon$，传导电流远大于位移电流。
+
 ### 2.7 电磁场的边界条件
 
 在不同媒质的分界面上，场量可能不连续，满足以下边界条件。
@@ -185,28 +220,9 @@ $$\mathbf{D} = \varepsilon \mathbf{E},\quad \mathbf{B} = \mu \mathbf{H},\quad \m
 - $\mathbf{E}_{1t} = \mathbf{E}_{2t}$，$D_{1n} = D_{2n}$
 - $\mathbf{H}_{1t} = \mathbf{H}_{2t}$，$B_{1n} = B_{2n}$
 
-## 例题与习题
+**例题：**
 
-### 例题 2.1
-**题目：** 在无源自由空间，已知磁场强度为 $\mathbf{H} = \hat{\mathbf{y}}\,2.63\times10^7\cos(3\times10^9 t - 10z)$（A/m），求位移电流密度 $\mathbf{J}_d$。
-
-**解：**
-
-由于是无源空间，传导电流 $\mathbf{J} = 0$，由安培环路定律：
-
-$$\nabla \times \mathbf{H} = \mathbf{J} + \frac{\partial \mathbf{D}}{\partial t} = \mathbf{J}_d$$
-
-计算旋度（$\mathbf{H}$ 仅有 $y$ 分量且只与 $z$、$t$ 有关）：
-
-$$\nabla \times \mathbf{H} = -\frac{\partial H_y}{\partial z}\hat{\mathbf{x}}$$
-
-$$\frac{\partial H_y}{\partial z} = 2.63\times10^7 \cdot 10\sin(3\times10^9 t - 10z) = 2.63\times10^8\sin(3\times10^9 t - 10z)$$
-
-因此位移电流密度为：
-
-$$\mathbf{J}_d = -\hat{\mathbf{x}}\,2.63\times10^8\sin(3\times10^9 t - 10z) \quad (\text{A/m}^2)$$
-
-### 例题 2.2
+**例题 2.2**
 **题目：** 设 $z=0$ 的平面为空气与理想导体的分界面，$z<0$ 一侧为理想导体。分界面处磁场强度为 $\mathbf{H} = \hat{\mathbf{y}}\,H_0\sin(\alpha x)\cos(\omega t - \beta y)$，求导体上的面电流分布。
 
 **解：**
@@ -221,7 +237,7 @@ $$= H_0\sin(\alpha x)\cos(\omega t - \beta y)\,(\hat{\mathbf{z}} \times \hat{\ma
 
 $$= -\hat{\mathbf{x}}\,H_0\sin(\alpha x)\cos(\omega t - \beta y) \quad (\text{A/m})$$
 
-### 例题 2.3
+**例题 2.3**
 **题目：** 间距 $d$ 的两无限大导电板间为空气，其中电场强度为 $\mathbf{E} = \hat{\mathbf{x}}\,E_0\cos(\omega t - \beta z)$。求两导电平板表面上的面电荷密度和面电流密度。
 
 **解：**
@@ -254,7 +270,7 @@ $$\mathbf{H} = \hat{\mathbf{y}}\,\frac{E_0}{\eta_0}\cos(\omega t - \beta z)$$
 
 下壁、上壁电流大小相等、方向相反。
 
-### 例题 2.4
+**例题 2.4**
 **题目：** 已知 $y=0$ 的无限大平面为两种电介质的分界面，该分界面上无自由电荷。介质 2 侧的电场强度为 $\mathbf{E}_2 = 10\hat{\mathbf{x}} + 20\hat{\mathbf{y}}$（V/m）。分界面两侧的相对介电常数分别为 $\varepsilon_{r1} = 5$，$\varepsilon_{r2} = 3$。求介质 1 侧的电场强度 $\mathbf{E}_1$ 和电位移矢量 $\mathbf{D}_1$。
 
 **解：**
@@ -279,24 +295,9 @@ $$\mathbf{E}_1 = 10\hat{\mathbf{x}} + 12\hat{\mathbf{y}} \quad (\text{V/m})$$
 
 $$\mathbf{D}_1 = \varepsilon_1\mathbf{E}_1 = 5\varepsilon_0(10\hat{\mathbf{x}} + 12\hat{\mathbf{y}}) = 50\varepsilon_0\hat{\mathbf{x}} + 60\varepsilon_0\hat{\mathbf{y}} \quad (\text{C/m}^2)$$
 
-## 历年真题精选
+**真题：**
 
-### 真题 2.1（来源：2024春季B卷）
-**题目：** 在金属铜中，电场强度为 $\mathbf{E} = \hat{\mathbf{x}} E_0 \sin(\omega t)$（V/m），铜的电导率为 $\sigma$、介电常数为 $\varepsilon$。求铜中的传导电流密度和位移电流密度。
-
-**解：**
-
-**传导电流密度**由欧姆定律给出：
-
-$$\mathbf{J}_c = \sigma \mathbf{E} = \hat{\mathbf{x}}\, \sigma E_0 \sin(\omega t) \quad (\text{A/m}^2)$$
-
-**位移电流密度**由电位移矢量随时间的变化率定义：
-
-$$\mathbf{J}_d = \frac{\partial \mathbf{D}}{\partial t} = \varepsilon \frac{\partial \mathbf{E}}{\partial t} = \hat{\mathbf{x}}\, \varepsilon \omega E_0 \cos(\omega t) \quad (\text{A/m}^2)$$
-
-可见传导电流与电场同相位，而位移电流超前电场 $90°$。两者之比为 $|\mathbf{J}_c| / |\mathbf{J}_d| = \sigma / (\omega \varepsilon)$，在良导体中 $\sigma \gg \omega \varepsilon$，传导电流远大于位移电流。
-
-### 真题 2.2（来源：2023春季A卷）
+**真题 2.2（来源：2023春季A卷）**
 **题目：** 空气和介质的分界面为 $z = 0$ 平面，介质的相对介电常数 $\varepsilon_r = 4$。已知分界面处靠近空气一侧的电场强度为 $\mathbf{E}_2 = (\hat{\mathbf{x}} + 4\hat{\mathbf{y}} + 5\hat{\mathbf{z}})$ V/m，且分界面上无自由电荷。求靠近介质一侧的电场强度 $\mathbf{E}_1$。
 
 **解：**

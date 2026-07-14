@@ -1,8 +1,5 @@
 # 第4章 时变电磁场
 
-
-## 课程内容
-
 ### 4.1 波动方程
 
 从麦克斯韦方程组出发，可导出电磁场的波动方程，揭示电磁波的传播本质。
@@ -20,6 +17,54 @@ $$\nabla^2 \mathbf{H} - \mu\varepsilon\frac{\partial^2 \mathbf{H}}{\partial t^2}
 **波速：** $v = \frac{1}{\sqrt{\mu\varepsilon}}$，真空中 $c = \frac{1}{\sqrt{\mu_0\varepsilon_0}} \approx 3 \times 10^8\,\mathrm{m/s}$
 
 这一结果揭示了光是电磁波的本质。
+
+**真题：**
+
+**真题 4.1（来源：2021秋季B卷）**
+**题目：** 真空中有一 $N$ 匝圆形线圈，半径为 $a$，线圈平面与 $xy$ 平面重合，圆心在原点。空间中存在均匀磁场 $\mathbf{B} = B_0 \cos(\omega t)\,\hat{\mathbf{z}}$，其中 $\omega$ 为角频率。求线圈中的感应电动势。
+
+**解：**
+
+穿过单匝线圈的磁通量为：
+
+$$\Phi = \int_S \mathbf{B} \cdot d\mathbf{S} = B_0 \cos(\omega t) \cdot \pi a^2$$
+
+$N$ 匝线圈的总磁通链为：
+
+$$\pmb{\Psi} = N\Phi = N\pi a^2 B_0 \cos(\omega t)$$
+
+由法拉第电磁感应定律，感应电动势为：
+
+$$\mathcal{E} = -\frac{d\pmb{\Psi}}{dt} = N\pi a^2 \omega B_0 \sin(\omega t)$$
+
+因此：
+
+$$\boxed{\mathcal{E} = N\pi a^2 \omega B_0 \sin(\omega t)}$$
+
+**真题 4.2（来源：2024秋季A卷）**
+**题目：** 证明真空中无源区域（$\rho = 0$，$\mathbf{J} = 0$）的电场 $\mathbf{E} = E_0 \cos\!\left[\omega\!\left(t - \dfrac{x}{c}\right)\right]\hat{\mathbf{z}}$ 满足波动方程 $\nabla^2 \mathbf{E} - \dfrac{1}{c^2}\dfrac{\partial^2 \mathbf{E}}{\partial t^2} = 0$，其中 $c = 1/\sqrt{\mu_0\varepsilon_0}$。
+
+**解：**
+
+令 $k = \omega/c$，则 $\mathbf{E} = E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}}$。
+
+**时间二阶偏导：**
+
+$$\frac{\partial^2 \mathbf{E}}{\partial t^2} = -\omega^2 E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}}$$
+
+$$\frac{1}{c^2}\frac{\partial^2 \mathbf{E}}{\partial t^2} = -\frac{\omega^2}{c^2} E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}} = -k^2 E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}}$$
+
+**空间二阶偏导（拉普拉斯）：**
+
+由于 $\mathbf{E}$ 仅有 $z$ 分量且仅依赖 $x$ 和 $t$：
+
+$$\nabla^2 \mathbf{E} = \frac{\partial^2 \mathbf{E}}{\partial x^2}\,\hat{\mathbf{z}} = -k^2 E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}}$$
+
+**代入波动方程：**
+
+$$\nabla^2 \mathbf{E} - \frac{1}{c^2}\frac{\partial^2 \mathbf{E}}{\partial t^2} = -k^2 E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}} - \left(-k^2 E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}}\right) = 0$$
+
+因此该电场满足无源区域的波动方程。$\blacksquare$
 
 ### 4.2 电磁场的位函数
 
@@ -73,6 +118,31 @@ $$\nabla^2 \dot{\mathbf{E}} + k^2 \dot{\mathbf{E}} = 0,\quad \nabla^2 \dot{\math
 
 $k = \omega\sqrt{\mu\varepsilon_c}$ 为复波数。
 
+**例题：**
+
+**例题 4.1**
+**题目：** 已知磁场强度的瞬时表达式为 $\mathbf{H}(t) = \hat{\mathbf{y}}\,H_0\sin(\omega t - \beta z)$，求其复数（相量）表示式。反之，已知电场强度的复数表示式为 $\dot{\mathbf{E}} = -j\hat{\mathbf{x}}\,E_0 e^{-j\beta z}$，写出其瞬时表达式。
+
+**解：**
+
+**(1) 瞬时表达式 → 复数表达式**
+
+首先将 $\sin$ 转换为 $\cos$：
+
+$$\sin(\omega t - \beta z) = \cos\!\left(\omega t - \beta z - \frac{\pi}{2}\right)$$
+
+利用 $\mathbf{H}(t) = \mathrm{Re}[\dot{\mathbf{H}}\,e^{j\omega t}]$，提取相量：
+
+$$\dot{\mathbf{H}} = \hat{\mathbf{y}}\,H_0\,e^{-j(\beta z + \pi/2)} = -j\hat{\mathbf{y}}\,H_0\,e^{-j\beta z}$$
+
+**(2) 复数表达式 → 瞬时表达式**
+
+将 $-j$ 写成指数形式：$-j = e^{-j\pi/2}$，故：
+
+$$\dot{\mathbf{E}} = \hat{\mathbf{x}}\,E_0\,e^{-j\pi/2}\,e^{-j\beta z} = \hat{\mathbf{x}}\,E_0\,e^{-j(\beta z + \pi/2)}$$
+
+$$\mathbf{E}(t) = \mathrm{Re}[\dot{\mathbf{E}}\,e^{j\omega t}] = \hat{\mathbf{x}}\,E_0\cos\!\left(\omega t - \beta z - \frac{\pi}{2}\right) = \hat{\mathbf{x}}\,E_0\sin(\omega t - \beta z)$$
+
 ### 4.4 电磁能量守恒 — 坡印廷定理
 
 **坡印廷矢量（Poynting Vector）：**
@@ -103,50 +173,9 @@ $$\mathbf{S}_{av} = \frac{1}{T}\int_0^T \mathbf{S}\,\mathrm{d}t = \frac{1}{2}\op
 
 其实部为平均有功功率密度，虚部为无功功率密度。
 
-### 4.5 基本电磁定律 — 对偶原理与互易定理
+**例题：**
 
-**对偶原理（Duality Principle）：**
-
-在无源区域（$\mathbf{J} = 0, \rho = 0$），麦克斯韦方程组电磁对称：
-
-$$\nabla \times \mathbf{E} = -j\omega\mu\mathbf{H},\quad \nabla \times \mathbf{H} = j\omega\varepsilon\mathbf{E}$$
-
-对偶代换：$\mathbf{E} \to \mathbf{H},\ \mathbf{H} \to -\mathbf{E},\ \varepsilon \to \mu,\ \mu \to \varepsilon$
-
-若已知一个问题解，可通过代换得到对偶问题的解，无需重新求解。
-
-**互易定理（Reciprocity Theorem）：**
-
-两天线系统满足：源与接收点互换后，接收到的信号相同。即天线用作发射和接收时方向图相同。
-
-数学表述：$\int_{V_2} \mathbf{J}_2 \cdot \mathbf{E}_1\mathrm{d}V = \int_{V_1} \mathbf{J}_1 \cdot \mathbf{E}_2\mathrm{d}V$
-
-## 例题与习题
-
-### 例题 4.1
-**题目：** 已知磁场强度的瞬时表达式为 $\mathbf{H}(t) = \hat{\mathbf{y}}\,H_0\sin(\omega t - \beta z)$，求其复数（相量）表示式。反之，已知电场强度的复数表示式为 $\dot{\mathbf{E}} = -j\hat{\mathbf{x}}\,E_0 e^{-j\beta z}$，写出其瞬时表达式。
-
-**解：**
-
-**(1) 瞬时表达式 → 复数表达式**
-
-首先将 $\sin$ 转换为 $\cos$：
-
-$$\sin(\omega t - \beta z) = \cos\!\left(\omega t - \beta z - \frac{\pi}{2}\right)$$
-
-利用 $\mathbf{H}(t) = \mathrm{Re}[\dot{\mathbf{H}}\,e^{j\omega t}]$，提取相量：
-
-$$\dot{\mathbf{H}} = \hat{\mathbf{y}}\,H_0\,e^{-j(\beta z + \pi/2)} = -j\hat{\mathbf{y}}\,H_0\,e^{-j\beta z}$$
-
-**(2) 复数表达式 → 瞬时表达式**
-
-将 $-j$ 写成指数形式：$-j = e^{-j\pi/2}$，故：
-
-$$\dot{\mathbf{E}} = \hat{\mathbf{x}}\,E_0\,e^{-j\pi/2}\,e^{-j\beta z} = \hat{\mathbf{x}}\,E_0\,e^{-j(\beta z + \pi/2)}$$
-
-$$\mathbf{E}(t) = \mathrm{Re}[\dot{\mathbf{E}}\,e^{j\omega t}] = \hat{\mathbf{x}}\,E_0\cos\!\left(\omega t - \beta z - \frac{\pi}{2}\right) = \hat{\mathbf{x}}\,E_0\sin(\omega t - \beta z)$$
-
-### 例题 4.2
+**例题 4.2**
 **题目：** 已知无源自由空间的电场强度为 $\mathbf{E} = \hat{\mathbf{x}}\,E_0\sin(\omega t - \beta z)$（V/m），求：
 
 1. 磁场强度的瞬时表示式；
@@ -185,53 +214,23 @@ $$\mathbf{S}_{\mathrm{av}} = \frac{1}{2}\,\frac{\beta E_0^2}{\omega\mu_0}\,\hat{
 
 其中 $\eta_0 = \omega\mu_0/\beta = \sqrt{\mu_0/\varepsilon_0} \approx 377\;\Omega$ 为自由空间波阻抗。
 
-## 历年真题精选
+### 4.5 基本电磁定律 — 对偶原理与互易定理
 
-### 真题 4.1（来源：2021秋季B卷）
-**题目：** 真空中有一 $N$ 匝圆形线圈，半径为 $a$，线圈平面与 $xy$ 平面重合，圆心在原点。空间中存在均匀磁场 $\mathbf{B} = B_0 \cos(\omega t)\,\hat{\mathbf{z}}$，其中 $\omega$ 为角频率。求线圈中的感应电动势。
+**对偶原理（Duality Principle）：**
 
-**解：**
+在无源区域（$\mathbf{J} = 0, \rho = 0$），麦克斯韦方程组电磁对称：
 
-穿过单匝线圈的磁通量为：
+$$\nabla \times \mathbf{E} = -j\omega\mu\mathbf{H},\quad \nabla \times \mathbf{H} = j\omega\varepsilon\mathbf{E}$$
 
-$$\Phi = \int_S \mathbf{B} \cdot d\mathbf{S} = B_0 \cos(\omega t) \cdot \pi a^2$$
+对偶代换：$\mathbf{E} \to \mathbf{H},\ \mathbf{H} \to -\mathbf{E},\ \varepsilon \to \mu,\ \mu \to \varepsilon$
 
-$N$ 匝线圈的总磁通链为：
+若已知一个问题解，可通过代换得到对偶问题的解，无需重新求解。
 
-$$\pmb{\Psi} = N\Phi = N\pi a^2 B_0 \cos(\omega t)$$
+**互易定理（Reciprocity Theorem）：**
 
-由法拉第电磁感应定律，感应电动势为：
+两天线系统满足：源与接收点互换后，接收到的信号相同。即天线用作发射和接收时方向图相同。
 
-$$\mathcal{E} = -\frac{d\pmb{\Psi}}{dt} = N\pi a^2 \omega B_0 \sin(\omega t)$$
-
-因此：
-
-$$\boxed{\mathcal{E} = N\pi a^2 \omega B_0 \sin(\omega t)}$$
-
-### 真题 4.2（来源：2024秋季A卷）
-**题目：** 证明真空中无源区域（$\rho = 0$，$\mathbf{J} = 0$）的电场 $\mathbf{E} = E_0 \cos\!\left[\omega\!\left(t - \dfrac{x}{c}\right)\right]\hat{\mathbf{z}}$ 满足波动方程 $\nabla^2 \mathbf{E} - \dfrac{1}{c^2}\dfrac{\partial^2 \mathbf{E}}{\partial t^2} = 0$，其中 $c = 1/\sqrt{\mu_0\varepsilon_0}$。
-
-**解：**
-
-令 $k = \omega/c$，则 $\mathbf{E} = E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}}$。
-
-**时间二阶偏导：**
-
-$$\frac{\partial^2 \mathbf{E}}{\partial t^2} = -\omega^2 E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}}$$
-
-$$\frac{1}{c^2}\frac{\partial^2 \mathbf{E}}{\partial t^2} = -\frac{\omega^2}{c^2} E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}} = -k^2 E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}}$$
-
-**空间二阶偏导（拉普拉斯）：**
-
-由于 $\mathbf{E}$ 仅有 $z$ 分量且仅依赖 $x$ 和 $t$：
-
-$$\nabla^2 \mathbf{E} = \frac{\partial^2 \mathbf{E}}{\partial x^2}\,\hat{\mathbf{z}} = -k^2 E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}}$$
-
-**代入波动方程：**
-
-$$\nabla^2 \mathbf{E} - \frac{1}{c^2}\frac{\partial^2 \mathbf{E}}{\partial t^2} = -k^2 E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}} - \left(-k^2 E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}}\right) = 0$$
-
-因此该电场满足无源区域的波动方程。$\blacksquare$
+数学表述：$\int_{V_2} \mathbf{J}_2 \cdot \mathbf{E}_1\mathrm{d}V = \int_{V_1} \mathbf{J}_1 \cdot \mathbf{E}_2\mathrm{d}V$
 
 ---
 

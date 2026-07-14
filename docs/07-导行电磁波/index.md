@@ -1,8 +1,5 @@
 # 第7章 导行电磁波
 
-
-## 课程内容
-
 ### 7.1 导行波基本概念
 
 导行电磁波是沿传输结构定向传播的电磁波。常用导波系统：
@@ -73,6 +70,104 @@ $$H_z = H_0\cos\left(\frac{\pi x}{a}\right)e^{-j\beta z}$$
 **波导壁电流（TE$_{10}$）：** $\mathbf{J}_s = \hat{\mathbf{n}} \times \mathbf{H}|_{\text{壁}}$
 
 宽壁中央电流沿纵向。开槽/缝隙天线必须沿电流方向切割。
+
+**例题：**
+
+**例题 7.1**
+**题目：** 矩形波导 $a\times b = 0.08\,\text{m}\times0.04\,\text{m}$，填充空气。判断频率为 $4\,\text{GHz}$ 的电磁波能否在该矩形波导中以 $\mathrm{TE}_{10}$ 模式传输？能否以 $\mathrm{TE}_{20}$ 模式传输？
+
+**解：**
+
+频率 $f = 4\,\text{GHz}$ 对应的自由空间波长：
+
+$$\lambda = \frac{c}{f} = \frac{3\times10^8}{4\times10^9} = 0.075 \;\text{m}$$
+
+**(1) $\mathrm{TE}_{10}$ 模式**
+
+截止波长：$\lambda_c = 2a = 2\times0.08 = 0.16\;\text{m}$
+
+截止频率：$f_c = \dfrac{c}{\lambda_c} = \dfrac{3\times10^8}{0.16} = 1.875\;\text{GHz}$
+
+由于 $f = 4\;\text{GHz} > f_c = 1.875\;\text{GHz}$，$\mathrm{TE}_{10}$ 模式**可以传输**。
+
+**(2) $\mathrm{TE}_{20}$ 模式**
+
+截止波长：$\lambda_c = a = 0.08\;\text{m}$
+
+截止频率：$f_c = \dfrac{c}{\lambda_c} = \dfrac{3\times10^8}{0.08} = 3.75\;\text{GHz}$
+
+由于 $f = 4\;\text{GHz} > f_c = 3.75\;\text{GHz}$，$\mathrm{TE}_{20}$ 模式**也可以传输**。
+
+**例题 7.2**
+**题目：** 填充空气的矩形波导 $a = 0.02286\,\text{m}$，$b = 0.01016\,\text{m}$。求 $\mathrm{TE}_{10}$ 模式的截止波长、截止频率。频率为 $10\,\text{GHz}$ 和 $4\,\text{GHz}$ 的 $\mathrm{TE}_{10}$ 波能否传输？若可以，求其相移常数、波导波长、相速度和波阻抗。若波导中填充介电常数 $\varepsilon_r = 4$ 的介质，重新判断上述两个频率能否传输。
+
+**解：**
+
+**(1) 空气填充**
+
+截止波长：$\lambda_c = 2a = 0.04572\;\text{m}$
+
+截止频率：$f_c = \dfrac{c}{\lambda_c} = \dfrac{3\times10^8}{0.04572} \approx 6.56\;\text{GHz}$
+
+- $f = 10\,\text{GHz} > f_c = 6.56\,\text{GHz}$：**可以传输**
+
+  相移常数：$\beta = \sqrt{k^2 - k_c^2} = \sqrt{\left(\frac{2\pi f}{c}\right)^2 - \left(\frac{\pi}{a}\right)^2}$
+
+  $$\beta = \sqrt{\left(\frac{2\pi\times10^{10}}{3\times10^8}\right)^2 - \left(\frac{\pi}{0.02286}\right)^2} \approx 158.07 \;\text{rad/m}$$
+
+  波导波长：$\lambda_g = \dfrac{2\pi}{\beta} = \dfrac{2\pi}{158.07} \approx 0.03975\;\text{m}$
+
+  相速度：$v_p = \dfrac{\omega}{\beta} = \dfrac{2\pi\times10^{10}}{158.07} \approx 3.98\times10^8\;\text{m/s}$
+
+  波阻抗：$Z_{\mathrm{TE}_{10}} = \dfrac{\eta_0}{\sqrt{1-(f_c/f)^2}} = \dfrac{377}{\sqrt{1-(6.56/10)^2}} \approx 500\;\Omega$
+
+- $f = 4\,\text{GHz} < f_c = 6.56\;\text{GHz}$：**不可传输**（截止）
+
+**(2) 填充 $\varepsilon_r = 4$ 介质**
+
+截止频率降低：$f_c' = \dfrac{c}{2a\sqrt{\varepsilon_r}} = \dfrac{6.56}{2} = 3.28\;\text{GHz}$
+
+- $f = 10\,\text{GHz} > f_c' = 3.28\;\text{GHz}$：**可以传输**
+- $f = 4\,\text{GHz} > f_c' = 3.28\;\text{GHz}$：**可以传输**
+
+**结论：** 填充介质后截止频率降低，原来被截止的 $4\,\text{GHz}$ 波也可以传输。
+
+**真题：**
+
+**真题 7.2（来源：2024秋季A卷）**
+**题目：** 矩形波导尺寸 $a = 22.86$ mm，$b = 10.16$ mm，工作频率 $f = 6$ GHz。
+
+(1) 波导内填充空气时，$\mathrm{TE}_{10}$ 模能否传输？
+
+(2) 若波导内填充 $\varepsilon_r = 2$、$\mu_r = 2$ 的介质，$\mathrm{TE}_{10}$ 模能否传输？
+
+**解：**
+
+$\mathrm{TE}_{10}$ 模的截止波长和截止频率为：
+
+$$\lambda_c = 2a = 2 \times 22.86 = 45.72 \;\text{mm} = 4.572 \;\text{cm}$$
+
+$$f_c = \frac{c}{2a} = \frac{3\times10^8}{2\times 0.02286} \approx 6.56 \;\text{GHz}$$
+
+**(1) 空气填充：**
+
+工作波长 $\lambda_0 = c/f = 3\times10^8 / (6\times10^9) = 5$ cm。
+
+由于 $\lambda_0 = 5\;\text{cm} > \lambda_c = 4.572\;\text{cm}$（即 $f = 6\;\text{GHz} < f_c = 6.56\;\text{GHz}$），$\mathrm{TE}_{10}$ 模**不能传输**。
+
+**(2) 填充 $\varepsilon_r = \mu_r = 2$ 介质：**
+
+介质中的截止频率降低为：
+
+$$f_c' = \frac{c}{2a\sqrt{\varepsilon_r\mu_r}} = \frac{6.56}{\sqrt{4}} = 3.28 \;\text{GHz}$$
+
+介质中的工作波长为：
+
+$$\lambda = \frac{c}{f\sqrt{\varepsilon_r\mu_r}} = \frac{3\times10^8}{6\times10^9 \times 2} = 2.5 \;\text{cm}$$
+
+由于 $\lambda = 2.5\;\text{cm} < \lambda_c = 4.572\;\text{cm}$（即 $f = 6\;\text{GHz} > f_c' = 3.28\;\text{GHz}$），$\mathrm{TE}_{10}$ 模**可以传输**。
+
+**结论：** 填充介质后截止频率降低，原本截止的频率变为可传输。这是通过介质加载扩展波导工作频带的常用方法。
 
 ### 7.3 圆波导
 
@@ -146,70 +241,9 @@ $$\Gamma(l) = \frac{Z_{in}(l) - Z_0}{Z_{in}(l) + Z_0} = \Gamma_L e^{-2j\beta l}$
 
 Smith 圆图是处理传输线阻抗匹配的图形工具，将复反射系数和归一化阻抗的映射关系可视化。
 
-## 例题与习题
+**真题：**
 
-### 例题 7.1
-**题目：** 矩形波导 $a\times b = 0.08\,\text{m}\times0.04\,\text{m}$，填充空气。判断频率为 $4\,\text{GHz}$ 的电磁波能否在该矩形波导中以 $\mathrm{TE}_{10}$ 模式传输？能否以 $\mathrm{TE}_{20}$ 模式传输？
-
-**解：**
-
-频率 $f = 4\,\text{GHz}$ 对应的自由空间波长：
-
-$$\lambda = \frac{c}{f} = \frac{3\times10^8}{4\times10^9} = 0.075 \;\text{m}$$
-
-**(1) $\mathrm{TE}_{10}$ 模式**
-
-截止波长：$\lambda_c = 2a = 2\times0.08 = 0.16\;\text{m}$
-
-截止频率：$f_c = \dfrac{c}{\lambda_c} = \dfrac{3\times10^8}{0.16} = 1.875\;\text{GHz}$
-
-由于 $f = 4\;\text{GHz} > f_c = 1.875\;\text{GHz}$，$\mathrm{TE}_{10}$ 模式**可以传输**。
-
-**(2) $\mathrm{TE}_{20}$ 模式**
-
-截止波长：$\lambda_c = a = 0.08\;\text{m}$
-
-截止频率：$f_c = \dfrac{c}{\lambda_c} = \dfrac{3\times10^8}{0.08} = 3.75\;\text{GHz}$
-
-由于 $f = 4\;\text{GHz} > f_c = 3.75\;\text{GHz}$，$\mathrm{TE}_{20}$ 模式**也可以传输**。
-
-### 例题 7.2
-**题目：** 填充空气的矩形波导 $a = 0.02286\,\text{m}$，$b = 0.01016\,\text{m}$。求 $\mathrm{TE}_{10}$ 模式的截止波长、截止频率。频率为 $10\,\text{GHz}$ 和 $4\,\text{GHz}$ 的 $\mathrm{TE}_{10}$ 波能否传输？若可以，求其相移常数、波导波长、相速度和波阻抗。若波导中填充介电常数 $\varepsilon_r = 4$ 的介质，重新判断上述两个频率能否传输。
-
-**解：**
-
-**(1) 空气填充**
-
-截止波长：$\lambda_c = 2a = 0.04572\;\text{m}$
-
-截止频率：$f_c = \dfrac{c}{\lambda_c} = \dfrac{3\times10^8}{0.04572} \approx 6.56\;\text{GHz}$
-
-- $f = 10\,\text{GHz} > f_c = 6.56\,\text{GHz}$：**可以传输**
-
-  相移常数：$\beta = \sqrt{k^2 - k_c^2} = \sqrt{\left(\frac{2\pi f}{c}\right)^2 - \left(\frac{\pi}{a}\right)^2}$
-
-  $$\beta = \sqrt{\left(\frac{2\pi\times10^{10}}{3\times10^8}\right)^2 - \left(\frac{\pi}{0.02286}\right)^2} \approx 158.07 \;\text{rad/m}$$
-
-  波导波长：$\lambda_g = \dfrac{2\pi}{\beta} = \dfrac{2\pi}{158.07} \approx 0.03975\;\text{m}$
-
-  相速度：$v_p = \dfrac{\omega}{\beta} = \dfrac{2\pi\times10^{10}}{158.07} \approx 3.98\times10^8\;\text{m/s}$
-
-  波阻抗：$Z_{\mathrm{TE}_{10}} = \dfrac{\eta_0}{\sqrt{1-(f_c/f)^2}} = \dfrac{377}{\sqrt{1-(6.56/10)^2}} \approx 500\;\Omega$
-
-- $f = 4\,\text{GHz} < f_c = 6.56\,\text{GHz}$：**不可传输**（截止）
-
-**(2) 填充 $\varepsilon_r = 4$ 介质**
-
-截止频率降低：$f_c' = \dfrac{c}{2a\sqrt{\varepsilon_r}} = \dfrac{6.56}{2} = 3.28\;\text{GHz}$
-
-- $f = 10\,\text{GHz} > f_c' = 3.28\;\text{GHz}$：**可以传输**
-- $f = 4\,\text{GHz} > f_c' = 3.28\;\text{GHz}$：**可以传输**
-
-**结论：** 填充介质后截止频率降低，原来被截止的 $4\,\text{GHz}$ 波也可以传输。
-
-## 历年真题精选
-
-### 真题 7.1（来源：2024秋季A卷）
+**真题 7.1（来源：2024秋季A卷）**
 **题目：** 一根无损耗传输线的特性阻抗 $Z_0 = 50\;\Omega$，长度 $l = 2$ m，工作频率 $f = 200$ MHz，终端负载阻抗 $Z_L = 40 + j30\;\Omega$。设传输线中波的相速度等于光速 $c$，求该传输线的输入阻抗。
 
 **解：**
@@ -237,41 +271,6 @@ $$Z_0 + jZ_L\tan(\beta l) = 50 + j(40+j30)(-\sqrt{3}) = 50 + 30\sqrt{3} - j40\sq
 **输入阻抗：**
 
 $$Z_{\text{in}} = 50\times\frac{40 - j56.6}{101.96 - j69.28} \approx 26.3 - j9.9 \;\Omega$$
-
-### 真题 7.2（来源：2024秋季A卷）
-**题目：** 矩形波导尺寸 $a = 22.86$ mm，$b = 10.16$ mm，工作频率 $f = 6$ GHz。
-
-(1) 波导内填充空气时，$\mathrm{TE}_{10}$ 模能否传输？
-
-(2) 若波导内填充 $\varepsilon_r = 2$、$\mu_r = 2$ 的介质，$\mathrm{TE}_{10}$ 模能否传输？
-
-**解：**
-
-$\mathrm{TE}_{10}$ 模的截止波长和截止频率为：
-
-$$\lambda_c = 2a = 2 \times 22.86 = 45.72 \;\text{mm} = 4.572 \;\text{cm}$$
-
-$$f_c = \frac{c}{2a} = \frac{3\times10^8}{2\times 0.02286} \approx 6.56 \;\text{GHz}$$
-
-**(1) 空气填充：**
-
-工作波长 $\lambda_0 = c/f = 3\times10^8 / (6\times10^9) = 5$ cm。
-
-由于 $\lambda_0 = 5\;\text{cm} > \lambda_c = 4.572\;\text{cm}$（即 $f = 6\;\text{GHz} < f_c = 6.56\;\text{GHz}$），$\mathrm{TE}_{10}$ 模**不能传输**。
-
-**(2) 填充 $\varepsilon_r = \mu_r = 2$ 介质：**
-
-介质中的截止频率降低为：
-
-$$f_c' = \frac{c}{2a\sqrt{\varepsilon_r\mu_r}} = \frac{6.56}{\sqrt{4}} = 3.28 \;\text{GHz}$$
-
-介质中的工作波长为：
-
-$$\lambda = \frac{c}{f\sqrt{\varepsilon_r\mu_r}} = \frac{3\times10^8}{6\times10^9 \times 2} = 2.5 \;\text{cm}$$
-
-由于 $\lambda = 2.5\;\text{cm} < \lambda_c = 4.572\;\text{cm}$（即 $f = 6\;\text{GHz} > f_c' = 3.28\;\text{GHz}$），$\mathrm{TE}_{10}$ 模**可以传输**。
-
-**结论：** 填充介质后截止频率降低，原本截止的频率变为可传输。这是通过介质加载扩展波导工作频带的常用方法。
 
 ---
 
