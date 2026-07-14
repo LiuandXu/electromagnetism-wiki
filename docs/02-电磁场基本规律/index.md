@@ -284,6 +284,48 @@ $$\mathbf{E}_1 = 10\hat{\mathbf{x}} + 12\hat{\mathbf{y}} \quad (\text{V/m})$$
 
 $$\mathbf{D}_1 = \varepsilon_1\mathbf{E}_1 = 5\varepsilon_0(10\hat{\mathbf{x}} + 12\hat{\mathbf{y}}) = 50\varepsilon_0\hat{\mathbf{x}} + 60\varepsilon_0\hat{\mathbf{y}} \quad (\text{C/m}^2)$$
 
+## 历年真题精选
+
+### 真题 2.1（来源：2024春季B卷）
+**题目：** 在金属铜中，电场强度为 $\mathbf{E} = \hat{\mathbf{x}} E_0 \sin(\omega t)$（V/m），铜的电导率为 $\sigma$、介电常数为 $\varepsilon$。求铜中的传导电流密度和位移电流密度。
+
+**解：**
+
+**传导电流密度**由欧姆定律给出：
+
+$$\mathbf{J}_c = \sigma \mathbf{E} = \hat{\mathbf{x}}\, \sigma E_0 \sin(\omega t) \quad (\text{A/m}^2)$$
+
+**位移电流密度**由电位移矢量随时间的变化率定义：
+
+$$\mathbf{J}_d = \frac{\partial \mathbf{D}}{\partial t} = \varepsilon \frac{\partial \mathbf{E}}{\partial t} = \hat{\mathbf{x}}\, \varepsilon \omega E_0 \cos(\omega t) \quad (\text{A/m}^2)$$
+
+可见传导电流与电场同相位，而位移电流超前电场 $90°$。两者之比为 $|\mathbf{J}_c| / |\mathbf{J}_d| = \sigma / (\omega \varepsilon)$，在良导体中 $\sigma \gg \omega \varepsilon$，传导电流远大于位移电流。
+
+### 真题 2.2（来源：2023春季A卷）
+**题目：** 空气和介质的分界面为 $z = 0$ 平面，介质的相对介电常数 $\varepsilon_r = 4$。已知分界面处靠近空气一侧的电场强度为 $\mathbf{E}_2 = (\hat{\mathbf{x}} + 4\hat{\mathbf{y}} + 5\hat{\mathbf{z}})$ V/m，且分界面上无自由电荷。求靠近介质一侧的电场强度 $\mathbf{E}_1$。
+
+**解：**
+
+将电场分解为切向分量（$x$、$y$ 方向）和法向分量（$z$ 方向）。
+
+**切向分量**由边界条件 $E_{1t} = E_{2t}$（切向电场连续）：
+
+$$E_{1x} = E_{2x} = 1 \text{ V/m}, \quad E_{1y} = E_{2y} = 4 \text{ V/m}$$
+
+**法向分量**由边界条件 $D_{1n} = D_{2n}$（无自由电荷时法向电位移连续）：
+
+$$\varepsilon_0 E_{1z} = \varepsilon_r \varepsilon_0 E_{2z}$$
+
+因此：
+
+$$E_{1z} = \frac{E_{2z}}{\varepsilon_r} = \frac{5}{4} = 1.25 \text{ V/m}$$
+
+故：
+
+$$\mathbf{E}_1 = \hat{\mathbf{x}} + 4\hat{\mathbf{y}} + 1.25\hat{\mathbf{z}} \quad (\text{V/m})$$
+
+可见电场进入高介电常数介质后，法向分量减小（$D_n$ 保持连续而 $E_n$ 减小），切向分量不变。
+
 ---
 
 [← 上一章: 第1章 绪论与矢量分析](../01-绪论与矢量分析/index.md)

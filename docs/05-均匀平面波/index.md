@@ -159,6 +159,66 @@ $$E_y = -E_0\cos(\omega t + \beta z) = E_0\cos(\omega t + \beta z + \pi)$$
 
 合成电场方向为 $\hat{\mathbf{x}} - \hat{\mathbf{y}}$ 方向（与 $x$ 轴成 $-45°$），电场大小随时间变化但方向不变，因此该电磁波为**线极化波**。
 
+## 历年真题精选
+
+### 真题 5.1（来源：2024秋季A卷）
+**题目：** 已知均匀平面波在理想介质中传播，电场和磁场分别为：
+
+$$\mathbf{E} = \hat{\mathbf{x}}\,E_0 \cos(6\pi\times10^7\,t - 0.8\pi\,x) \quad (\text{V/m})$$
+
+$$\mathbf{H} = \hat{\mathbf{y}}\,\frac{E_0}{60\pi} \cos(6\pi\times10^7\,t - 0.8\pi\,x) \quad (\text{A/m})$$
+
+求该介质的相对磁导率 $\mu_r$ 和相对介电常数 $\varepsilon_r$。
+
+**解：**
+
+从电场表达式可知 $\omega = 6\pi\times10^7$ rad/s，$k = 0.8\pi$ rad/m，波的相速度为：
+
+$$v = \frac{\omega}{k} = \frac{6\pi\times10^7}{0.8\pi} = 7.5\times10^7 \;\text{m/s}$$
+
+由 $v = c / \sqrt{\mu_r\varepsilon_r}$：
+
+$$\sqrt{\mu_r\varepsilon_r} = \frac{c}{v} = \frac{3\times10^8}{7.5\times10^7} = 4 \quad \Longrightarrow \quad \mu_r\varepsilon_r = 16$$
+
+波阻抗为电场与磁场振幅之比：
+
+$$\eta = \frac{E_0}{H_0} = 60\pi \;\Omega$$
+
+由 $\eta = \eta_0\sqrt{\mu_r/\varepsilon_r} = 120\pi\sqrt{\mu_r/\varepsilon_r}$：
+
+$$\sqrt{\frac{\mu_r}{\varepsilon_r}} = \frac{60\pi}{120\pi} = \frac{1}{2} \quad \Longrightarrow \quad \frac{\mu_r}{\varepsilon_r} = \frac{1}{4}$$
+
+联立 $\mu_r\varepsilon_r = 16$ 和 $\mu_r/\varepsilon_r = 1/4$：
+
+$$\mu_r = 2,\qquad \varepsilon_r = 8$$
+
+### 真题 5.2（来源：2024春季A卷）
+**题目：** 频率为 $f = 100$ MHz 的均匀平面波在理想介质（$\varepsilon_r = 9$，$\mu_r = 1$）中沿 $+z$ 方向传播，电场的复数形式为 $\dot{\mathbf{E}} = E_0(\hat{\mathbf{x}} - j\hat{\mathbf{y}})\,e^{-jkz}$，且 $t = 0$、$z = 0$ 处电场值为 $10$ V/m。求该波的波数、波阻抗，并写出电场和磁场的瞬时表达式。
+
+**解：**
+
+由 $t=0$、$z=0$ 时 $E = 10$ V/m，得 $E_0 = 10$ V/m。
+
+**波数和波阻抗：**
+
+$$k = \omega\sqrt{\mu\varepsilon} = \frac{2\pi f}{c}\sqrt{\mu_r\varepsilon_r} = \frac{2\pi\times10^8}{3\times10^8}\times 3 = 2\pi \;\text{rad/m}$$
+
+$$\eta = \eta_0\sqrt{\frac{\mu_r}{\varepsilon_r}} = \frac{120\pi}{3} = 40\pi \;\Omega$$
+
+**电场瞬时表达式：**
+
+$$\mathbf{E}(z,t) = \text{Re}\!\left[E_0(\hat{\mathbf{x}} - j\hat{\mathbf{y}})\,e^{-jkz}\,e^{j\omega t}\right] = E_0\!\left[\hat{\mathbf{x}}\cos(\omega t - kz) + \hat{\mathbf{y}}\sin(\omega t - kz)\right]$$
+
+$$\mathbf{E}(z,t) = 10\!\left[\hat{\mathbf{x}}\cos(\omega t - 2\pi z) + \hat{\mathbf{y}}\sin(\omega t - 2\pi z)\right] \;\text{(V/m)}$$
+
+**磁场瞬时表达式：**
+
+$$\dot{\mathbf{H}} = \frac{1}{\eta}\,\hat{\mathbf{z}}\times\dot{\mathbf{E}} = \frac{E_0}{40\pi}(j\hat{\mathbf{x}} + \hat{\mathbf{y}})\,e^{-jkz}$$
+
+$$\mathbf{H}(z,t) = \frac{10}{40\pi}\!\left[-\hat{\mathbf{x}}\sin(\omega t - 2\pi z) + \hat{\mathbf{y}}\cos(\omega t - 2\pi z)\right] \;\text{(A/m)}$$
+
+该波为**右旋圆极化波**（$E_y$ 滞后 $E_x$ 为 $90°$）。
+
 ---
 
 [← 上一章: 第4章 时变电磁场](../04-时变电磁场/index.md)

@@ -169,6 +169,50 @@ $$\mathbf{E}(\mathbf{r}) = -\nabla\Phi = -\frac{\partial}{\partial r}\left(\frac
 
 即点电荷的电场为沿径向的场，大小与距离平方成反比，这正是库仑定律的结果。
 
+## 历年真题精选
+
+### 真题 1.1（来源：2023春季B卷）
+**题目：** 已知矢量 $\mathbf{A} = 3\hat{\mathbf{x}} + 2\hat{\mathbf{y}} + \hat{\mathbf{z}}$，并且 $\mathbf{A} \times \mathbf{B} = 4\hat{\mathbf{x}} - 8\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$，$\mathbf{A} \cdot \mathbf{B} = 10$，试求矢量 $\mathbf{B}$。
+
+**解：**
+
+设 $\mathbf{B} = a\hat{\mathbf{x}} + b\hat{\mathbf{y}} + c\hat{\mathbf{z}}$，由点积条件：
+
+$$\mathbf{A} \cdot \mathbf{B} = 3a + 2b + c = 10$$
+
+由叉积 $\mathbf{A} \times \mathbf{B} = (2c - b)\hat{\mathbf{x}} + (a - 3c)\hat{\mathbf{y}} + (3b - 2a)\hat{\mathbf{z}}$，与已知 $\mathbf{A} \times \mathbf{B} = 4\hat{\mathbf{x}} - 8\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$ 比较得：
+
+$$2c - b = 4, \quad a - 3c = -8, \quad 3b - 2a = 4$$
+
+联立求解：
+
+$$a = 1,\quad b = 2,\quad c = 3$$
+
+因此 $\mathbf{B} = \hat{\mathbf{x}} + 2\hat{\mathbf{y}} + 3\hat{\mathbf{z}}$。
+
+**验证：** $\mathbf{A} \cdot \mathbf{B} = 3 + 4 + 3 = 10$ ✓，$\mathbf{A} \times \mathbf{B} = (6-2)\hat{\mathbf{x}} + (1-9)\hat{\mathbf{y}} + (6-2)\hat{\mathbf{z}} = 4\hat{\mathbf{x}} - 8\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$ ✓。
+
+### 真题 1.2（来源：2024春季B卷）
+**题目：** 求标量场 $u = x^2 + 2y^2 + xy + z^2$ 在点 $M(3, 2, 0)$ 处的梯度。
+
+**解：**
+
+梯度在直角坐标系中为：
+
+$$\nabla u = \frac{\partial u}{\partial x}\hat{\mathbf{x}} + \frac{\partial u}{\partial y}\hat{\mathbf{y}} + \frac{\partial u}{\partial z}\hat{\mathbf{z}}$$
+
+计算各偏导数：
+
+$$\frac{\partial u}{\partial x} = 2x + y, \quad \frac{\partial u}{\partial y} = 4y + x, \quad \frac{\partial u}{\partial z} = 2z$$
+
+代入 $M(3, 2, 0)$：
+
+$$\frac{\partial u}{\partial x}\bigg|_M = 2(3) + 2 = 8, \quad \frac{\partial u}{\partial y}\bigg|_M = 4(2) + 3 = 11, \quad \frac{\partial u}{\partial z}\bigg|_M = 0$$
+
+因此：
+
+$$\nabla u\big|_M = 8\hat{\mathbf{x}} + 11\hat{\mathbf{y}}$$
+
 ---
 
 [← 返回首页](../index.md)

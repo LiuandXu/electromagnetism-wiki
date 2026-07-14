@@ -190,6 +190,54 @@ $$\mathbf{S}_{\mathrm{av}} = \frac{1}{2}\,\frac{\beta E_0^2}{\omega\mu_0}\,\hat{
 
 其中 $\eta_0 = \omega\mu_0/\beta = \sqrt{\mu_0/\varepsilon_0} \approx 377\;\Omega$ 为自由空间波阻抗。
 
+## 历年真题精选
+
+### 真题 4.1（来源：2021秋季B卷）
+**题目：** 真空中有一 $N$ 匝圆形线圈，半径为 $a$，线圈平面与 $xy$ 平面重合，圆心在原点。空间中存在均匀磁场 $\mathbf{B} = B_0 \cos(\omega t)\,\hat{\mathbf{z}}$，其中 $\omega$ 为角频率。求线圈中的感应电动势。
+
+**解：**
+
+穿过单匝线圈的磁通量为：
+
+$$\Phi = \int_S \mathbf{B} \cdot d\mathbf{S} = B_0 \cos(\omega t) \cdot \pi a^2$$
+
+$N$ 匝线圈的总磁通链为：
+
+$$\pmb{\Psi} = N\Phi = N\pi a^2 B_0 \cos(\omega t)$$
+
+由法拉第电磁感应定律，感应电动势为：
+
+$$\mathcal{E} = -\frac{d\pmb{\Psi}}{dt} = N\pi a^2 \omega B_0 \sin(\omega t)$$
+
+因此：
+
+$$\boxed{\mathcal{E} = N\pi a^2 \omega B_0 \sin(\omega t)}$$
+
+### 真题 4.2（来源：2024秋季A卷）
+**题目：** 证明真空中无源区域（$\rho = 0$，$\mathbf{J} = 0$）的电场 $\mathbf{E} = E_0 \cos\!\left[\omega\!\left(t - \dfrac{x}{c}\right)\right]\hat{\mathbf{z}}$ 满足波动方程 $\nabla^2 \mathbf{E} - \dfrac{1}{c^2}\dfrac{\partial^2 \mathbf{E}}{\partial t^2} = 0$，其中 $c = 1/\sqrt{\mu_0\varepsilon_0}$。
+
+**解：**
+
+令 $k = \omega/c$，则 $\mathbf{E} = E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}}$。
+
+**时间二阶偏导：**
+
+$$\frac{\partial^2 \mathbf{E}}{\partial t^2} = -\omega^2 E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}}$$
+
+$$\frac{1}{c^2}\frac{\partial^2 \mathbf{E}}{\partial t^2} = -\frac{\omega^2}{c^2} E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}} = -k^2 E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}}$$
+
+**空间二阶偏导（拉普拉斯）：**
+
+由于 $\mathbf{E}$ 仅有 $z$ 分量且仅依赖 $x$ 和 $t$：
+
+$$\nabla^2 \mathbf{E} = \frac{\partial^2 \mathbf{E}}{\partial x^2}\,\hat{\mathbf{z}} = -k^2 E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}}$$
+
+**代入波动方程：**
+
+$$\nabla^2 \mathbf{E} - \frac{1}{c^2}\frac{\partial^2 \mathbf{E}}{\partial t^2} = -k^2 E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}} - \left(-k^2 E_0 \cos(\omega t - kx)\,\hat{\mathbf{z}}\right) = 0$$
+
+因此该电场满足无源区域的波动方程。$\blacksquare$
+
 ---
 
 [← 上一章: 第3章 静态电磁场及其解法](../03-静态电磁场及其解法/index.md)

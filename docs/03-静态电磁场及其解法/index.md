@@ -151,6 +151,40 @@ $$\rho_s = -\varepsilon_0\frac{\partial\Phi}{\partial z}\bigg|_{z=0} = -\frac{qd
 1. 所有镜像电荷必须位于所求场域以外的空间中
 2. 镜像电荷的个数、位置及电荷量以满足场域边界面上的边界条件来确定
 
+电偶极子远区辐射场为 $E_\theta = \frac{Idl}{2\lambda}\eta_0\sin\theta$（将在第 8 章详细推导）。
+
+## 历年真题精选
+
+### 真题 3.1（来源：2021秋季A卷）
+**题目：** 真空中有一半径为 $a$ 的圆盘，均匀带电，面电荷密度为 $\rho_s$。圆盘位于 $xy$ 平面，圆心在原点。求其轴线上距圆心 $z$ 处的电场强度。
+
+**解：**
+
+在圆盘上取半径为 $r$、宽度为 $dr$ 的圆环，其电荷量为 $dq = \rho_s \cdot 2\pi r\, dr$。
+
+由对称性，轴线上 $z$ 处的电场仅有 $z$ 分量。圆环上电荷元 $dq$ 在 $z$ 处产生的电场 $z$ 分量为：
+
+$$dE_z = \frac{1}{4\pi\varepsilon_0} \cdot \frac{dq \cdot z}{(r^2 + z^2)^{3/2}} = \frac{\rho_s z}{2\varepsilon_0} \cdot \frac{r\, dr}{(r^2 + z^2)^{3/2}}$$
+
+对 $r$ 从 $0$ 到 $a$ 积分：
+
+$$E_z = \frac{\rho_s z}{2\varepsilon_0} \int_0^a \frac{r\, dr}{(r^2 + z^2)^{3/2}}$$
+
+令 $u = r^2 + z^2$，$du = 2r\, dr$：
+
+$$E_z = \frac{\rho_s z}{4\varepsilon_0} \int_{z^2}^{a^2+z^2} u^{-3/2}\, du = \frac{\rho_s z}{4\varepsilon_0} \left[-2u^{-1/2}\right]_{z^2}^{a^2+z^2}$$
+
+$$E_z = \frac{\rho_s z}{2\varepsilon_0}\left(\frac{1}{z} - \frac{1}{\sqrt{a^2 + z^2}}\right) = \frac{\rho_s}{2\varepsilon_0}\left(1 - \frac{z}{\sqrt{a^2 + z^2}}\right)$$
+
+因此轴线上的电场强度为：
+
+$$\boxed{\mathbf{E} = \frac{\rho_s}{2\varepsilon_0}\left(1 - \frac{z}{\sqrt{a^2 + z^2}}\right)\hat{\mathbf{z}}}$$
+
+**讨论：**
+
+- 当 $z \to 0$（圆心处）：$E_z \to \rho_s / (2\varepsilon_0)$，为无限大带电平面的电场。
+- 当 $z \to \infty$：$E_z \approx \frac{\rho_s}{2\varepsilon_0} \cdot \frac{a^2}{2z^2} = \frac{\rho_s \pi a^2}{4\pi\varepsilon_0 z^2} = \frac{Q}{4\pi\varepsilon_0 z^2}$，退化为点电荷电场。
+
 ---
 
 [← 上一章: 第2章 电磁场基本规律](../02-电磁场基本规律/index.md)

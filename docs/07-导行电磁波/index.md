@@ -213,6 +213,72 @@ $$\lambda = \frac{c}{f} = \frac{3\times10^8}{4\times10^9} = 0.075 \;\text{m}$$
 
 **结论：** 填充介质后截止频率降低，原来被截止的 $4\,\text{GHz}$ 波也可以传输。
 
+## 历年真题精选
+
+### 真题 7.1（来源：2024秋季A卷）
+**题目：** 一根无损耗传输线的特性阻抗 $Z_0 = 50\;\Omega$，长度 $l = 2$ m，工作频率 $f = 200$ MHz，终端负载阻抗 $Z_L = 40 + j30\;\Omega$。设传输线中波的相速度等于光速 $c$，求该传输线的输入阻抗。
+
+**解：**
+
+**相移常数：**
+
+$$\beta = \frac{\omega}{c} = \frac{2\pi \times 200\times10^6}{3\times10^8} = \frac{4\pi}{3} \;\text{rad/m}$$
+
+$$\beta l = \frac{4\pi}{3} \times 2 = \frac{8\pi}{3} = 2\pi + \frac{2\pi}{3}$$
+
+$$\tan(\beta l) = \tan\frac{2\pi}{3} = -\sqrt{3}$$
+
+**输入阻抗公式：**
+
+$$Z_{\text{in}} = Z_0\,\frac{Z_L + jZ_0\tan(\beta l)}{Z_0 + jZ_L\tan(\beta l)}$$
+
+**分子：**
+
+$$Z_L + jZ_0\tan(\beta l) = (40 + j30) + j\times 50\times(-\sqrt{3}) = 40 + j(30 - 50\sqrt{3}) = 40 - j56.6$$
+
+**分母：**
+
+$$Z_0 + jZ_L\tan(\beta l) = 50 + j(40+j30)(-\sqrt{3}) = 50 + 30\sqrt{3} - j40\sqrt{3} = 101.96 - j69.28$$
+
+**输入阻抗：**
+
+$$Z_{\text{in}} = 50\times\frac{40 - j56.6}{101.96 - j69.28} \approx 26.3 - j9.9 \;\Omega$$
+
+### 真题 7.2（来源：2024秋季A卷）
+**题目：** 矩形波导尺寸 $a = 22.86$ mm，$b = 10.16$ mm，工作频率 $f = 6$ GHz。
+
+(1) 波导内填充空气时，$\mathrm{TE}_{10}$ 模能否传输？
+
+(2) 若波导内填充 $\varepsilon_r = 2$、$\mu_r = 2$ 的介质，$\mathrm{TE}_{10}$ 模能否传输？
+
+**解：**
+
+$\mathrm{TE}_{10}$ 模的截止波长和截止频率为：
+
+$$\lambda_c = 2a = 2 \times 22.86 = 45.72 \;\text{mm} = 4.572 \;\text{cm}$$
+
+$$f_c = \frac{c}{2a} = \frac{3\times10^8}{2\times 0.02286} \approx 6.56 \;\text{GHz}$$
+
+**(1) 空气填充：**
+
+工作波长 $\lambda_0 = c/f = 3\times10^8 / (6\times10^9) = 5$ cm。
+
+由于 $\lambda_0 = 5\;\text{cm} > \lambda_c = 4.572\;\text{cm}$（即 $f = 6\;\text{GHz} < f_c = 6.56\;\text{GHz}$），$\mathrm{TE}_{10}$ 模**不能传输**。
+
+**(2) 填充 $\varepsilon_r = \mu_r = 2$ 介质：**
+
+介质中的截止频率降低为：
+
+$$f_c' = \frac{c}{2a\sqrt{\varepsilon_r\mu_r}} = \frac{6.56}{\sqrt{4}} = 3.28 \;\text{GHz}$$
+
+介质中的工作波长为：
+
+$$\lambda = \frac{c}{f\sqrt{\varepsilon_r\mu_r}} = \frac{3\times10^8}{6\times10^9 \times 2} = 2.5 \;\text{cm}$$
+
+由于 $\lambda = 2.5\;\text{cm} < \lambda_c = 4.572\;\text{cm}$（即 $f = 6\;\text{GHz} > f_c' = 3.28\;\text{GHz}$），$\mathrm{TE}_{10}$ 模**可以传输**。
+
+**结论：** 填充介质后截止频率降低，原本截止的频率变为可传输。这是通过介质加载扩展波导工作频带的常用方法。
+
 ---
 
 [← 上一章: 第6章 均匀平面波的反射与透射](../06-均匀平面波的反射与透射/index.md)
