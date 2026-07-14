@@ -232,6 +232,77 @@ $$\nabla \times \mathbf{E} = -j\omega\mu\mathbf{H},\quad \nabla \times \mathbf{H
 
 数学表述：$\int_{V_2} \mathbf{J}_2 \cdot \mathbf{E}_1\mathrm{d}V = \int_{V_1} \mathbf{J}_1 \cdot \mathbf{E}_2\mathrm{d}V$
 
+!!! warning "真题"
+
+    **真题 4.3（来源：2021秋季A卷 二、1）**
+    **题目：** 写出麦克斯韦方程组的时域微分形式，并写出无源区域的频域波动方程。
+
+    **解：**
+
+    麦克斯韦方程组的时域微分形式：
+
+    $$\nabla\times\mathbf{E} = -\frac{\partial\mathbf{B}}{\partial t}$$
+
+    $$\nabla\times\mathbf{H} = \mathbf{J} + \frac{\partial\mathbf{D}}{\partial t}$$
+
+    $$\nabla\cdot\mathbf{D} = \rho$$
+
+    $$\nabla\cdot\mathbf{B} = 0$$
+
+    无源区域（$\mathbf{J}=0,\;\rho=0$）的频域波动方程：
+
+    $$\nabla^2\mathbf{E} + k^2\mathbf{E} = 0$$
+
+    $$\nabla^2\mathbf{H} + k^2\mathbf{H} = 0$$
+
+    其中 $k = \omega\sqrt{\mu\varepsilon}$。
+
+!!! warning "真题"
+
+    **真题 4.4（来源：2024秋季B卷 一、1）**
+    **题目：** 写出微分形式的时谐场 Maxwell 方程组。
+
+    **答案：**
+
+    $$\nabla\times\dot{\mathbf{E}} = -j\omega\mu\dot{\mathbf{H}}$$
+
+    $$\nabla\times\dot{\mathbf{H}} = \mathbf{J} + j\omega\varepsilon\dot{\mathbf{E}}$$
+
+    $$\nabla\cdot\mathbf{D} = \rho$$
+
+    $$\nabla\cdot\mathbf{B} = 0$$
+
+!!! warning "真题"
+
+    **真题 4.5（来源：2022秋季B卷 一、2）**
+    **题目：** 角频率为 $\omega$ 的时谐电磁场，空间某点处电场强度的复振幅为 $\dot{\mathbf{E}}(\mathbf{r})$、瞬时值为 $\mathbf{E}(\mathbf{r},t)$，磁场强度的复振幅为 $\dot{\mathbf{H}}(\mathbf{r})$、瞬时值为 $\mathbf{H}(\mathbf{r},t)$，则复坡印廷矢量 $\mathbf{S}(\mathbf{r})=$ \_\_\_，平均坡印廷矢量 $\mathbf{S}_{\mathrm{av}}(\mathbf{r})$ 与复坡印廷矢量 $\mathbf{S}(\mathbf{r})$ 的关系是\_\_\_。
+
+    **答案：**
+
+    $$\mathbf{S}(\mathbf{r}) = \dot{\mathbf{E}}(\mathbf{r}) \times \dot{\mathbf{H}}^*(\mathbf{r})$$
+
+    $$\mathbf{S}_{\mathrm{av}}(\mathbf{r}) = \frac{1}{2}\operatorname{Re}\!\left[\mathbf{S}(\mathbf{r})\right]$$
+
+!!! warning "真题"
+
+    **真题 4.6（来源：2023秋季A卷 一、1）**
+    **题目：** 电位移矢量随时间的变化率为\_\_\_，它被称为位移电流密度。微分形式的麦克斯韦方程组中含该位移电流密度的公式为\_\_\_。
+
+    **答案：**
+
+    $$\frac{\partial\mathbf{D}}{\partial t}$$
+
+    $$\nabla\times\mathbf{H} = \mathbf{J} + \frac{\partial\mathbf{D}}{\partial t}$$
+
+!!! warning "真题"
+
+    **真题 4.7（来源：2023春季A卷 一、10）**
+    **题目：** 麦克斯韦针对安培环路定理直接应用到时变电磁场时出现的矛盾，提出了位移电流的假说。若真空中的介电常数为 $\varepsilon_0$，电场强度为 $\mathbf{E} = \hat{\mathbf{x}}\,E_0\sin(2\pi f t)\;\text{(V/m)}$，则其位移电流密度为？
+
+    **答案：**
+
+    $$\mathbf{J}_d = \varepsilon_0\frac{\partial\mathbf{E}}{\partial t} = \hat{\mathbf{x}}\,2\pi f\varepsilon_0 E_0\cos(2\pi f t)\;\text{(A/m}^2\text{)}$$
+
 ---
 
 [← 上一章: 第3章 静态电磁场及其解法](../03-静态电磁场及其解法/index.md)
