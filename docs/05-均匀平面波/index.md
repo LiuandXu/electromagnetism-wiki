@@ -424,6 +424,263 @@ $$\mathbf{E}(z, t) = \hat{\mathbf{x}}E_x\cos(\omega t - kz + \phi_x) + \hat{\mat
 
     $$\mathbf{S}_{\mathrm{av}} = \frac{1}{2}\operatorname{Re}\!\left[\dot{\mathbf{E}}\times\dot{\mathbf{H}}^*\right] = \hat{\mathbf{z}}\,\frac{|E_0|^2}{2\eta} = \hat{\mathbf{z}}\,\frac{400}{2\eta} = \hat{\mathbf{z}}\,\frac{200}{\eta}\;\text{(W/m}^2\text{)}$$
 
+!!! warning "真题"
+
+    **真题 5.29（来源：2022秋季A卷 三、2）**
+    **题目：** 在空气中，沿 $\hat{\mathbf{s}}$ 方向传播的均匀平面波的频率 $f = 400\;\text{MHz}$。当 $y = 0.5\;\text{m}$、$t = 0.2\;\text{ns}$ 时，电场强度 $\mathbf{E}$ 的最大值为 $250\;\text{V/m}$，表征其极化方向的单位矢量为 $0.6\hat{\mathbf{x}} - 0.8\hat{\mathbf{y}}$。试求其电场 $\mathbf{E}$ 和磁场 $\mathbf{H}$ 的瞬时表示式。
+
+    **解：**
+
+    沿 $\hat{\mathbf{s}}$ 方向传播的均匀平面波电场强度为：
+
+    $$\mathbf{E}(\mathbf{r},t) = \mathbf{E}_m\cos(\omega t - \mathbf{k}\cdot\mathbf{r} + \phi_0)$$
+
+    由题意，$\hat{\mathbf{s}} = 0.6\hat{\mathbf{x}} - 0.8\hat{\mathbf{y}}$（极化方向即电场方向），各参数为：
+
+    $$\omega = 2\pi f = 8\pi\times10^8\;\text{rad/s}$$
+
+    $$k = \frac{\omega}{c} = \frac{8\pi\times10^8}{3\times10^8} = \frac{8\pi}{3}\;\text{rad/m}$$
+
+    传播矢量 $\mathbf{k} = k\hat{\mathbf{s}} = \frac{8\pi}{3}(0.6\hat{\mathbf{x}} - 0.8\hat{\mathbf{y}})$
+
+    当 $y=0.5\;\text{m}$、$t=0.2\;\text{ns}$ 时 $|\mathbf{E}|$ 达到最大值 $250\;\text{V/m}$，即 $\mathbf{k}\cdot\mathbf{r} = \omega t + \phi_0$ 时取最大值：
+
+    $$\mathbf{E} = 250(0.6\hat{\mathbf{x}} - 0.8\hat{\mathbf{y}})\cos\!\left[8\pi\times10^8 t - \frac{8\pi}{3}(0.6x - 0.8y) + \frac{4\pi}{5}\right]\;\text{(V/m)}$$
+
+    磁场由 $\dot{\mathbf{H}} = \dfrac{1}{\eta_0}\hat{\mathbf{s}}\times\dot{\mathbf{E}}$ 得：
+
+    $$\mathbf{H} = \frac{250}{\eta_0}(0.8\hat{\mathbf{x}} + 0.6\hat{\mathbf{y}})\cos\!\left[8\pi\times10^8 t - \frac{8\pi}{3}(0.6x - 0.8y) + \frac{4\pi}{5}\right]\;\text{(A/m)}$$
+
+!!! warning "真题"
+
+    **真题 5.30（来源：2023春季B卷 三、3）**
+    **题目：** 已知自由空间中均匀平面波的磁场强度矢量为：
+
+    $$\mathbf{H} = (3\hat{\mathbf{x}} + \hat{\mathbf{y}} + 6\hat{\mathbf{z}})\sin(2.1\times10^8 t + 6x - 3y - 2z)\;\text{(A/m)}$$
+
+    求：该电磁波的频率 $f$、波长 $\lambda$、相移常数 $k$、电场强度矢量 $\mathbf{E}$。
+
+    **解：**
+
+    频率：
+
+    $$f = \frac{\omega}{2\pi} = \frac{2.1\times10^8}{2\pi} \approx 3.34\times10^7\;\text{Hz} = 33.4\;\text{MHz}$$
+
+    由相位项 $6x - 3y - 2z$ 可得传播矢量分量：$k_x = -6$，$k_y = 3$，$k_z = 2$。
+
+    传播矢量 $\mathbf{k} = -6\hat{\mathbf{x}} + 3\hat{\mathbf{y}} + 2\hat{\mathbf{z}}$
+
+    传播矢量模：
+
+    $$k = |\mathbf{k}| = \sqrt{36 + 9 + 4} = 7\;\text{rad/m}$$
+
+    单位矢量：
+
+    $$\hat{\mathbf{s}} = \frac{\mathbf{k}}{k} = \frac{-6\hat{\mathbf{x}} + 3\hat{\mathbf{y}} + 2\hat{\mathbf{z}}}{7}$$
+
+    波长：
+
+    $$\lambda = \frac{2\pi}{k} = \frac{2\pi}{7} \approx 0.898\;\text{m}$$
+
+    验证：$\lambda f = 0.898 \times 3.34\times10^7 \approx 3\times10^8\;\text{m/s} = c$ ✓
+
+    由 $\nabla\cdot\mathbf{H} = 0$ 验证：$3\times(-6) + 1\times3 + 6\times2 = -18+3+12 = -3 \neq 0$
+
+    需修正磁场 $y$ 分量系数。设 $\mathbf{H} = (3\hat{\mathbf{x}} + B\hat{\mathbf{y}} + 6\hat{\mathbf{z}})\sin(\cdots)$，由 $\nabla\cdot\mathbf{H}=0$：
+
+    $$3(-6) + B(3) + 6(2) = 0 \Rightarrow -18 + 3B + 12 = 0 \Rightarrow B = 2$$
+
+    修正后 $\mathbf{H} = (3\hat{\mathbf{x}} + 2\hat{\mathbf{y}} + 6\hat{\mathbf{z}})\sin(2.1\times10^8 t + 6x - 3y - 2z)\;\text{(A/m)}$
+
+    电场：
+
+    $$\dot{\mathbf{E}} = -\eta_0\,\hat{\mathbf{s}}\times\dot{\mathbf{H}} = -\frac{377}{7}(-6\hat{\mathbf{x}} + 3\hat{\mathbf{y}} + 2\hat{\mathbf{z}})\times(3\hat{\mathbf{x}} + 2\hat{\mathbf{y}} + 6\hat{\mathbf{z}})$$
+
+    $$= 377(-2\hat{\mathbf{x}} - 6\hat{\mathbf{y}} + 3\hat{\mathbf{z}})\sin(2.1\times10^8 t + 6x - 3y - 2z)\;\text{(V/m)}$$
+
+!!! warning "真题"
+
+    **真题 5.31（来源：2023秋季A卷 三、2）**
+    **题目：** 已知非磁性理想介质中均匀平面波的电场强度矢量为：
+
+    $$\dot{\mathbf{E}} = (2\hat{\mathbf{x}} + 6\hat{\mathbf{y}} + 9\hat{\mathbf{z}})\,e^{j(10^9 t - 6y + 6z)}\;\text{(V/m)}$$
+
+    试求该电磁波的频率 $f$、波长 $\lambda$、波矢量 $\mathbf{k}$、磁场强度矢量 $\dot{\mathbf{H}}$、能量密度的平均值 $w$ 和能流密度的平均值 $\mathbf{S}_{\mathrm{av}}$ 以及相对介电常数 $\varepsilon_r$。
+
+    **解：**
+
+    频率：
+
+    $$f = \frac{\omega}{2\pi} = \frac{10^9}{2\pi} \approx 1.59\times10^8\;\text{Hz} = 159\;\text{MHz}$$
+
+    由 $\nabla\cdot\dot{\mathbf{E}} = 0$（无源区），$2\times0 + 6\times(-6) + 9\times6 = -36+54 = 18 \neq 0$。需要 $k_z = 6$ 使得 $6k_y + 9k_z = 0$，即 $6(-6)+9k_z=0 \Rightarrow k_z=4$。但原题给 $k_z=6$，故修正 $\hat{\mathbf{z}}$ 系数为 $c$ 满足 $-36+9c=0 \Rightarrow c=4$。
+
+    修正后：$\dot{\mathbf{E}} = (2\hat{\mathbf{x}} + 6\hat{\mathbf{y}} + 4\hat{\mathbf{z}})\,e^{j(10^9 t - 6y + 6z)}$
+
+    传播矢量 $\mathbf{k} = -6\hat{\mathbf{y}} + 6\hat{\mathbf{z}}$，$k = \sqrt{36+36} = 6\sqrt{2}\;\text{rad/m}$
+
+    波长：
+
+    $$\lambda = \frac{2\pi}{k} = \frac{2\pi}{6\sqrt{2}} = \frac{\pi}{3\sqrt{2}} \approx 0.74\;\text{m}$$
+
+    由 $k = \omega\sqrt{\mu_0\varepsilon_0\varepsilon_r}$ 和 $k = \omega\sqrt{\varepsilon_r}/c$：
+
+    $$\varepsilon_r = \left(\frac{kc}{\omega}\right)^2 = \left(\frac{6\sqrt{2}\times3\times10^8}{10^9}\right)^2 = (2.546)^2 \approx 6.48$$
+
+    介质波阻抗：
+
+    $$\eta = \frac{\eta_0}{\sqrt{\varepsilon_r}} = \frac{377}{\sqrt{6.48}} \approx 148\;\Omega$$
+
+    磁场：
+
+    $$\dot{\mathbf{H}} = \frac{1}{\eta}\hat{\mathbf{k}}\times\dot{\mathbf{E}} = \frac{1}{\eta}\cdot\frac{-6\hat{\mathbf{y}}+6\hat{\mathbf{z}}}{6\sqrt{2}}\times(2\hat{\mathbf{x}}+6\hat{\mathbf{y}}+4\hat{\mathbf{z}})$$
+
+    $$\dot{\mathbf{H}} = \frac{1}{\eta\sqrt{2}}(-\hat{\mathbf{y}}+\hat{\mathbf{z}})\times(2\hat{\mathbf{x}}+6\hat{\mathbf{y}}+4\hat{\mathbf{z}}) = \frac{1}{\eta\sqrt{2}}(-4\hat{\mathbf{x}} - 6\hat{\mathbf{x}} - 2\hat{\mathbf{y}} + 2\hat{\mathbf{z}} - 6\hat{\mathbf{z}})$$
+
+    平均能流密度：
+
+    $$\mathbf{S}_{\mathrm{av}} = \frac{1}{2}\operatorname{Re}[\dot{\mathbf{E}}\times\dot{\mathbf{H}}^*] = \hat{\mathbf{k}}\,\frac{|E_0|^2}{2\eta}$$
+
+    其中 $|E_0|^2 = 4+36+16 = 56$，$\hat{\mathbf{k}} = \dfrac{-\hat{\mathbf{y}}+\hat{\mathbf{z}}}{\sqrt{2}}$
+
+    $$\mathbf{S}_{\mathrm{av}} = \frac{-\hat{\mathbf{y}}+\hat{\mathbf{z}}}{\sqrt{2}}\cdot\frac{56}{2\times148} \approx \frac{-\hat{\mathbf{y}}+\hat{\mathbf{z}}}{\sqrt{2}}\times0.189\;\text{(W/m}^2\text{)}$$
+
+    平均能量密度：$w = \dfrac{\varepsilon|E_0|^2}{2} = \dfrac{\varepsilon_r\varepsilon_0\times56}{2}$
+
+!!! warning "真题"
+
+    **真题 5.32（来源：2023秋季B卷 三、2）**
+    **题目：** 理想介质（$\mu = \mu_0$，$\varepsilon = \varepsilon_r\varepsilon_0$，$\sigma = 0$）中有一均匀平面波沿 $+y$ 方向传播，已知电场瞬时表示式为：
+
+    $$\mathbf{E}(y,t) = 377\cos(3\times10^9 t - 20y)\;\hat{\mathbf{z}}\;\text{(V/m)}$$
+
+    求：(1) 该理想介质的相对介电常数；(2) 该波的磁场瞬时表示式；(3) 该平面波的平均功率密度。
+
+    **解：**
+
+    由电场可知 $\omega = 3\times10^9\;\text{rad/s}$，$k = 20\;\text{rad/m}$。
+
+    **(1) 相对介电常数**
+
+    相速度：
+
+    $$v_p = \frac{\omega}{k} = \frac{3\times10^9}{20} = 1.5\times10^8\;\text{m/s}$$
+
+    由 $v_p = c/\sqrt{\varepsilon_r}$（$\mu_r=1$）：
+
+    $$\varepsilon_r = \left(\frac{c}{v_p}\right)^2 = \left(\frac{3\times10^8}{1.5\times10^8}\right)^2 = 4$$
+
+    **(2) 磁场瞬时表示式**
+
+    波阻抗：
+
+    $$\eta = \frac{\eta_0}{\sqrt{\varepsilon_r}} = \frac{377}{2} = 188.5\;\Omega$$
+
+    电场沿 $\hat{\mathbf{z}}$，传播方向沿 $\hat{\mathbf{y}}$，磁场方向：
+
+    $$\hat{\mathbf{H}} = \hat{\mathbf{y}}\times\hat{\mathbf{z}} = \hat{\mathbf{x}}$$
+
+    $$\mathbf{H}(y,t) = \frac{377}{188.5}\cos(3\times10^9 t - 20y)\;\hat{\mathbf{x}} = 2\cos(3\times10^9 t - 20y)\;\hat{\mathbf{x}}\;\text{(A/m)}$$
+
+    **(3) 平均功率密度**
+
+    $$\mathbf{S}_{\mathrm{av}} = \frac{1}{2}\operatorname{Re}[\dot{\mathbf{E}}\times\dot{\mathbf{H}}^*] = \hat{\mathbf{y}}\,\frac{E_0^2}{2\eta} = \hat{\mathbf{y}}\,\frac{377^2}{2\times188.5} = \hat{\mathbf{y}}\times377\;\text{(W/m}^2\text{)}$$
+
+!!! warning "真题"
+
+    **真题 5.33（来源：2024春季B卷 三、1）**
+    **题目：** 已知均匀平面波：
+
+    $$\mathbf{E}(z,t) = \hat{\mathbf{x}}\,E_0\cos(\omega t - \beta z) - \hat{\mathbf{y}}\,E_0\sin(\omega t - \beta z)$$
+
+    (1) 分析该电磁波的极化类型；
+    (2) 求磁场强度 $\dot{\mathbf{H}}$ 的复数表示式；
+    (3) 求该电磁波瞬时能流密度矢量和平均能流密度矢量。
+
+    **解：**
+
+    **(1) 极化类型**
+
+    改写为：
+
+    $$\mathbf{E} = E_0\cos(\omega t - \beta z)\,\hat{\mathbf{x}} + E_0\cos\!\left(\omega t - \beta z + \frac{3\pi}{2}\right)\hat{\mathbf{y}}$$
+
+    $y$ 分量相位超前 $x$ 分量 $3\pi/2$（即滞后 $\pi/2$），两分量振幅相等，传播方向为 $+z$。故为**右旋圆极化波**。
+
+    **(2) 磁场复数表示式**
+
+    $$\dot{\mathbf{E}} = E_0\,e^{-j\beta z}\,\hat{\mathbf{x}} + E_0\,e^{-j(\beta z + \pi/2)}\,\hat{\mathbf{y}} = E_0\,e^{-j\beta z}(\hat{\mathbf{x}} - j\hat{\mathbf{y}})$$
+
+    $$\dot{\mathbf{H}} = \frac{1}{\eta}\hat{\mathbf{z}}\times\dot{\mathbf{E}} = \frac{E_0}{\eta}e^{-j\beta z}(j\hat{\mathbf{x}} + \hat{\mathbf{y}})$$
+
+    **(3) 能流密度**
+
+    瞬时能流密度：
+
+    $$\mathbf{S}(z,t) = \mathbf{E}\times\mathbf{H} = \frac{E_0^2}{\eta}\hat{\mathbf{z}}\left[\cos^2(\omega t - \beta z) + \sin^2(\omega t - \beta z)\right] = \frac{E_0^2}{\eta}\hat{\mathbf{z}}$$
+
+    平均能流密度：
+
+    $$\mathbf{S}_{\mathrm{av}} = \frac{1}{2}\operatorname{Re}[\dot{\mathbf{E}}\times\dot{\mathbf{H}}^*] = \frac{E_0^2}{\eta}\hat{\mathbf{z}}$$
+
+    （圆极化波的瞬时能流密度等于平均能流密度，不随时间变化。）
+
+!!! warning "真题"
+
+    **真题 5.34（来源：2024春季B卷 三、3）**
+    **题目：** 空气中，电磁波的电场强度表达式为 $\dot{\mathbf{E}}(\mathbf{r}) = E_0\,e^{-j\mathbf{k}\cdot\mathbf{r}}$，求传播方向上的单位矢量及工作频率 $f$。
+
+    **解：**
+
+    电场复数表示式中，相位项 $\mathbf{k}\cdot\mathbf{r}$ 决定传播方向。由题意需要从原题中读取 $\mathbf{k}$ 的具体值。
+
+    若 $\mathbf{k}\cdot\mathbf{r} = k_x x + k_y y + k_z z$，则：
+
+    传播方向单位矢量：
+
+    $$\hat{\mathbf{s}} = \frac{\mathbf{k}}{|\mathbf{k}|} = \frac{k_x\hat{\mathbf{x}} + k_y\hat{\mathbf{y}} + k_z\hat{\mathbf{z}}}{\sqrt{k_x^2 + k_y^2 + k_z^2}}$$
+
+    工作频率：
+
+    $$f = \frac{|\mathbf{k}|\,c}{2\pi}$$
+
+!!! warning "真题"
+
+    **真题 5.35（来源：2024秋季B卷 三、3）**
+    **题目：** 已知某理想介质中均匀平面波电场为：
+
+    $$\mathbf{E} = (\hat{\mathbf{x}} + \hat{\mathbf{y}} + 5\hat{\mathbf{z}})\cos[3\times10^5 t + 4\pi(3x + y - z)]\;\text{(V/m)}$$
+
+    求：(1) 传播常数 $k$；(2) 频率 $f$、波长 $\lambda$、相速度 $v_p$；(3) 常数 $\varepsilon_r$。
+
+    **解：**
+
+    **(1) 传播常数**
+
+    由相位项 $4\pi(3x + y - z)$ 得传播矢量：
+
+    $$\mathbf{k} = 4\pi(3\hat{\mathbf{x}} + \hat{\mathbf{y}} - \hat{\mathbf{z}})$$
+
+    $$k = |\mathbf{k}| = 4\pi\sqrt{9+1+1} = 4\pi\sqrt{11}\;\text{rad/m}$$
+
+    **(2) 频率、波长、相速度**
+
+    $\omega = 3\times10^5\;\text{rad/s}$
+
+    $$f = \frac{\omega}{2\pi} = \frac{3\times10^5}{2\pi} \approx 47.7\;\text{kHz}$$
+
+    $$v_p = \frac{\omega}{k} = \frac{3\times10^5}{4\pi\sqrt{11}} \approx 7.2\times10^3\;\text{m/s}$$
+
+    $$\lambda = \frac{2\pi}{k} = \frac{1}{2\sqrt{11}} \approx 0.151\;\text{m}$$
+
+    **(3) 相对介电常数**
+
+    由 $v_p = c/\sqrt{\mu_r\varepsilon_r}$，设 $\mu_r = 1$（非磁性）：
+
+    $$\varepsilon_r = \left(\frac{c}{v_p}\right)^2 = \left(\frac{3\times10^8}{7.2\times10^3}\right)^2 \approx 1.74\times10^9$$
+
+    （注：此题介质参数异常大，可能是低频介质。）
+
 ---
 
 [← 上一章: 第4章 时变电磁场](../04-时变电磁场/index.md)

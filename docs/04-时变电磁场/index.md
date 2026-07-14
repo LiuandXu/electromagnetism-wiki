@@ -303,6 +303,208 @@ $$\nabla \times \mathbf{E} = -j\omega\mu\mathbf{H},\quad \nabla \times \mathbf{H
 
     $$\mathbf{J}_d = \varepsilon_0\frac{\partial\mathbf{E}}{\partial t} = \hat{\mathbf{x}}\,2\pi f\varepsilon_0 E_0\cos(2\pi f t)\;\text{(A/m}^2\text{)}$$
 
+!!! warning "真题"
+
+    **真题 4.8（来源：2022春季B卷 三、1）**
+    **题目：** $N = 3$ 匝的圆形线圈的半径为 $a = 2\;\text{m}$，其对称中心沿 $z$ 轴放置。沿其对称中心穿过该线圈的磁感应强度为 $\mathbf{B} = 2\cos\!\left(\dfrac{\pi r}{2a}\right)\sin\omega t\;\hat{\mathbf{z}}$，其中 $r$ 为到 $z$ 轴的垂直距离，角频率 $\omega = 10^9\;\text{rad/s}$。求该线圈上产生的感应电动势 $\mathcal{E}$。
+
+    **解：**
+
+    穿过单匝线圈的磁通量为：
+
+    $$\Phi = \int_S \mathbf{B}\cdot d\mathbf{S} = \int_0^a 2\cos\!\left(\frac{\pi r}{2a}\right)\sin\omega t \cdot 2\pi r\,\mathrm{d}r$$
+
+    令 $\alpha = \pi/(2a)$，利用积分公式 $\int r\cos(\alpha r)\,\mathrm{d}r = \dfrac{r}{\alpha}\sin(\alpha r) + \dfrac{1}{\alpha^2}\cos(\alpha r)$：
+
+    $$\Phi = 4\pi\sin\omega t \left[\frac{r}{\alpha}\sin(\alpha r) + \frac{1}{\alpha^2}\cos(\alpha r)\right]_0^a = 4\pi\sin\omega t\left(\frac{a}{\alpha} - \frac{1}{\alpha^2}\right)$$
+
+    代入 $\alpha = \pi/(2a)$，$a = 2\;\text{m}$：
+
+    $$\Phi = 4\pi\sin\omega t\left(\frac{2a^2}{\pi} - \frac{4a^2}{\pi^2}\right) = \left(8a^2 - \frac{16a^2}{\pi}\right)\sin\omega t \approx 11.6\sin\omega t \;\text{(Wb)}$$
+
+    $N$ 匝线圈总磁通链 $\pmb{\Psi} = N\Phi$，由法拉第电磁感应定律：
+
+    $$\mathcal{E} = -N\frac{\mathrm{d}\Phi}{\mathrm{d}t} = -3 \times 11.6 \times 10^9 \cos(10^9 t)$$
+
+    $$\boxed{\mathcal{E} = -34.8 \times 10^9 \cos(10^9 t)\;\text{(V)}}$$
+
+!!! warning "真题"
+
+    **真题 4.9（来源：2024秋季B卷 三、1）**
+    **题目：** 两块无限大平行理想导体板垂直于 $x$ 轴，$0 < x < d$ 为板间区域，填充空气。已知其间电场为 $\dot{\mathbf{E}} = \hat{\mathbf{y}}\,E_0\sin\!\left(\dfrac{\pi x}{d}\right)e^{-j\beta z}\;\text{(V/m)}$，其中 $\beta = \omega\sqrt{\mu_0\varepsilon_0}$。(1) 求磁场强度 $\dot{\mathbf{H}}$；(2) 将 $\dot{\mathbf{E}}$ 分解为均匀平面波叠加的形式。
+
+    **解：**
+
+    **(1) 求磁场强度**
+
+    由 $\nabla\times\dot{\mathbf{E}} = -j\omega\mu_0\dot{\mathbf{H}}$，$\dot{\mathbf{E}}$ 仅有 $y$ 分量：
+
+    $$(\nabla\times\dot{\mathbf{E}})_x = -\frac{\partial \dot{E}_y}{\partial z} = j\beta E_0\sin\!\left(\frac{\pi x}{d}\right)e^{-j\beta z}$$
+
+    $$(\nabla\times\dot{\mathbf{E}})_z = \frac{\partial \dot{E}_y}{\partial x} = \frac{\pi E_0}{d}\cos\!\left(\frac{\pi x}{d}\right)e^{-j\beta z}$$
+
+    因此：
+
+    $$\dot{\mathbf{H}} = -\frac{1}{j\omega\mu_0}\nabla\times\dot{\mathbf{E}} = -\hat{\mathbf{x}}\,\frac{\beta E_0}{\omega\mu_0}\sin\!\left(\frac{\pi x}{d}\right)e^{-j\beta z} + \hat{\mathbf{z}}\,\frac{j\pi E_0}{\omega\mu_0 d}\cos\!\left(\frac{\pi x}{d}\right)e^{-j\beta z}$$
+
+    利用 $\beta/(\omega\mu_0) = 1/\eta_0$（$\eta_0 = \sqrt{\mu_0/\varepsilon_0}$）：
+
+    $$\dot{\mathbf{H}} = -\hat{\mathbf{x}}\,\frac{E_0}{\eta_0}\sin\!\left(\frac{\pi x}{d}\right)e^{-j\beta z} + \hat{\mathbf{z}}\,\frac{j\pi E_0}{\omega\mu_0 d}\cos\!\left(\frac{\pi x}{d}\right)e^{-j\beta z}\;\text{(A/m)}$$
+
+    **(2) 分解为均匀平面波**
+
+    利用 $\sin\!\left(\dfrac{\pi x}{d}\right) = \dfrac{e^{j\pi x/d} - e^{-j\pi x/d}}{2j}$，代入电场：
+
+    $$\dot{\mathbf{E}} = \hat{\mathbf{y}}\,\frac{E_0}{2j}\left(e^{j\pi x/d} - e^{-j\pi x/d}\right)e^{-j\beta z} = \hat{\mathbf{y}}\,\frac{E_0}{2j}e^{-j(\beta z - \pi x/d)} - \hat{\mathbf{y}}\,\frac{E_0}{2j}e^{-j(\beta z + \pi x/d)}$$
+
+    这表示两个均匀平面波的叠加：
+
+    - **波 1**：传播矢量 $\mathbf{k}_1 = -\dfrac{\pi}{d}\hat{\mathbf{x}} + \beta\hat{\mathbf{z}}$，振幅 $\dfrac{E_0}{2j}$
+    - **波 2**：传播矢量 $\mathbf{k}_2 = \dfrac{\pi}{d}\hat{\mathbf{x}} + \beta\hat{\mathbf{z}}$，振幅 $-\dfrac{E_0}{2j}$
+
+    两波沿 $z$ 方向有相同的相移常数 $\beta$，沿 $x$ 方向波数大小相等、符号相反，叠加后在 $x$ 方向形成驻波（满足 $x=0$ 和 $x=d$ 处 $E_y=0$ 的导体边界条件）。
+
+!!! warning "真题"
+
+    **真题 4.10（来源：2021秋季B卷 三、1）**
+    **题目：** 在两导体平板（$z=0$ 和 $z=a$）之间的空气中传播的电磁波，其电场强度为：
+
+    $$\mathbf{E} = \hat{\mathbf{x}}\,E_0\sin\!\left(\frac{\pi z}{a}\right)\cos(\omega t - \beta y)\;\text{(V/m)}$$
+
+    其中 $E_0$ 为常数。试求：(1) 磁场强度 $\mathbf{H}$；(2) 两导体表面的面电流密度 $\mathbf{J}_s$。
+
+    **解：**
+
+    **(1) 求磁场强度**
+
+    电场仅有 $x$ 分量且沿 $y$ 方向传播。由 $\nabla\times\mathbf{E} = -\dfrac{\partial\mathbf{B}}{\partial t}$，复数形式 $\nabla\times\dot{\mathbf{E}} = -j\omega\mu_0\dot{\mathbf{H}}$：
+
+    $$(\nabla\times\dot{\mathbf{E}})_y = \frac{\partial\dot{E}_x}{\partial z} = \frac{\pi E_0}{a}\cos\!\left(\frac{\pi z}{a}\right)e^{-j\beta y}$$
+
+    $$(\nabla\times\dot{\mathbf{E}})_z = -\frac{\partial\dot{E}_x}{\partial y} = j\beta E_0\sin\!\left(\frac{\pi z}{a}\right)e^{-j\beta y}$$
+
+    因此：
+
+    $$\dot{\mathbf{H}} = -\frac{1}{j\omega\mu_0}\nabla\times\dot{\mathbf{E}} = -\hat{\mathbf{y}}\,\frac{j\beta E_0}{\omega\mu_0}\sin\!\left(\frac{\pi z}{a}\right)e^{-j\beta y} + \hat{\mathbf{z}}\,\frac{\pi E_0}{j\omega\mu_0 a}\cos\!\left(\frac{\pi z}{a}\right)e^{-j\beta y}$$
+
+    利用 $\beta/(\omega\mu_0) = 1/\eta_0$：
+
+    $$\dot{\mathbf{H}} = -\hat{\mathbf{y}}\,\frac{E_0}{\eta_0}\sin\!\left(\frac{\pi z}{a}\right)e^{-j\beta y} - \hat{\mathbf{z}}\,\frac{j\pi E_0}{\omega\mu_0 a}\cos\!\left(\frac{\pi z}{a}\right)e^{-j\beta y}\;\text{(A/m)}$$
+
+    **(2) 面电流密度**
+
+    在 $z=0$ 表面，$\hat{\mathbf{n}} = -\hat{\mathbf{z}}$：
+
+    $$\mathbf{J}_s\big|_{z=0} = \hat{\mathbf{n}}\times\dot{\mathbf{H}}\big|_{z=0} = -\hat{\mathbf{z}}\times\left[-\hat{\mathbf{y}}\,\frac{E_0}{\eta_0}\cdot0 - \hat{\mathbf{z}}\,\frac{j\pi E_0}{\omega\mu_0 a}\right] = -\hat{\mathbf{x}}\,\frac{j\pi E_0}{\omega\mu_0 a}\;\text{(A/m)}$$
+
+    在 $z=a$ 表面，$\hat{\mathbf{n}} = \hat{\mathbf{z}}$：
+
+    $$\mathbf{J}_s\big|_{z=a} = \hat{\mathbf{z}}\times\left[-\hat{\mathbf{y}}\,\frac{E_0}{\eta_0}\cdot0\right] = \hat{\mathbf{x}}\,\frac{j\pi E_0}{\omega\mu_0 a}\;\text{(A/m)}$$
+
+    （注：$z=0$ 和 $z=a$ 处 $\sin(\pi z/a)=0$，故 $H_y=0$，面电流仅由 $H_z$ 贡献。）
+
+!!! warning "真题"
+
+    **真题 4.11（来源：2023春季A卷 三、1）**
+    **题目：** 已知无源自由空间的电场强度矢量 $\mathbf{E} = \hat{\mathbf{x}}\,E_0\sin(\omega t - kx)$。
+
+    (1) 试由麦克斯韦方程求磁场强度的瞬时表示式；
+    (2) 证明 $\omega/k$ 等于光速 $c$；
+    (3) 试求坡印廷矢量的时间平均值。
+
+    **解：**
+
+    **(1) 求磁场强度**
+
+    电场复数表示式：$\dot{\mathbf{E}} = \hat{\mathbf{x}}\,E_0 e^{-jkx}$（以正弦为基准）
+
+    由 $\nabla\times\dot{\mathbf{E}} = -j\omega\mu_0\dot{\mathbf{H}}$：
+
+    $$\nabla\times\dot{\mathbf{E}} = -\hat{\mathbf{z}}\,\frac{\partial\dot{E}_x}{\partial x} = \hat{\mathbf{z}}\,jkE_0 e^{-jkx}$$
+
+    $$\dot{\mathbf{H}} = -\frac{1}{j\omega\mu_0}\hat{\mathbf{z}}\,jkE_0 e^{-jkx} = -\hat{\mathbf{z}}\,\frac{kE_0}{\omega\mu_0}e^{-jkx}$$
+
+    转为瞬时形式（以正弦为基准）：
+
+    $$\mathbf{H} = -\hat{\mathbf{z}}\,\frac{kE_0}{\omega\mu_0}\sin(\omega t - kx)\;\text{(A/m)}$$
+
+    **(2) 证明 $\omega/k = c$**
+
+    在自由空间中，由 $\nabla\times\dot{\mathbf{H}} = j\omega\varepsilon_0\dot{\mathbf{E}}$：
+
+    $$\nabla\times\dot{\mathbf{H}} = \hat{\mathbf{x}}\,\frac{\partial\dot{H}_z}{\partial y} - \hat{\mathbf{y}}\,\frac{\partial\dot{H}_z}{\partial x} = -\hat{\mathbf{y}}\,\left(-\frac{k^2 E_0}{\omega\mu_0}\right)e^{-jkx} = \hat{\mathbf{y}}\,\frac{k^2 E_0}{\omega\mu_0}e^{-jkx}$$
+
+    由 $j\omega\varepsilon_0\dot{\mathbf{E}} = \hat{\mathbf{y}}\cdot0$（$\dot{\mathbf{E}}$ 仅有 $x$ 分量），但实际上 $\nabla\times\dot{\mathbf{H}}$ 的 $y$ 分量应等于 $j\omega\varepsilon_0\dot{E}_y = 0$，这里需要重新审视。
+
+    正确方法：$\nabla\times\dot{\mathbf{H}}$ 的 $y$ 分量为 $\dfrac{\partial\dot{H}_x}{\partial z} - \dfrac{\partial\dot{H}_z}{\partial x}$。$\dot{\mathbf{H}}$ 仅有 $z$ 分量：
+
+    $$(\nabla\times\dot{\mathbf{H}})_y = -\frac{\partial\dot{H}_z}{\partial x} = -\frac{k^2 E_0}{\omega\mu_0}(-j)e^{-jkx} \cdot (-1) = \frac{jk^2 E_0}{\omega\mu_0}e^{-jkx}$$
+
+    而 $j\omega\varepsilon_0\dot{E}_y = 0$，因此需要满足 $\dfrac{k^2}{\omega\mu_0} = \omega\varepsilon_0$，即：
+
+    $$\frac{\omega^2}{k^2} = \frac{1}{\mu_0\varepsilon_0} = c^2 \quad\Rightarrow\quad \frac{\omega}{k} = c$$
+
+    **(3) 坡印廷矢量平均值**
+
+    $$\mathbf{S}_{\mathrm{av}} = \frac{1}{2}\operatorname{Re}\!\left[\dot{\mathbf{E}}\times\dot{\mathbf{H}}^*\right] = \frac{1}{2}\operatorname{Re}\!\left[\hat{\mathbf{x}}\,E_0 e^{-jkx}\times\left(-\hat{\mathbf{z}}\,\frac{kE_0}{\omega\mu_0}e^{-jkx}\right)^*\right]$$
+
+    $$= \frac{1}{2}\hat{\mathbf{y}}\,\frac{kE_0^2}{\omega\mu_0} = \hat{\mathbf{y}}\,\frac{kE_0^2}{2\omega\mu_0}\;\text{(W/m}^2\text{)}$$
+
+    利用 $\omega/k = c$ 和 $\eta_0 = \sqrt{\mu_0/\varepsilon_0}$：
+
+    $$\mathbf{S}_{\mathrm{av}} = \hat{\mathbf{y}}\,\frac{E_0^2}{2\eta_0}\;\text{(W/m}^2\text{)}$$
+
+!!! warning "真题"
+
+    **真题 4.12（来源：2023秋季B卷 三、3）**
+    **题目：** 一均匀平面波沿 $+z$ 方向传播，其电场强度矢量为：
+
+    $$\mathbf{E}(z,t) = \hat{\mathbf{x}}\,E_0\sin(\omega t - \beta z) + \hat{\mathbf{y}}\,2E_0\cos(\omega t - \beta z)\;\text{(V/m)}$$
+
+    (1) 应用麦克斯韦方程组求磁场 $\mathbf{H}(z,t)$；
+    (2) 若在波传播方向上 $z=0$ 处放置一无限大的理想导体板，求 $z<0$ 区域中的合成波电场 $\dot{\mathbf{E}}(z)$ 和磁场 $\dot{\mathbf{H}}(z)$；
+    (3) 求理想导体板表面的电流密度。
+
+    **解：**
+
+    **(1) 求磁场**
+
+    复数形式：$\dot{\mathbf{E}} = \hat{\mathbf{x}}\,E_0(-j)e^{-j\beta z} + \hat{\mathbf{y}}\,2E_0\,e^{-j\beta z}$（以余弦为基准）
+
+    由 $\nabla\times\dot{\mathbf{E}} = -j\omega\mu_0\dot{\mathbf{H}}$：
+
+    $$(\nabla\times\dot{\mathbf{E}})_y = -\frac{\partial\dot{E}_x}{\partial z} = -j\beta\cdot(-j)E_0\,e^{-j\beta z} = -\beta E_0\,e^{-j\beta z}$$
+
+    $$(\nabla\times\dot{\mathbf{E}})_x = \frac{\partial\dot{E}_y}{\partial z} = -j\beta\cdot2E_0\,e^{-j\beta z}$$
+
+    $$\dot{\mathbf{H}} = \frac{1}{j\omega\mu_0}\left[\hat{\mathbf{x}}\,j\beta\cdot2E_0\,e^{-j\beta z} + \hat{\mathbf{y}}\,\beta E_0\,e^{-j\beta z}\right] = \hat{\mathbf{x}}\,\frac{2E_0}{\eta_0}e^{-j\beta z} - \hat{\mathbf{y}}\,\frac{jE_0}{\eta_0}e^{-j\beta z}$$
+
+    瞬时形式：
+
+    $$\mathbf{H}(z,t) = \hat{\mathbf{x}}\,\frac{2E_0}{\eta_0}\cos(\omega t - \beta z) - \hat{\mathbf{y}}\,\frac{E_0}{\eta_0}\sin(\omega t - \beta z)\;\text{(A/m)}$$
+
+    **(2) 合成波（$z<0$ 区域）**
+
+    垂直入射理想导体，反射系数 $\Gamma = -1$。反射波：
+
+    $$\dot{\mathbf{E}}^r = -\hat{\mathbf{x}}\,(-j)E_0\,e^{j\beta z} - \hat{\mathbf{y}}\,2E_0\,e^{j\beta z} = \hat{\mathbf{x}}\,jE_0\,e^{j\beta z} - \hat{\mathbf{y}}\,2E_0\,e^{j\beta z}$$
+
+    合成波电场：
+
+    $$\dot{\mathbf{E}} = \dot{\mathbf{E}}^i + \dot{\mathbf{E}}^r = \hat{\mathbf{x}}\,(-j)E_0(e^{-j\beta z} - e^{j\beta z}) + \hat{\mathbf{y}}\,2E_0(e^{-j\beta z} - e^{j\beta z})$$
+
+    $$= -\hat{\mathbf{x}}\,2E_0\sin\beta z - \hat{\mathbf{y}}\,j\,4E_0\sin\beta z$$
+
+    合成波磁场（反射波磁场取反号）：
+
+    $$\dot{\mathbf{H}} = \hat{\mathbf{x}}\,\frac{2E_0}{\eta_0}(e^{-j\beta z} + e^{j\beta z}) - \hat{\mathbf{y}}\,\frac{jE_0}{\eta_0}(e^{-j\beta z} + e^{j\beta z}) = \hat{\mathbf{x}}\,\frac{4E_0}{\eta_0}\cos\beta z - \hat{\mathbf{y}}\,\frac{j\,2E_0}{\eta_0}\cos\beta z$$
+
+    **(3) 导体板表面电流密度**
+
+    在 $z=0$ 处，$\hat{\mathbf{n}} = \hat{\mathbf{z}}$（导体法向 $+z$），$\dot{\mathbf{H}}|_{z=0} = \hat{\mathbf{x}}\,\dfrac{4E_0}{\eta_0} - \hat{\mathbf{y}}\,\dfrac{j\,2E_0}{\eta_0}$：
+
+    $$\mathbf{J}_s = \hat{\mathbf{n}}\times\dot{\mathbf{H}}\big|_{z=0} = \hat{\mathbf{z}}\times\left(\hat{\mathbf{x}}\,\frac{4E_0}{\eta_0} - \hat{\mathbf{y}}\,\frac{j\,2E_0}{\eta_0}\right) = \hat{\mathbf{y}}\,\frac{4E_0}{\eta_0} + \hat{\mathbf{x}}\,\frac{j\,2E_0}{\eta_0}\;\text{(A/m)}$$
+
 ---
 
 [← 上一章: 第3章 静态电磁场及其解法](../03-静态电磁场及其解法/index.md)

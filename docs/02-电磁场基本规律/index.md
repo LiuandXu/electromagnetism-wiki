@@ -442,6 +442,27 @@ $$\mathbf{D} = \varepsilon \mathbf{E},\quad \mathbf{B} = \mu \mathbf{H},\quad \m
 
     位移电流密度：$J_d = \dfrac{\partial D}{\partial t} = \omega\varepsilon E_0\cos\omega t$
 
+!!! warning "真题"
+
+    **真题 2.17（来源：2023春季B卷 三、2）**
+    **题目：** 已知海水的电导率 $\sigma = 4\;\text{S/m}$，相对介电常数 $\varepsilon_r = 81$。假设海水中的电场为 $\mathbf{E} = E_0\cos\omega t\;\hat{\mathbf{x}}\;(\text{V/m})$，其中 $\omega = 2\pi\times10^3\;\text{rad/s}$。计算海水中的位移电流密度和传导电流密度。
+
+    **解：**
+
+    传导电流密度：
+
+    $$\mathbf{J}_c = \sigma\mathbf{E} = 4E_0\cos\omega t\;\hat{\mathbf{x}}\;\text{(A/m}^2\text{)}$$
+
+    位移电流密度：
+
+    $$\mathbf{J}_d = \varepsilon\frac{\partial\mathbf{E}}{\partial t} = \varepsilon_r\varepsilon_0\omega E_0\sin\omega t\;\hat{\mathbf{x}} = 81\varepsilon_0\cdot2\pi\times10^3\cdot E_0\sin\omega t\;\hat{\mathbf{x}}\;\text{(A/m}^2\text{)}$$
+
+    传导电流与位移电流振幅之比：
+
+    $$\frac{|\mathbf{J}_c|}{|\mathbf{J}_d|} = \frac{\sigma}{\omega\varepsilon_r\varepsilon_0} = \frac{4}{2\pi\times10^3\times81\times8.85\times10^{-12}} \approx 8.9\times10^5$$
+
+    可见在频率 $f = 1\;\text{kHz}$ 时，海水中传导电流占主导。
+
 ---
 
 [← 上一章: 第1章 绪论与矢量分析](../01-绪论与矢量分析/index.md)
