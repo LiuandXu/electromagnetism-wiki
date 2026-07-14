@@ -24,43 +24,43 @@
 - 标量积（点乘）：$\mathbf{A} \cdot \mathbf{B} = |\mathbf{A}||\mathbf{B}|\cos\theta = A_xB_x + A_yB_y + A_zB_z$
 - 矢量积（叉乘）：$\mathbf{A} \times \mathbf{B} = \begin{vmatrix} \hat{\mathbf{x}} & \hat{\mathbf{y}} & \hat{\mathbf{z}} \\ A_x & A_y & A_z \\ B_x & B_y & B_z \end{vmatrix}$
 
-**例题：**
+!!! example "例题"
 
-**例题 1.1**
-**题目：** 已知矢量 $\mathbf{A} = 4\hat{\mathbf{x}} + 4\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$，单位矢量 $\hat{\mathbf{n}} = \hat{\mathbf{x}} + 0.5\hat{\mathbf{y}} + 0.3\hat{\mathbf{z}}$（已归一化），求 $\mathbf{A}$ 在 $\hat{\mathbf{n}}$ 方向上的投影。
+    **例题 1.1**
+    **题目：** 已知矢量 $\mathbf{A} = 4\hat{\mathbf{x}} + 4\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$，单位矢量 $\hat{\mathbf{n}} = \hat{\mathbf{x}} + 0.5\hat{\mathbf{y}} + 0.3\hat{\mathbf{z}}$（已归一化），求 $\mathbf{A}$ 在 $\hat{\mathbf{n}}$ 方向上的投影。
 
-**解：**
+    **解：**
 
-矢量与单位矢量的点积，等于该矢量在单位矢量方向上的投影（分量）：
+    矢量与单位矢量的点积，等于该矢量在单位矢量方向上的投影（分量）：
 
-$$\mathbf{A} \cdot \hat{\mathbf{n}} = (4)(1) + (4)(0.5) + (4)(0.3) = 4 + 2 + 1.2 = 7.2$$
+    $$\mathbf{A} \cdot \hat{\mathbf{n}} = (4)(1) + (4)(0.5) + (4)(0.3) = 4 + 2 + 1.2 = 7.2$$
 
-因此 $\mathbf{A}$ 在 $\hat{\mathbf{n}}$ 方向上的投影为 $7.2$。
+    因此 $\mathbf{A}$ 在 $\hat{\mathbf{n}}$ 方向上的投影为 $7.2$。
 
-推论：对于曲线上某点 $P$，若法线方向为 $\hat{\mathbf{n}}$、切线方向为 $\hat{\mathbf{t}}$，则 $\mathbf{A} \cdot \hat{\mathbf{n}}$ 表示矢量在该点的法向分量，$\mathbf{A} \cdot \hat{\mathbf{t}}$ 表示切向分量，且投影值等于 $|\mathbf{A}|\cos\theta$。
+    推论：对于曲线上某点 $P$，若法线方向为 $\hat{\mathbf{n}}$、切线方向为 $\hat{\mathbf{t}}$，则 $\mathbf{A} \cdot \hat{\mathbf{n}}$ 表示矢量在该点的法向分量，$\mathbf{A} \cdot \hat{\mathbf{t}}$ 表示切向分量，且投影值等于 $|\mathbf{A}|\cos\theta$。
 
-**真题：**
+!!! warning "真题"
 
-**真题 1.1（来源：2023春季B卷）**
-**题目：** 已知矢量 $\mathbf{A} = 3\hat{\mathbf{x}} + 2\hat{\mathbf{y}} + \hat{\mathbf{z}}$，并且 $\mathbf{A} \times \mathbf{B} = 4\hat{\mathbf{x}} - 8\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$，$\mathbf{A} \cdot \mathbf{B} = 10$，试求矢量 $\mathbf{B}$。
+    **真题 1.1（来源：2023春季B卷）**
+    **题目：** 已知矢量 $\mathbf{A} = 3\hat{\mathbf{x}} + 2\hat{\mathbf{y}} + \hat{\mathbf{z}}$，并且 $\mathbf{A} \times \mathbf{B} = 4\hat{\mathbf{x}} - 8\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$，$\mathbf{A} \cdot \mathbf{B} = 10$，试求矢量 $\mathbf{B}$。
 
-**解：**
+    **解：**
 
-设 $\mathbf{B} = a\hat{\mathbf{x}} + b\hat{\mathbf{y}} + c\hat{\mathbf{z}}$，由点积条件：
+    设 $\mathbf{B} = a\hat{\mathbf{x}} + b\hat{\mathbf{y}} + c\hat{\mathbf{z}}$，由点积条件：
 
-$$\mathbf{A} \cdot \mathbf{B} = 3a + 2b + c = 10$$
+    $$\mathbf{A} \cdot \mathbf{B} = 3a + 2b + c = 10$$
 
-由叉积 $\mathbf{A} \times \mathbf{B} = (2c - b)\hat{\mathbf{x}} + (a - 3c)\hat{\mathbf{y}} + (3b - 2a)\hat{\mathbf{z}}$，与已知 $\mathbf{A} \times \mathbf{B} = 4\hat{\mathbf{x}} - 8\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$ 比较得：
+    由叉积 $\mathbf{A} \times \mathbf{B} = (2c - b)\hat{\mathbf{x}} + (a - 3c)\hat{\mathbf{y}} + (3b - 2a)\hat{\mathbf{z}}$，与已知 $\mathbf{A} \times \mathbf{B} = 4\hat{\mathbf{x}} - 8\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$ 比较得：
 
-$$2c - b = 4, \quad a - 3c = -8, \quad 3b - 2a = 4$$
+    $$2c - b = 4, \quad a - 3c = -8, \quad 3b - 2a = 4$$
 
-联立求解：
+    联立求解：
 
-$$a = 1,\quad b = 2,\quad c = 3$$
+    $$a = 1,\quad b = 2,\quad c = 3$$
 
-因此 $\mathbf{B} = \hat{\mathbf{x}} + 2\hat{\mathbf{y}} + 3\hat{\mathbf{z}}$。
+    因此 $\mathbf{B} = \hat{\mathbf{x}} + 2\hat{\mathbf{y}} + 3\hat{\mathbf{z}}$。
 
-**验证：** $\mathbf{A} \cdot \mathbf{B} = 3 + 4 + 3 = 10$ ✓，$\mathbf{A} \times \mathbf{B} = (6-2)\hat{\mathbf{x}} + (1-9)\hat{\mathbf{y}} + (6-2)\hat{\mathbf{z}} = 4\hat{\mathbf{x}} - 8\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$ ✓。
+    **验证：** $\mathbf{A} \cdot \mathbf{B} = 3 + 4 + 3 = 10$ ✓，$\mathbf{A} \times \mathbf{B} = (6-2)\hat{\mathbf{x}} + (1-9)\hat{\mathbf{y}} + (6-2)\hat{\mathbf{z}} = 4\hat{\mathbf{x}} - 8\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$ ✓。
 
 ### 1.3 曲线坐标系
 
@@ -81,24 +81,24 @@ $$a = 1,\quad b = 2,\quad c = 3$$
 - 适用于球对称问题（如天线辐射）
 - 线元：$\mathrm{d}\mathbf{l} = \mathrm{d}r\,\hat{\mathbf{r}} + r\mathrm{d}\theta\,\hat{\pmb{\theta}} + r\sin\theta\mathrm{d}\phi\,\hat{\pmb{\phi}}$
 
-**例题：**
+!!! example "例题"
 
-**例题 1.2**
-**题目：** 坐标原点处电量为 $q$ 的点电荷周围的电位表示式如下，其等位面是何形状？
+    **例题 1.2**
+    **题目：** 坐标原点处电量为 $q$ 的点电荷周围的电位表示式如下，其等位面是何形状？
 
-$$\Phi(x, y, z) = \frac{q}{4\pi\varepsilon_0\sqrt{x^2 + y^2 + z^2}}$$
+    $$\Phi(x, y, z) = \frac{q}{4\pi\varepsilon_0\sqrt{x^2 + y^2 + z^2}}$$
 
-**解：**
+    **解：**
 
-等位面方程为 $\Phi = C$（$C$ 为常数），即：
+    等位面方程为 $\Phi = C$（$C$ 为常数），即：
 
-$$\frac{q}{4\pi\varepsilon_0\sqrt{x^2 + y^2 + z^2}} = C$$
+    $$\frac{q}{4\pi\varepsilon_0\sqrt{x^2 + y^2 + z^2}} = C$$
 
-整理得：
+    整理得：
 
-$$x^2 + y^2 + z^2 = \left(\frac{q}{4\pi\varepsilon_0 C}\right)^2$$
+    $$x^2 + y^2 + z^2 = \left(\frac{q}{4\pi\varepsilon_0 C}\right)^2$$
 
-这是一个以原点为球心、半径为 $R = \frac{q}{4\pi\varepsilon_0 C}$ 的球面。因此点电荷的等位面是一系列以电荷所在位置为球心的同心球面。
+    这是一个以原点为球心、半径为 $R = \frac{q}{4\pi\varepsilon_0 C}$ 的球面。因此点电荷的等位面是一系列以电荷所在位置为球心的同心球面。
 
 ### 1.4 标量场的梯度
 
@@ -115,41 +115,41 @@ $$\nabla u = \frac{\partial u}{\partial r}\hat{\mathbf{r}} + \frac{1}{r}\frac{\p
 - 梯度垂直于等值面
 - 静电场中：$\mathbf{E} = -\nabla V$（电场强度等于电势的负梯度）
 
-**例题：**
+!!! example "例题"
 
-**例题 1.4**
-**题目：** 带电量为 $q$ 的点电荷周围的电位表示式为 $\Phi(\mathbf{r}) = \dfrac{q}{4\pi\varepsilon_0 r}$，求其电场强度 $\mathbf{E}$。
+    **例题 1.4**
+    **题目：** 带电量为 $q$ 的点电荷周围的电位表示式为 $\Phi(\mathbf{r}) = \dfrac{q}{4\pi\varepsilon_0 r}$，求其电场强度 $\mathbf{E}$。
 
-**解：**
+    **解：**
 
-由电场与电位的关系 $\mathbf{E} = -\nabla\Phi$，在球坐标系中：
+    由电场与电位的关系 $\mathbf{E} = -\nabla\Phi$，在球坐标系中：
 
-$$\mathbf{E}(\mathbf{r}) = -\nabla\Phi = -\frac{\partial}{\partial r}\left(\frac{q}{4\pi\varepsilon_0 r}\right)\hat{\mathbf{r}} = \frac{q}{4\pi\varepsilon_0 r^2}\hat{\mathbf{r}}$$
+    $$\mathbf{E}(\mathbf{r}) = -\nabla\Phi = -\frac{\partial}{\partial r}\left(\frac{q}{4\pi\varepsilon_0 r}\right)\hat{\mathbf{r}} = \frac{q}{4\pi\varepsilon_0 r^2}\hat{\mathbf{r}}$$
 
-即点电荷的电场为沿径向的场，大小与距离平方成反比，这正是库仑定律的结果。
+    即点电荷的电场为沿径向的场，大小与距离平方成反比，这正是库仑定律的结果。
 
-**真题：**
+!!! warning "真题"
 
-**真题 1.2（来源：2024春季B卷）**
-**题目：** 求标量场 $u = x^2 + 2y^2 + xy + z^2$ 在点 $M(3, 2, 0)$ 处的梯度。
+    **真题 1.2（来源：2024春季B卷）**
+    **题目：** 求标量场 $u = x^2 + 2y^2 + xy + z^2$ 在点 $M(3, 2, 0)$ 处的梯度。
 
-**解：**
+    **解：**
 
-梯度在直角坐标系中为：
+    梯度在直角坐标系中为：
 
-$$\nabla u = \frac{\partial u}{\partial x}\hat{\mathbf{x}} + \frac{\partial u}{\partial y}\hat{\mathbf{y}} + \frac{\partial u}{\partial z}\hat{\mathbf{z}}$$
+    $$\nabla u = \frac{\partial u}{\partial x}\hat{\mathbf{x}} + \frac{\partial u}{\partial y}\hat{\mathbf{y}} + \frac{\partial u}{\partial z}\hat{\mathbf{z}}$$
 
-计算各偏导数：
+    计算各偏导数：
 
-$$\frac{\partial u}{\partial x} = 2x + y, \quad \frac{\partial u}{\partial y} = 4y + x, \quad \frac{\partial u}{\partial z} = 2z$$
+    $$\frac{\partial u}{\partial x} = 2x + y, \quad \frac{\partial u}{\partial y} = 4y + x, \quad \frac{\partial u}{\partial z} = 2z$$
 
-代入 $M(3, 2, 0)$：
+    代入 $M(3, 2, 0)$：
 
-$$\frac{\partial u}{\partial x}\bigg|_M = 2(3) + 2 = 8, \quad \frac{\partial u}{\partial y}\bigg|_M = 4(2) + 3 = 11, \quad \frac{\partial u}{\partial z}\bigg|_M = 0$$
+    $$\frac{\partial u}{\partial x}\bigg|_M = 2(3) + 2 = 8, \quad \frac{\partial u}{\partial y}\bigg|_M = 4(2) + 3 = 11, \quad \frac{\partial u}{\partial z}\bigg|_M = 0$$
 
-因此：
+    因此：
 
-$$\nabla u\big|_M = 8\hat{\mathbf{x}} + 11\hat{\mathbf{y}}$$
+    $$\nabla u\big|_M = 8\hat{\mathbf{x}} + 11\hat{\mathbf{y}}$$
 
 ### 1.5 矢量场的散度
 
@@ -171,18 +171,18 @@ $$\oint_S \mathbf{A} \cdot \mathrm{d}\mathbf{S} = \int_V \nabla \cdot \mathbf{A}
 - 静电场高斯定律：$\nabla \cdot \mathbf{D} = \rho$
 - 磁场高斯定律：$\nabla \cdot \mathbf{B} = 0$（磁通连续性原理）
 
-**例题：**
+!!! example "例题"
 
-**例题 1.3**
-**题目：** 已知置于原点的点电荷 $q$ 的电位移矢量为 $\mathbf{D} = \dfrac{q}{4\pi r^2}\hat{\mathbf{r}}$，计算通过以原点为圆心、半径为 $R$ 的球面的电通量。
+    **例题 1.3**
+    **题目：** 已知置于原点的点电荷 $q$ 的电位移矢量为 $\mathbf{D} = \dfrac{q}{4\pi r^2}\hat{\mathbf{r}}$，计算通过以原点为圆心、半径为 $R$ 的球面的电通量。
 
-**解：**
+    **解：**
 
-半径为 $R$ 的球面的外法向为 $\hat{\mathbf{n}} = \hat{\mathbf{r}}$，电通量为：
+    半径为 $R$ 的球面的外法向为 $\hat{\mathbf{n}} = \hat{\mathbf{r}}$，电通量为：
 
-$$\Psi = \oint_S \mathbf{D} \cdot \mathrm{d}\mathbf{S} = \oint_S \frac{q}{4\pi R^2}\hat{\mathbf{r}} \cdot \hat{\mathbf{r}}\,\mathrm{d}S = \frac{q}{4\pi R^2} \oint_S \mathrm{d}S = \frac{q}{4\pi R^2} \cdot 4\pi R^2 = q$$
+    $$\Psi = \oint_S \mathbf{D} \cdot \mathrm{d}\mathbf{S} = \oint_S \frac{q}{4\pi R^2}\hat{\mathbf{r}} \cdot \hat{\mathbf{r}}\,\mathrm{d}S = \frac{q}{4\pi R^2} \oint_S \mathrm{d}S = \frac{q}{4\pi R^2} \cdot 4\pi R^2 = q$$
 
-即球面 $S$ 内产生电通量的源是 $S$ 内的电荷 $q$，这与高斯定理一致。
+    即球面 $S$ 内产生电通量的源是 $S$ 内的电荷 $q$，这与高斯定理一致。
 
 ### 1.6 矢量场的旋度
 

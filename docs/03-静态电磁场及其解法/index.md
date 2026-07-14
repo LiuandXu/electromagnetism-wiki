@@ -35,37 +35,37 @@ $$\nabla^2 V = 0 \quad (\text{拉普拉斯方程 Laplace's Equation})$$
 
 $$W_e = \frac{1}{2}\int_V \mathbf{D} \cdot \mathbf{E}\,\mathrm{d}V = \frac{1}{2}\int_V \varepsilon E^2\mathrm{d}V$$
 
-**真题：**
+!!! warning "真题"
 
-**真题 3.1（来源：2021秋季A卷）**
-**题目：** 真空中有一半径为 $a$ 的圆盘，均匀带电，面电荷密度为 $\rho_s$。圆盘位于 $xy$ 平面，圆心在原点。求其轴线上距圆心 $z$ 处的电场强度。
+    **真题 3.1（来源：2021秋季A卷）**
+    **题目：** 真空中有一半径为 $a$ 的圆盘，均匀带电，面电荷密度为 $\rho_s$。圆盘位于 $xy$ 平面，圆心在原点。求其轴线上距圆心 $z$ 处的电场强度。
 
-**解：**
+    **解：**
 
-在圆盘上取半径为 $r$、宽度为 $dr$ 的圆环，其电荷量为 $dq = \rho_s \cdot 2\pi r\, dr$。
+    在圆盘上取半径为 $r$、宽度为 $dr$ 的圆环，其电荷量为 $dq = \rho_s \cdot 2\pi r\, dr$。
 
-由对称性，轴线上 $z$ 处的电场仅有 $z$ 分量。圆环上电荷元 $dq$ 在 $z$ 处产生的电场 $z$ 分量为：
+    由对称性，轴线上 $z$ 处的电场仅有 $z$ 分量。圆环上电荷元 $dq$ 在 $z$ 处产生的电场 $z$ 分量为：
 
-$$dE_z = \frac{1}{4\pi\varepsilon_0} \cdot \frac{dq \cdot z}{(r^2 + z^2)^{3/2}} = \frac{\rho_s z}{2\varepsilon_0} \cdot \frac{r\, dr}{(r^2 + z^2)^{3/2}}$$
+    $$dE_z = \frac{1}{4\pi\varepsilon_0} \cdot \frac{dq \cdot z}{(r^2 + z^2)^{3/2}} = \frac{\rho_s z}{2\varepsilon_0} \cdot \frac{r\, dr}{(r^2 + z^2)^{3/2}}$$
 
-对 $r$ 从 $0$ 到 $a$ 积分：
+    对 $r$ 从 $0$ 到 $a$ 积分：
 
-$$E_z = \frac{\rho_s z}{2\varepsilon_0} \int_0^a \frac{r\, dr}{(r^2 + z^2)^{3/2}}$$
+    $$E_z = \frac{\rho_s z}{2\varepsilon_0} \int_0^a \frac{r\, dr}{(r^2 + z^2)^{3/2}}$$
 
-令 $u = r^2 + z^2$，$du = 2r\, dr$：
+    令 $u = r^2 + z^2$，$du = 2r\, dr$：
 
-$$E_z = \frac{\rho_s z}{4\varepsilon_0} \int_{z^2}^{a^2+z^2} u^{-3/2}\, du = \frac{\rho_s z}{4\varepsilon_0} \left[-2u^{-1/2}\right]_{z^2}^{a^2+z^2}$$
+    $$E_z = \frac{\rho_s z}{4\varepsilon_0} \int_{z^2}^{a^2+z^2} u^{-3/2}\, du = \frac{\rho_s z}{4\varepsilon_0} \left[-2u^{-1/2}\right]_{z^2}^{a^2+z^2}$$
 
-$$E_z = \frac{\rho_s z}{2\varepsilon_0}\left(\frac{1}{z} - \frac{1}{\sqrt{a^2 + z^2}}\right) = \frac{\rho_s}{2\varepsilon_0}\left(1 - \frac{z}{\sqrt{a^2 + z^2}}\right)$$
+    $$E_z = \frac{\rho_s z}{2\varepsilon_0}\left(\frac{1}{z} - \frac{1}{\sqrt{a^2 + z^2}}\right) = \frac{\rho_s}{2\varepsilon_0}\left(1 - \frac{z}{\sqrt{a^2 + z^2}}\right)$$
 
-因此轴线上的电场强度为：
+    因此轴线上的电场强度为：
 
-$$\boxed{\mathbf{E} = \frac{\rho_s}{2\varepsilon_0}\left(1 - \frac{z}{\sqrt{a^2 + z^2}}\right)\hat{\mathbf{z}}}$$
+    $$\boxed{\mathbf{E} = \frac{\rho_s}{2\varepsilon_0}\left(1 - \frac{z}{\sqrt{a^2 + z^2}}\right)\hat{\mathbf{z}}}$$
 
-**讨论：**
+    **讨论：**
 
-- 当 $z \to 0$（圆心处）：$E_z \to \rho_s / (2\varepsilon_0)$，为无限大带电平面的电场。
-- 当 $z \to \infty$：$E_z \approx \frac{\rho_s}{2\varepsilon_0} \cdot \frac{a^2}{2z^2} = \frac{\rho_s \pi a^2}{4\pi\varepsilon_0 z^2} = \frac{Q}{4\pi\varepsilon_0 z^2}$，退化为点电荷电场。
+    - 当 $z \to 0$（圆心处）：$E_z \to \rho_s / (2\varepsilon_0)$，为无限大带电平面的电场。
+    - 当 $z \to \infty$：$E_z \approx \frac{\rho_s}{2\varepsilon_0} \cdot \frac{a^2}{2z^2} = \frac{\rho_s \pi a^2}{4\pi\varepsilon_0 z^2} = \frac{Q}{4\pi\varepsilon_0 z^2}$，退化为点电荷电场。
 
 ### 3.2 恒定磁场分析方法
 
@@ -145,40 +145,40 @@ $$V(x, y, z) = \frac{q}{4\pi\varepsilon}\left[\frac{1}{\sqrt{x^2 + y^2 + (z - h)
 - 边界为等位面（导体）或对称面
 - 镜像源必须在求解区域之外
 
-**例题：**
+!!! example "例题"
 
-**例题 3.1**
-**题目：** 在无限大接地导体平面（$z = 0$）上方 $z = d$ 处放置一个点电荷 $q$，求上半空间（$z > 0$）的电位分布和电场分布。
+    **例题 3.1**
+    **题目：** 在无限大接地导体平面（$z = 0$）上方 $z = d$ 处放置一个点电荷 $q$，求上半空间（$z > 0$）的电位分布和电场分布。
 
-**解：**
+    **解：**
 
-**理论依据：** 静电场的唯一性定理。镜像法的核心逻辑是等效与唯一——在所求场域以外的空间中放置适当的等效电荷（镜像电荷），使其满足边界条件，从而将原边值问题替换为均匀无界空间中的问题来求解。
+    **理论依据：** 静电场的唯一性定理。镜像法的核心逻辑是等效与唯一——在所求场域以外的空间中放置适当的等效电荷（镜像电荷），使其满足边界条件，从而将原边值问题替换为均匀无界空间中的问题来求解。
 
-**求解：**
+    **求解：**
 
-在 $z = -d$ 处放置镜像电荷 $q' = -q$。上半空间任意点 $P(x, y, z)$（$z > 0$）到实电荷和镜像电荷的距离分别为：
+    在 $z = -d$ 处放置镜像电荷 $q' = -q$。上半空间任意点 $P(x, y, z)$（$z > 0$）到实电荷和镜像电荷的距离分别为：
 
-$$r_1 = \sqrt{x^2 + y^2 + (z-d)^2}, \quad r_2 = \sqrt{x^2 + y^2 + (z+d)^2}$$
+    $$r_1 = \sqrt{x^2 + y^2 + (z-d)^2}, \quad r_2 = \sqrt{x^2 + y^2 + (z+d)^2}$$
 
-电位分布为：
+    电位分布为：
 
-$$\Phi = \frac{q}{4\pi\varepsilon_0}\left(\frac{1}{r_1} - \frac{1}{r_2}\right) = \frac{q}{4\pi\varepsilon_0}\left[\frac{1}{\sqrt{x^2 + y^2 + (z-d)^2}} - \frac{1}{\sqrt{x^2 + y^2 + (z+d)^2}}\right]$$
+    $$\Phi = \frac{q}{4\pi\varepsilon_0}\left(\frac{1}{r_1} - \frac{1}{r_2}\right) = \frac{q}{4\pi\varepsilon_0}\left[\frac{1}{\sqrt{x^2 + y^2 + (z-d)^2}} - \frac{1}{\sqrt{x^2 + y^2 + (z+d)^2}}\right]$$
 
-验证边界条件：在 $z = 0$ 处，$r_1 = r_2$，故 $\Phi = 0$，满足接地导体平面的边界条件。
+    验证边界条件：在 $z = 0$ 处，$r_1 = r_2$，故 $\Phi = 0$，满足接地导体平面的边界条件。
 
-电场为电位的负梯度：
+    电场为电位的负梯度：
 
-$$\mathbf{E} = -\nabla\Phi$$
+    $$\mathbf{E} = -\nabla\Phi$$
 
-导体表面的感应电荷面密度为：
+    导体表面的感应电荷面密度为：
 
-$$\rho_s = -\varepsilon_0\frac{\partial\Phi}{\partial z}\bigg|_{z=0} = -\frac{qd}{2\pi(x^2+y^2+d^2)^{3/2}}$$
+    $$\rho_s = -\varepsilon_0\frac{\partial\Phi}{\partial z}\bigg|_{z=0} = -\frac{qd}{2\pi(x^2+y^2+d^2)^{3/2}}$$
 
-**求解原则：**
-1. 所有镜像电荷必须位于所求场域以外的空间中
-2. 镜像电荷的个数、位置及电荷量以满足场域边界面上的边界条件来确定
+    **求解原则：**
+    1. 所有镜像电荷必须位于所求场域以外的空间中
+    2. 镜像电荷的个数、位置及电荷量以满足场域边界面上的边界条件来确定
 
-电偶极子远区辐射场为 $E_\theta = \frac{Idl}{2\lambda}\eta_0\sin\theta$（将在第 8 章详细推导）。
+    电偶极子远区辐射场为 $E_\theta = \frac{Idl}{2\lambda}\eta_0\sin\theta$（将在第 8 章详细推导）。
 
 ---
 
