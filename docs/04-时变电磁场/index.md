@@ -126,6 +126,70 @@ $$\nabla \times \mathbf{E} = -j\omega\mu\mathbf{H},\quad \nabla \times \mathbf{H
 
 数学表述：$\int_{V_2} \mathbf{J}_2 \cdot \mathbf{E}_1\mathrm{d}V = \int_{V_1} \mathbf{J}_1 \cdot \mathbf{E}_2\mathrm{d}V$
 
+## 例题与习题
+
+### 例题 4.1
+**题目：** 已知磁场强度的瞬时表达式为 $\mathbf{H}(t) = \hat{\mathbf{y}}\,H_0\sin(\omega t - \beta z)$，求其复数（相量）表示式。反之，已知电场强度的复数表示式为 $\dot{\mathbf{E}} = -j\hat{\mathbf{x}}\,E_0 e^{-j\beta z}$，写出其瞬时表达式。
+
+**解：**
+
+**(1) 瞬时表达式 → 复数表达式**
+
+首先将 $\sin$ 转换为 $\cos$：
+
+$$\sin(\omega t - \beta z) = \cos\!\left(\omega t - \beta z - \frac{\pi}{2}\right)$$
+
+利用 $\mathbf{H}(t) = \mathrm{Re}[\dot{\mathbf{H}}\,e^{j\omega t}]$，提取相量：
+
+$$\dot{\mathbf{H}} = \hat{\mathbf{y}}\,H_0\,e^{-j(\beta z + \pi/2)} = -j\hat{\mathbf{y}}\,H_0\,e^{-j\beta z}$$
+
+**(2) 复数表达式 → 瞬时表达式**
+
+将 $-j$ 写成指数形式：$-j = e^{-j\pi/2}$，故：
+
+$$\dot{\mathbf{E}} = \hat{\mathbf{x}}\,E_0\,e^{-j\pi/2}\,e^{-j\beta z} = \hat{\mathbf{x}}\,E_0\,e^{-j(\beta z + \pi/2)}$$
+
+$$\mathbf{E}(t) = \mathrm{Re}[\dot{\mathbf{E}}\,e^{j\omega t}] = \hat{\mathbf{x}}\,E_0\cos\!\left(\omega t - \beta z - \frac{\pi}{2}\right) = \hat{\mathbf{x}}\,E_0\sin(\omega t - \beta z)$$
+
+### 例题 4.2
+**题目：** 已知无源自由空间的电场强度为 $\mathbf{E} = \hat{\mathbf{x}}\,E_0\sin(\omega t - \beta z)$（V/m），求：
+
+1. 磁场强度的瞬时表示式；
+2. 证明 $v = \omega/\beta$ 等于光速 $c$；
+3. 坡印亭矢量的时间平均值 $\mathbf{S}_{\mathrm{av}}$。
+
+**解：**
+
+**(1) 求磁场强度**
+
+将电场写成复数形式：$\dot{\mathbf{E}} = -j\hat{\mathbf{x}}\,E_0\,e^{-j\beta z}$
+
+由 $\nabla \times \dot{\mathbf{E}} = -j\omega\mu_0\dot{\mathbf{H}}$，计算旋度：
+
+$$\nabla \times \dot{\mathbf{E}} = \frac{\partial \dot{E}_x}{\partial z}\hat{\mathbf{y}} = -\beta E_0\,e^{-j\beta z}\,\hat{\mathbf{y}}$$
+
+$$\dot{\mathbf{H}} = \frac{\beta E_0}{j\omega\mu_0}\,e^{-j\beta z}\,\hat{\mathbf{y}} = -j\,\frac{\beta E_0}{\omega\mu_0}\,e^{-j\beta z}\,\hat{\mathbf{y}}$$
+
+转换回瞬时形式：
+
+$$\mathbf{H} = \hat{\mathbf{y}}\,\frac{\beta E_0}{\omega\mu_0}\sin(\omega t - \beta z)$$
+
+**(2) 证明波速等于光速**
+
+在自由空间中，$\beta = \omega\sqrt{\mu_0\varepsilon_0}$，因此：
+
+$$v = \frac{\omega}{\beta} = \frac{1}{\sqrt{\mu_0\varepsilon_0}} = c \approx 3\times10^8 \;\text{m/s}$$
+
+**(3) 求坡印亭矢量时间平均值**
+
+$$\mathbf{S}_{\mathrm{av}} = \frac{1}{2}\,\mathrm{Re}[\dot{\mathbf{E}} \times \dot{\mathbf{H}}^*]$$
+
+$$\dot{\mathbf{E}} \times \dot{\mathbf{H}}^* = (-j)(j)\,E_0\,\frac{\beta E_0}{\omega\mu_0}\,e^{-j\beta z}\,e^{j\beta z}\,(\hat{\mathbf{x}} \times \hat{\mathbf{y}}) = \frac{\beta E_0^2}{\omega\mu_0}\,\hat{\mathbf{z}}$$
+
+$$\mathbf{S}_{\mathrm{av}} = \frac{1}{2}\,\frac{\beta E_0^2}{\omega\mu_0}\,\hat{\mathbf{z}} = \frac{E_0^2}{2\eta_0}\,\hat{\mathbf{z}} \quad (\text{W/m}^2)$$
+
+其中 $\eta_0 = \omega\mu_0/\beta = \sqrt{\mu_0/\varepsilon_0} \approx 377\;\Omega$ 为自由空间波阻抗。
+
 ---
 
 [← 上一章: 第3章 静态电磁场及其解法](../03-静态电磁场及其解法/index.md)

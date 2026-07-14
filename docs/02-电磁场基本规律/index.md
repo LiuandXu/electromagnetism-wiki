@@ -190,6 +190,100 @@ $$\mathbf{D} = \varepsilon \mathbf{E},\quad \mathbf{B} = \mu \mathbf{H},\quad \m
 - $\mathbf{E}_{1t} = \mathbf{E}_{2t}$，$D_{1n} = D_{2n}$
 - $\mathbf{H}_{1t} = \mathbf{H}_{2t}$，$B_{1n} = B_{2n}$
 
+## 例题与习题
+
+### 例题 2.1
+**题目：** 在无源自由空间，已知磁场强度为 $\mathbf{H} = \hat{\mathbf{y}}\,2.63\times10^7\cos(3\times10^9 t - 10z)$（A/m），求位移电流密度 $\mathbf{J}_d$。
+
+**解：**
+
+由于是无源空间，传导电流 $\mathbf{J} = 0$，由安培环路定律：
+
+$$\nabla \times \mathbf{H} = \mathbf{J} + \frac{\partial \mathbf{D}}{\partial t} = \mathbf{J}_d$$
+
+计算旋度（$\mathbf{H}$ 仅有 $y$ 分量且只与 $z$、$t$ 有关）：
+
+$$\nabla \times \mathbf{H} = -\frac{\partial H_y}{\partial z}\hat{\mathbf{x}}$$
+
+$$\frac{\partial H_y}{\partial z} = 2.63\times10^7 \cdot 10\sin(3\times10^9 t - 10z) = 2.63\times10^8\sin(3\times10^9 t - 10z)$$
+
+因此位移电流密度为：
+
+$$\mathbf{J}_d = -\hat{\mathbf{x}}\,2.63\times10^8\sin(3\times10^9 t - 10z) \quad (\text{A/m}^2)$$
+
+### 例题 2.2
+**题目：** 设 $z=0$ 的平面为空气与理想导体的分界面，$z<0$ 一侧为理想导体。分界面处磁场强度为 $\mathbf{H} = \hat{\mathbf{y}}\,H_0\sin(\alpha x)\cos(\omega t - \beta y)$，求导体上的面电流分布。
+
+**解：**
+
+首先确定单位法向矢量 $\hat{\mathbf{n}} = \hat{\mathbf{z}}$（由导体指向空气）。
+
+由理想导体表面边界条件 $\mathbf{J}_s = \hat{\mathbf{n}} \times \mathbf{H}$：
+
+$$\mathbf{J}_s = \hat{\mathbf{z}} \times [\hat{\mathbf{y}}\,H_0\sin(\alpha x)\cos(\omega t - \beta y)]$$
+
+$$= H_0\sin(\alpha x)\cos(\omega t - \beta y)\,(\hat{\mathbf{z}} \times \hat{\mathbf{y}})$$
+
+$$= -\hat{\mathbf{x}}\,H_0\sin(\alpha x)\cos(\omega t - \beta y) \quad (\text{A/m})$$
+
+### 例题 2.3
+**题目：** 间距 $d$ 的两无限大导电板间为空气，其中电场强度为 $\mathbf{E} = \hat{\mathbf{x}}\,E_0\cos(\omega t - \beta z)$。求两导电平板表面上的面电荷密度和面电流密度。
+
+**解：**
+
+**(1) 面电荷密度**
+
+由边界条件 $\rho_s = \hat{\mathbf{n}} \cdot \mathbf{D} = \varepsilon_0\,E_0\cos(\omega t - \beta z)$。
+
+下壁（$x = 0$），法向 $\hat{\mathbf{n}} = +\hat{\mathbf{x}}$：
+
+$$\rho_s = \varepsilon_0 E_0\cos(\omega t - \beta z)$$
+
+上壁（$x = d$），法向 $\hat{\mathbf{n}} = -\hat{\mathbf{x}}$：
+
+$$\rho_s = -\varepsilon_0 E_0\cos(\omega t - \beta z)$$
+
+上下壁电荷大小相等，下壁为正电荷、上壁为负电荷。
+
+**(2) 面电流密度**
+
+由 $\nabla \times \mathbf{E} = -\dfrac{\partial \mathbf{B}}{\partial t}$ 可得 $\mathbf{H}$，其中自由空间 $\dfrac{\beta}{\omega\mu_0} = \dfrac{1}{\eta_0}$（$\eta_0 = \sqrt{\mu_0/\varepsilon_0}$）：
+
+$$\mathbf{H} = \hat{\mathbf{y}}\,\frac{E_0}{\eta_0}\cos(\omega t - \beta z)$$
+
+由边界条件 $\mathbf{J}_s = \hat{\mathbf{n}} \times \mathbf{H}$：
+
+下壁（$x = 0$）：$\mathbf{J}_s = \hat{\mathbf{x}} \times \hat{\mathbf{y}}\,\dfrac{E_0}{\eta_0}\cos(\omega t - \beta z) = \hat{\mathbf{z}}\,\dfrac{E_0}{\eta_0}\cos(\omega t - \beta z)$
+
+上壁（$x = d$）：$\mathbf{J}_s = -\hat{\mathbf{x}} \times \hat{\mathbf{y}}\,\dfrac{E_0}{\eta_0}\cos(\omega t - \beta z) = -\hat{\mathbf{z}}\,\dfrac{E_0}{\eta_0}\cos(\omega t - \beta z)$
+
+下壁、上壁电流大小相等、方向相反。
+
+### 例题 2.4
+**题目：** 已知 $y=0$ 的无限大平面为两种电介质的分界面，该分界面上无自由电荷。介质 2 侧的电场强度为 $\mathbf{E}_2 = 10\hat{\mathbf{x}} + 20\hat{\mathbf{y}}$（V/m）。分界面两侧的相对介电常数分别为 $\varepsilon_{r1} = 5$，$\varepsilon_{r2} = 3$。求介质 1 侧的电场强度 $\mathbf{E}_1$ 和电位移矢量 $\mathbf{D}_1$。
+
+**解：**
+
+先求介质 2 侧的电位移矢量：
+
+$$\mathbf{D}_2 = \varepsilon_2\mathbf{E}_2 = 3\varepsilon_0(10\hat{\mathbf{x}} + 20\hat{\mathbf{y}}) = 30\varepsilon_0\hat{\mathbf{x}} + 60\varepsilon_0\hat{\mathbf{y}}$$
+
+根据理想介质分界面上电位移矢量的法向分量连续 $D_{1n} = D_{2n}$：
+
+$$D_{1n} = D_{2n} = 60\varepsilon_0$$
+
+$$E_{1n} = \frac{D_{1n}}{\varepsilon_1} = \frac{60\varepsilon_0}{5\varepsilon_0} = 12 \quad (\text{V/m})$$
+
+再根据理想介质分界面上电场强度的切向分量连续 $E_{1t} = E_{2t}$：
+
+$$E_{1t} = E_{2t} = 10 \quad (\text{V/m})$$
+
+因此：
+
+$$\mathbf{E}_1 = 10\hat{\mathbf{x}} + 12\hat{\mathbf{y}} \quad (\text{V/m})$$
+
+$$\mathbf{D}_1 = \varepsilon_1\mathbf{E}_1 = 5\varepsilon_0(10\hat{\mathbf{x}} + 12\hat{\mathbf{y}}) = 50\varepsilon_0\hat{\mathbf{x}} + 60\varepsilon_0\hat{\mathbf{y}} \quad (\text{C/m}^2)$$
+
 ---
 
 [← 上一章: 第1章 绪论与矢量分析](../01-绪论与矢量分析/index.md)

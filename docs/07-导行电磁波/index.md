@@ -152,6 +152,67 @@ $$\Gamma(l) = \frac{Z_{in}(l) - Z_0}{Z_{in}(l) + Z_0} = \Gamma_L e^{-2j\beta l}$
 
 Smith 圆图是处理传输线阻抗匹配的图形工具，将复反射系数和归一化阻抗的映射关系可视化。
 
+## 例题与习题
+
+### 例题 7.1
+**题目：** 矩形波导 $a\times b = 0.08\,\text{m}\times0.04\,\text{m}$，填充空气。判断频率为 $4\,\text{GHz}$ 的电磁波能否在该矩形波导中以 $\mathrm{TE}_{10}$ 模式传输？能否以 $\mathrm{TE}_{20}$ 模式传输？
+
+**解：**
+
+频率 $f = 4\,\text{GHz}$ 对应的自由空间波长：
+
+$$\lambda = \frac{c}{f} = \frac{3\times10^8}{4\times10^9} = 0.075 \;\text{m}$$
+
+**(1) $\mathrm{TE}_{10}$ 模式**
+
+截止波长：$\lambda_c = 2a = 2\times0.08 = 0.16\;\text{m}$
+
+截止频率：$f_c = \dfrac{c}{\lambda_c} = \dfrac{3\times10^8}{0.16} = 1.875\;\text{GHz}$
+
+由于 $f = 4\;\text{GHz} > f_c = 1.875\;\text{GHz}$，$\mathrm{TE}_{10}$ 模式**可以传输**。
+
+**(2) $\mathrm{TE}_{20}$ 模式**
+
+截止波长：$\lambda_c = a = 0.08\;\text{m}$
+
+截止频率：$f_c = \dfrac{c}{\lambda_c} = \dfrac{3\times10^8}{0.08} = 3.75\;\text{GHz}$
+
+由于 $f = 4\;\text{GHz} > f_c = 3.75\;\text{GHz}$，$\mathrm{TE}_{20}$ 模式**也可以传输**。
+
+### 例题 7.2
+**题目：** 填充空气的矩形波导 $a = 0.02286\,\text{m}$，$b = 0.01016\,\text{m}$。求 $\mathrm{TE}_{10}$ 模式的截止波长、截止频率。频率为 $10\,\text{GHz}$ 和 $4\,\text{GHz}$ 的 $\mathrm{TE}_{10}$ 波能否传输？若可以，求其相移常数、波导波长、相速度和波阻抗。若波导中填充介电常数 $\varepsilon_r = 4$ 的介质，重新判断上述两个频率能否传输。
+
+**解：**
+
+**(1) 空气填充**
+
+截止波长：$\lambda_c = 2a = 0.04572\;\text{m}$
+
+截止频率：$f_c = \dfrac{c}{\lambda_c} = \dfrac{3\times10^8}{0.04572} \approx 6.56\;\text{GHz}$
+
+- $f = 10\,\text{GHz} > f_c = 6.56\,\text{GHz}$：**可以传输**
+
+  相移常数：$\beta = \sqrt{k^2 - k_c^2} = \sqrt{\left(\frac{2\pi f}{c}\right)^2 - \left(\frac{\pi}{a}\right)^2}$
+
+  $$\beta = \sqrt{\left(\frac{2\pi\times10^{10}}{3\times10^8}\right)^2 - \left(\frac{\pi}{0.02286}\right)^2} \approx 158.07 \;\text{rad/m}$$
+
+  波导波长：$\lambda_g = \dfrac{2\pi}{\beta} = \dfrac{2\pi}{158.07} \approx 0.03975\;\text{m}$
+
+  相速度：$v_p = \dfrac{\omega}{\beta} = \dfrac{2\pi\times10^{10}}{158.07} \approx 3.98\times10^8\;\text{m/s}$
+
+  波阻抗：$Z_{\mathrm{TE}_{10}} = \dfrac{\eta_0}{\sqrt{1-(f_c/f)^2}} = \dfrac{377}{\sqrt{1-(6.56/10)^2}} \approx 500\;\Omega$
+
+- $f = 4\,\text{GHz} < f_c = 6.56\,\text{GHz}$：**不可传输**（截止）
+
+**(2) 填充 $\varepsilon_r = 4$ 介质**
+
+截止频率降低：$f_c' = \dfrac{c}{2a\sqrt{\varepsilon_r}} = \dfrac{6.56}{2} = 3.28\;\text{GHz}$
+
+- $f = 10\,\text{GHz} > f_c' = 3.28\;\text{GHz}$：**可以传输**
+- $f = 4\,\text{GHz} > f_c' = 3.28\;\text{GHz}$：**可以传输**
+
+**结论：** 填充介质后截止频率降低，原来被截止的 $4\,\text{GHz}$ 波也可以传输。
+
 ---
 
 [← 上一章: 第6章 均匀平面波的反射与透射](../06-均匀平面波的反射与透射/index.md)
