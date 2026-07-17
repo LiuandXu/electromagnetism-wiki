@@ -576,6 +576,89 @@ $\eta_{in} = \eta_2^2/\eta_3$
 
     $$\mathbf{J}_s = \hat{\mathbf{n}}\times\dot{\mathbf{H}}\big|_{z=0} = (-\hat{\mathbf{z}})\times\frac{2E_0}{\eta_0}\hat{\mathbf{y}} = \hat{\mathbf{x}}\,\frac{2E_0}{\eta_0}\;\text{(A/m)}$$
 
+!!! warning "真题"
+
+    **真题 6.12（来源：2021秋季A卷 三、3）**
+    **题目：** 有一均匀平面波由真空（波的相速度为 $c$，波阻抗为 $120\pi$）斜入射到 $z=0$ 的理想导体平面上，其电场强度的复数表示式为：
+
+    $$\dot{\mathbf{E}}_i = \hat{\mathbf{y}}\,e^{-j\left(\frac{1}{\sqrt{2}}x + \frac{1}{\sqrt{2}}z\right)}\;\text{(V/m)}$$
+
+    求：(1) 波的频率和波长；(2) 写出入射波电场和磁场的瞬时表示式；(3) 确定入射角；(4) 求反射波电场和磁场的复数表示式；(5) 求合成波电场和磁场的复数表示式。
+
+    **解：**
+
+    **(1) 频率和波长**
+
+    传播矢量分量：$k_x = \dfrac{1}{\sqrt{2}}\;\text{rad/m}$，$k_z = \dfrac{1}{\sqrt{2}}\;\text{rad/m}$
+
+    波数：
+
+    $$k = \sqrt{k_x^2 + k_z^2} = \sqrt{\frac{1}{2} + \frac{1}{2}} = 1\;\text{rad/m}$$
+
+    角频率：
+
+    $$\omega = kc = 1\times3\times10^8 = 3\times10^8\;\text{rad/s}$$
+
+    频率：
+
+    $$f = \frac{\omega}{2\pi} = \frac{3\times10^8}{2\pi} \approx 4.77\times10^7\;\text{Hz} = 47.7\;\text{MHz}$$
+
+    波长：
+
+    $$\lambda = \frac{2\pi}{k} = 2\pi \approx 6.28\;\text{m}$$
+
+    **(2) 入射波瞬时表示式**
+
+    传播方向单位矢量：
+
+    $$\hat{\mathbf{k}}_i = \frac{k_x\hat{\mathbf{x}} + k_z\hat{\mathbf{z}}}{k} = \frac{1}{\sqrt{2}}\hat{\mathbf{x}} + \frac{1}{\sqrt{2}}\hat{\mathbf{z}}$$
+
+    入射波磁场：
+
+    $$\dot{\mathbf{H}}_i = \frac{1}{\eta_0}\hat{\mathbf{k}}_i\times\dot{\mathbf{E}}_i = \frac{1}{120\pi}\cdot\frac{\hat{\mathbf{x}}+\hat{\mathbf{z}}}{\sqrt{2}}\times\hat{\mathbf{y}}\,e^{-j(x+z)/\sqrt{2}}$$
+
+    $$= \frac{1}{120\pi\sqrt{2}}(\hat{\mathbf{z}} - \hat{\mathbf{x}})\,e^{-j(x+z)/\sqrt{2}}\;\text{(A/m)}$$
+
+    瞬时形式：
+
+    $$\mathbf{E}_i = \hat{\mathbf{y}}\cos\!\left(\omega t - \frac{x+z}{\sqrt{2}}\right)\;\text{(V/m)}$$
+
+    $$\mathbf{H}_i = \frac{1}{120\pi\sqrt{2}}(\hat{\mathbf{z}} - \hat{\mathbf{x}})\cos\!\left(\omega t - \frac{x+z}{\sqrt{2}}\right)\;\text{(A/m)}$$
+
+    **(3) 入射角**
+
+    入射面为 $xoz$ 面，入射角为传播矢量与 $z$ 轴的夹角：
+
+    $$\tan\theta_i = \frac{k_x}{k_z} = \frac{1/\sqrt{2}}{1/\sqrt{2}} = 1 \quad\Rightarrow\quad \theta_i = 45°$$
+
+    **(4) 反射波**
+
+    理想导体反射系数 $\Gamma = -1$。反射波传播方向 $k_z \to -k_z$：
+
+    $$\dot{\mathbf{E}}_r = -\hat{\mathbf{y}}\,e^{-j(x/\sqrt{2} - z/\sqrt{2})}\;\text{(V/m)}$$
+
+    反射波传播方向 $\hat{\mathbf{k}}_r = \dfrac{1}{\sqrt{2}}\hat{\mathbf{x}} - \dfrac{1}{\sqrt{2}}\hat{\mathbf{z}}$：
+
+    $$\dot{\mathbf{H}}_r = \frac{1}{\eta_0}\hat{\mathbf{k}}_r\times\dot{\mathbf{E}}_r = \frac{-1}{120\pi\sqrt{2}}(\hat{\mathbf{z}} + \hat{\mathbf{x}})\,e^{-j(x-z)/\sqrt{2}}\;\text{(A/m)}$$
+
+    **(5) 合成波**
+
+    $$\dot{\mathbf{E}} = \dot{\mathbf{E}}_i + \dot{\mathbf{E}}_r = \hat{\mathbf{y}}\left[e^{-j(x+z)/\sqrt{2}} - e^{-j(x-z)/\sqrt{2}}\right]$$
+
+    $$= \hat{\mathbf{y}}\,e^{-jx/\sqrt{2}}\left(e^{-jz/\sqrt{2}} - e^{jz/\sqrt{2}}\right) = -2j\,\hat{\mathbf{y}}\sin\!\left(\frac{z}{\sqrt{2}}\right)e^{-jx/\sqrt{2}}$$
+
+    $$\dot{\mathbf{H}} = \dot{\mathbf{H}}_i + \dot{\mathbf{H}}_r = \frac{1}{120\pi\sqrt{2}}\left[(\hat{\mathbf{z}}-\hat{\mathbf{x}})e^{-j(x+z)/\sqrt{2}} - (\hat{\mathbf{z}}+\hat{\mathbf{x}})e^{-j(x-z)/\sqrt{2}}\right]$$
+
+    $x$ 分量：
+
+    $$\dot{H}_x = \frac{-1}{120\pi\sqrt{2}}\left[e^{-j(x+z)/\sqrt{2}} + e^{-j(x-z)/\sqrt{2}}\right] = \frac{-2}{120\pi\sqrt{2}}\cos\!\left(\frac{z}{\sqrt{2}}\right)e^{-jx/\sqrt{2}}$$
+
+    $z$ 分量：
+
+    $$\dot{H}_z = \frac{1}{120\pi\sqrt{2}}\left[e^{-j(x+z)/\sqrt{2}} - e^{-j(x-z)/\sqrt{2}}\right] = \frac{-2j}{120\pi\sqrt{2}}\sin\!\left(\frac{z}{\sqrt{2}}\right)e^{-jx/\sqrt{2}}$$
+
+    合成波电场沿 $z$ 方向为驻波（$\sin$ 分布），沿 $x$ 方向为行波（$e^{-jx/\sqrt{2}}$），即合成波沿导体表面 $x$ 方向传播。
+
 ---
 
 [← 上一章: 第5章 均匀平面波](../05-均匀平面波/index.md)

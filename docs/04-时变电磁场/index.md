@@ -505,6 +505,108 @@ $$\nabla \times \mathbf{E} = -j\omega\mu\mathbf{H},\quad \nabla \times \mathbf{H
 
     $$\mathbf{J}_s = \hat{\mathbf{n}}\times\dot{\mathbf{H}}\big|_{z=0} = \hat{\mathbf{z}}\times\left(\hat{\mathbf{x}}\,\frac{4E_0}{\eta_0} - \hat{\mathbf{y}}\,\frac{j\,2E_0}{\eta_0}\right) = \hat{\mathbf{y}}\,\frac{4E_0}{\eta_0} + \hat{\mathbf{x}}\,\frac{j\,2E_0}{\eta_0}\;\text{(A/m)}$$
 
+!!! warning "真题"
+
+    **真题 4.13（来源：2022春季A卷 三、3）**
+    **题目：** 在间距为 $d$ 的两无限大导电平板之间充满空气，其中电场强度为：
+
+    $$\mathbf{E}(x,z,t) = \hat{\mathbf{y}}\,E_0\sin\!\left(\frac{\pi x}{d}\right)\cos(\omega t - \beta z)\;\text{(V/m)}$$
+
+    $\beta$ 为常数。求：(1) 与 $\mathbf{E}$ 相伴的磁场强度 $\mathbf{H}(x,z,t)$；(2) 两导体平板表面上的面电荷密度 $\rho_s$ 和面电流密度 $\mathbf{J}_s$。
+
+    **解：**
+
+    **(1) 求磁场强度**
+
+    由 $\nabla\times\mathbf{E} = -\mu_0\dfrac{\partial\mathbf{H}}{\partial t}$，电场仅有 $y$ 分量：
+
+    $$(\nabla\times\mathbf{E})_x = -\frac{\partial E_y}{\partial z} = -\beta E_0\sin\!\left(\frac{\pi x}{d}\right)\sin(\omega t - \beta z)$$
+
+    $$(\nabla\times\mathbf{E})_z = \frac{\partial E_y}{\partial x} = \frac{\pi E_0}{d}\cos\!\left(\frac{\pi x}{d}\right)\cos(\omega t - \beta z)$$
+
+    对时间积分得磁场：
+
+    $$H_x = -\frac{1}{\mu_0}\int(\nabla\times\mathbf{E})_x\,dt = -\frac{\beta E_0}{\omega\mu_0}\sin\!\left(\frac{\pi x}{d}\right)\cos(\omega t - \beta z)$$
+
+    $$H_z = -\frac{1}{\mu_0}\int(\nabla\times\mathbf{E})_z\,dt = -\frac{\pi E_0}{\omega\mu_0 d}\cos\!\left(\frac{\pi x}{d}\right)\sin(\omega t - \beta z)$$
+
+    因此：
+
+    $$\mathbf{H}(x,z,t) = -\hat{\mathbf{x}}\,\frac{\beta E_0}{\omega\mu_0}\sin\!\left(\frac{\pi x}{d}\right)\cos(\omega t - \beta z) - \hat{\mathbf{z}}\,\frac{\pi E_0}{\omega\mu_0 d}\cos\!\left(\frac{\pi x}{d}\right)\sin(\omega t - \beta z)\;\text{(A/m)}$$
+
+    利用 $\beta/(\omega\mu_0) = 1/\eta_0\cdot\beta/k$（$k=\omega/c$）：
+
+    $$\mathbf{H} = -\hat{\mathbf{x}}\,\frac{E_0}{\eta_0}\cdot\frac{\beta}{k}\sin\!\left(\frac{\pi x}{d}\right)\cos(\omega t - \beta z) - \hat{\mathbf{z}}\,\frac{\pi E_0}{\omega\mu_0 d}\cos\!\left(\frac{\pi x}{d}\right)\sin(\omega t - \beta z)\;\text{(A/m)}$$
+
+    **(2) 面电荷密度和面电流密度**
+
+    在 $x=0$ 表面，$\hat{\mathbf{n}} = -\hat{\mathbf{x}}$：
+
+    面电荷密度：$E_n\big|_{x=0} = E_x\big|_{x=0} = 0$（电场只有 $y$ 分量，无法向分量）
+
+    $$\rho_s\big|_{x=0} = \varepsilon_0 E_n = 0$$
+
+    面电流密度：$\mathbf{J}_s = \hat{\mathbf{n}}\times\mathbf{H}\big|_{x=0}$
+
+    在 $x=0$ 处，$\sin(0) = 0$，$\cos(0) = 1$：
+
+    $$\mathbf{H}\big|_{x=0} = -\hat{\mathbf{z}}\,\frac{\pi E_0}{\omega\mu_0 d}\sin(\omega t - \beta z)$$
+
+    $$\mathbf{J}_s\big|_{x=0} = (-\hat{\mathbf{x}})\times\left[-\hat{\mathbf{z}}\,\frac{\pi E_0}{\omega\mu_0 d}\sin(\omega t - \beta z)\right] = -\hat{\mathbf{y}}\,\frac{\pi E_0}{\omega\mu_0 d}\sin(\omega t - \beta z)\;\text{(A/m)}$$
+
+    在 $x=d$ 表面，$\hat{\mathbf{n}} = \hat{\mathbf{x}}$：
+
+    在 $x=d$ 处，$\sin(\pi) = 0$，$\cos(\pi) = -1$：
+
+    $$\mathbf{H}\big|_{x=d} = \hat{\mathbf{z}}\,\frac{\pi E_0}{\omega\mu_0 d}\sin(\omega t - \beta z)$$
+
+    $$\mathbf{J}_s\big|_{x=d} = \hat{\mathbf{x}}\times\left[\hat{\mathbf{z}}\,\frac{\pi E_0}{\omega\mu_0 d}\sin(\omega t - \beta z)\right] = -\hat{\mathbf{y}}\,\frac{\pi E_0}{\omega\mu_0 d}\sin(\omega t - \beta z)\;\text{(A/m)}$$
+
+    两板面电荷密度均为零（电场平行于导体表面，无法向分量），面电流方向相同。
+
+!!! warning "真题"
+
+    **真题 4.14（来源：2022春季B卷 三、1）**
+    **题目：** $N = 3$ 匝的圆形线圈的半径为 $b = 2\;\text{m}$，其对称中心沿 $z$ 轴放置。沿其对称中心穿过该线圈的磁感应强度为 $\mathbf{B} = 2\cos\!\left(\dfrac{\pi r}{2b}\right)\sin\omega t\;\hat{\mathbf{z}}$。其中，角频率 $\omega = 10^9\;\text{Hz}$。求该线圈上产生的感应电动势 $V_{\text{感应}}$。
+
+    **解：**
+
+    由法拉第电磁感应定律：
+
+    $$V_{\text{感应}} = -N\frac{d\Phi}{dt}$$
+
+    磁通量：
+
+    $$\Phi = \int_S \mathbf{B}\cdot d\mathbf{S} = \int_0^b 2\cos\!\left(\frac{\pi r}{2b}\right)\sin\omega t\cdot 2\pi r\,dr$$
+
+    $$= 4\pi\sin\omega t\int_0^b r\cos\!\left(\frac{\pi r}{2b}\right)dr$$
+
+    令 $u = \dfrac{\pi r}{2b}$，则 $r = \dfrac{2bu}{\pi}$，$dr = \dfrac{2b}{\pi}du$：
+
+    $$\int_0^b r\cos\!\left(\frac{\pi r}{2b}\right)dr = \frac{4b^2}{\pi^2}\int_0^{\pi/2} u\cos u\,du$$
+
+    利用分部积分：$\int u\cos u\,du = u\sin u + \cos u$
+
+    $$\int_0^{\pi/2} u\cos u\,du = \left[u\sin u + \cos u\right]_0^{\pi/2} = \frac{\pi}{2}\cdot1 + 0 - (0 + 1) = \frac{\pi}{2} - 1$$
+
+    因此：
+
+    $$\Phi = 4\pi\sin\omega t\cdot\frac{4b^2}{\pi^2}\left(\frac{\pi}{2} - 1\right) = \frac{16b^2}{\pi}\left(\frac{\pi}{2} - 1\right)\sin\omega t$$
+
+    代入 $b = 2\;\text{m}$：
+
+    $$\Phi = \frac{16\times4}{\pi}\left(\frac{\pi}{2} - 1\right)\sin\omega t = \frac{64}{\pi}\left(\frac{\pi}{2} - 1\right)\sin\omega t$$
+
+    感应电动势：
+
+    $$V_{\text{感应}} = -N\frac{d\Phi}{dt} = -3\cdot\frac{64}{\pi}\left(\frac{\pi}{2} - 1\right)\omega\cos\omega t$$
+
+    代入 $\omega = 10^9\;\text{rad/s}$：
+
+    $$V_{\text{感应}} = -\frac{192\times10^9}{\pi}\left(\frac{\pi}{2} - 1\right)\cos(10^9 t)\;\text{(V)}$$
+
+    $$\approx -\frac{192\times10^9\times0.571}{3.1416}\cos(10^9 t) \approx -3.49\times10^{10}\cos(10^9 t)\;\text{(V)}$$
+
 ---
 
 [← 上一章: 第3章 静态电磁场及其解法](../03-静态电磁场及其解法/index.md)

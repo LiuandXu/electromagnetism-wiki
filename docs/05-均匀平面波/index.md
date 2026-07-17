@@ -681,6 +681,53 @@ $$\mathbf{E}(z, t) = \hat{\mathbf{x}}E_x\cos(\omega t - kz + \phi_x) + \hat{\mat
 
     （注：此题介质参数异常大，可能是低频介质。）
 
+!!! warning "真题"
+
+    **真题 5.36（来源：2022春季B卷 三、2）**
+    **题目：** 空气中，一列沿 $+y$ 方向传播的均匀平面波的磁场表示式如下：
+
+    $$\mathbf{H} = 4\times10^{-6}\cos\!\left(10^7\pi t - k_0 y + \frac{\pi}{4}\right)\hat{\mathbf{z}}\;\text{(A/m)}$$
+
+    求：(1) 波数 $k_0$ 和当 $t = 3\;\text{ms}$ 时 $H_z$ 振幅为 $0$ 的位置；(2) 写出电场的瞬时表示式。
+
+    **解：**
+
+    **(1) 波数 $k_0$ 和零振幅位置**
+
+    空气中波速 $c = 3\times10^8\;\text{m/s}$，角频率 $\omega = 10^7\pi\;\text{rad/s}$。
+
+    波数：
+
+    $$k_0 = \frac{\omega}{c} = \frac{10^7\pi}{3\times10^8} = \frac{\pi}{30}\;\text{rad/m}$$
+
+    $H_z = 0$ 时 $\cos(\cdot) = 0$，即：
+
+    $$10^7\pi t - k_0 y + \frac{\pi}{4} = \frac{\pi}{2} + n\pi\quad(n = 0, \pm1, \pm2, \ldots)$$
+
+    代入 $t = 3\;\text{ms} = 3\times10^{-3}\;\text{s}$：
+
+    $$10^7\pi\times3\times10^{-3} - \frac{\pi}{30}y + \frac{\pi}{4} = \frac{\pi}{2} + n\pi$$
+
+    $$3\times10^4\pi - \frac{\pi}{30}y + \frac{\pi}{4} = \frac{\pi}{2} + n\pi$$
+
+    $$\frac{\pi}{30}y = 3\times10^4\pi - \frac{\pi}{4} + n\pi$$
+
+    $$y = 30\left(3\times10^4 - \frac{1}{4} + n\right) = 30\left(30000 - 0.25 + n\right)\;\text{m}$$
+
+    即 $y = 900000 - 7.5 + 30n\;\text{m}$，$n = 0, \pm1, \pm2, \ldots$
+
+    **(2) 电场瞬时表示式**
+
+    传播方向 $\hat{\mathbf{y}}$，磁场方向 $\hat{\mathbf{z}}$，电场方向：
+
+    $$\hat{\mathbf{E}} = \hat{\mathbf{y}}\times\hat{\mathbf{z}} = \hat{\mathbf{x}}$$
+
+    电场振幅：
+
+    $$E_m = \eta_0 H_m = 120\pi\times4\times10^{-6} = 4.8\pi\times10^{-4}\;\text{V/m}$$
+
+    $$\mathbf{E}(y,t) = 4.8\pi\times10^{-4}\cos\!\left(10^7\pi t - \frac{\pi}{30}y + \frac{\pi}{4}\right)\hat{\mathbf{x}}\;\text{(V/m)}$$
+
 ---
 
 [← 上一章: 第4章 时变电磁场](../04-时变电磁场/index.md)
