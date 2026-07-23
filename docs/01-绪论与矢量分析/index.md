@@ -41,26 +41,30 @@
 
 !!! warning "真题"
 
+
     **真题 1.1（来源：2023春季B卷）**
     **题目：** 已知矢量 $\mathbf{A} = 3\hat{\mathbf{x}} + 2\hat{\mathbf{y}} + \hat{\mathbf{z}}$，并且 $\mathbf{A} \times \mathbf{B} = 4\hat{\mathbf{x}} - 8\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$，$\mathbf{A} \cdot \mathbf{B} = 10$，试求矢量 $\mathbf{B}$。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    设 $\mathbf{B} = a\hat{\mathbf{x}} + b\hat{\mathbf{y}} + c\hat{\mathbf{z}}$，由点积条件：
+        **解：**
 
-    $$\mathbf{A} \cdot \mathbf{B} = 3a + 2b + c = 10$$
+        设 $\mathbf{B} = a\hat{\mathbf{x}} + b\hat{\mathbf{y}} + c\hat{\mathbf{z}}$，由点积条件：
 
-    由叉积 $\mathbf{A} \times \mathbf{B} = (2c - b)\hat{\mathbf{x}} + (a - 3c)\hat{\mathbf{y}} + (3b - 2a)\hat{\mathbf{z}}$，与已知 $\mathbf{A} \times \mathbf{B} = 4\hat{\mathbf{x}} - 8\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$ 比较得：
+        $$\mathbf{A} \cdot \mathbf{B} = 3a + 2b + c = 10$$
 
-    $$2c - b = 4, \quad a - 3c = -8, \quad 3b - 2a = 4$$
+        由叉积 $\mathbf{A} \times \mathbf{B} = (2c - b)\hat{\mathbf{x}} + (a - 3c)\hat{\mathbf{y}} + (3b - 2a)\hat{\mathbf{z}}$，与已知 $\mathbf{A} \times \mathbf{B} = 4\hat{\mathbf{x}} - 8\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$ 比较得：
 
-    联立求解：
+        $$2c - b = 4, \quad a - 3c = -8, \quad 3b - 2a = 4$$
 
-    $$a = 1,\quad b = 2,\quad c = 3$$
+        联立求解：
 
-    因此 $\mathbf{B} = \hat{\mathbf{x}} + 2\hat{\mathbf{y}} + 3\hat{\mathbf{z}}$。
+        $$a = 1,\quad b = 2,\quad c = 3$$
 
-    **验证：** $\mathbf{A} \cdot \mathbf{B} = 3 + 4 + 3 = 10$ ✓，$\mathbf{A} \times \mathbf{B} = (6-2)\hat{\mathbf{x}} + (1-9)\hat{\mathbf{y}} + (6-2)\hat{\mathbf{z}} = 4\hat{\mathbf{x}} - 8\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$ ✓。
+        因此 $\mathbf{B} = \hat{\mathbf{x}} + 2\hat{\mathbf{y}} + 3\hat{\mathbf{z}}$。
+
+        **验证：** $\mathbf{A} \cdot \mathbf{B} = 3 + 4 + 3 = 10$ ✓，$\mathbf{A} \times \mathbf{B} = (6-2)\hat{\mathbf{x}} + (1-9)\hat{\mathbf{y}} + (6-2)\hat{\mathbf{z}} = 4\hat{\mathbf{x}} - 8\hat{\mathbf{y}} + 4\hat{\mathbf{z}}$ ✓。
+
 
 ### 1.3 曲线坐标系
 
@@ -130,26 +134,30 @@ $$\nabla u = \frac{\partial u}{\partial r}\hat{\mathbf{r}} + \frac{1}{r}\frac{\p
 
 !!! warning "真题"
 
+
     **真题 1.2（来源：2024春季B卷）**
     **题目：** 求标量场 $u = x^2 + 2y^2 + xy + z^2$ 在点 $M(3, 2, 0)$ 处的梯度。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    梯度在直角坐标系中为：
+        **解：**
 
-    $$\nabla u = \frac{\partial u}{\partial x}\hat{\mathbf{x}} + \frac{\partial u}{\partial y}\hat{\mathbf{y}} + \frac{\partial u}{\partial z}\hat{\mathbf{z}}$$
+        梯度在直角坐标系中为：
 
-    计算各偏导数：
+        $$\nabla u = \frac{\partial u}{\partial x}\hat{\mathbf{x}} + \frac{\partial u}{\partial y}\hat{\mathbf{y}} + \frac{\partial u}{\partial z}\hat{\mathbf{z}}$$
 
-    $$\frac{\partial u}{\partial x} = 2x + y, \quad \frac{\partial u}{\partial y} = 4y + x, \quad \frac{\partial u}{\partial z} = 2z$$
+        计算各偏导数：
 
-    代入 $M(3, 2, 0)$：
+        $$\frac{\partial u}{\partial x} = 2x + y, \quad \frac{\partial u}{\partial y} = 4y + x, \quad \frac{\partial u}{\partial z} = 2z$$
 
-    $$\frac{\partial u}{\partial x}\bigg|_M = 2(3) + 2 = 8, \quad \frac{\partial u}{\partial y}\bigg|_M = 4(2) + 3 = 11, \quad \frac{\partial u}{\partial z}\bigg|_M = 0$$
+        代入 $M(3, 2, 0)$：
 
-    因此：
+        $$\frac{\partial u}{\partial x}\bigg|_M = 2(3) + 2 = 8, \quad \frac{\partial u}{\partial y}\bigg|_M = 4(2) + 3 = 11, \quad \frac{\partial u}{\partial z}\bigg|_M = 0$$
 
-    $$\nabla u\big|_M = 8\hat{\mathbf{x}} + 11\hat{\mathbf{y}}$$
+        因此：
+
+        $$\nabla u\big|_M = 8\hat{\mathbf{x}} + 11\hat{\mathbf{y}}$$
+
 
 ### 1.5 矢量场的散度
 
@@ -216,58 +224,70 @@ $$\mathbf{F}(\mathbf{r}) = -\nabla \Phi(\mathbf{r}) + \nabla \times \mathbf{A}(\
 
 !!! warning "真题"
 
+
     **真题 1.3（来源：2022春季A卷 一、4）**
     **题目：** 已知空间 $M$ 点的坐标为 $(2, 3, 4)$，另有 $M'$ 点的坐标为 $(3, 4, 5)$，矢量 $\mathbf{A}$ 的起点和终点分别位于 $M$ 和 $M'$ 点，则矢量 $\mathbf{A}$ 为多少？
 
-    **答案：**
+    ??? note "点击查看解答"
 
-    $$\mathbf{A} = \overrightarrow{MM'} = (3-2)\hat{\mathbf{x}} + (4-3)\hat{\mathbf{y}} + (5-4)\hat{\mathbf{z}} = \hat{\mathbf{x}} + \hat{\mathbf{y}} + \hat{\mathbf{z}}$$
+        **答案：**
+
+        $$\mathbf{A} = \overrightarrow{MM'} = (3-2)\hat{\mathbf{x}} + (4-3)\hat{\mathbf{y}} + (5-4)\hat{\mathbf{z}} = \hat{\mathbf{x}} + \hat{\mathbf{y}} + \hat{\mathbf{z}}$$
+
 
 !!! warning "真题"
+
 
     **真题 1.4（来源：2024秋季B卷 一、2）**
     **题目：** 球坐标系下标量函数 $u = r\sin\theta$，求 $\nabla u$ 和 $\nabla^2 u$。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    球坐标系梯度公式：
+        **解：**
 
-    $$\nabla u = \hat{r}\frac{\partial u}{\partial r} + \hat{\theta}\frac{1}{r}\frac{\partial u}{\partial\theta} + \hat{\phi}\frac{1}{r\sin\theta}\frac{\partial u}{\partial\phi}$$
+        球坐标系梯度公式：
 
-    代入 $u = r\sin\theta$：
+        $$\nabla u = \hat{r}\frac{\partial u}{\partial r} + \hat{\theta}\frac{1}{r}\frac{\partial u}{\partial\theta} + \hat{\phi}\frac{1}{r\sin\theta}\frac{\partial u}{\partial\phi}$$
 
-    $$\frac{\partial u}{\partial r} = \sin\theta, \quad \frac{1}{r}\frac{\partial u}{\partial\theta} = \cos\theta, \quad \frac{\partial u}{\partial\phi} = 0$$
+        代入 $u = r\sin\theta$：
 
-    $$\boxed{\nabla u = \hat{r}\sin\theta + \hat{\theta}\cos\theta}$$
+        $$\frac{\partial u}{\partial r} = \sin\theta, \quad \frac{1}{r}\frac{\partial u}{\partial\theta} = \cos\theta, \quad \frac{\partial u}{\partial\phi} = 0$$
 
-    球坐标系拉普拉斯公式：
+        $$\boxed{\nabla u = \hat{r}\sin\theta + \hat{\theta}\cos\theta}$$
 
-    $$\nabla^2 u = \frac{1}{r^2}\frac{\partial}{\partial r}\!\left(r^2\frac{\partial u}{\partial r}\right) + \frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}\!\left(\sin\theta\frac{\partial u}{\partial\theta}\right)$$
+        球坐标系拉普拉斯公式：
 
-    第一项：$\dfrac{1}{r^2}\dfrac{\partial}{\partial r}(r^2\sin\theta) = \dfrac{2\sin\theta}{r}$
+        $$\nabla^2 u = \frac{1}{r^2}\frac{\partial}{\partial r}\!\left(r^2\frac{\partial u}{\partial r}\right) + \frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}\!\left(\sin\theta\frac{\partial u}{\partial\theta}\right)$$
 
-    第二项：$\dfrac{1}{r^2\sin\theta}\dfrac{\partial}{\partial\theta}(\sin\theta\cdot r\cos\theta) = \dfrac{\cos 2\theta}{r\sin\theta}$
+        第一项：$\dfrac{1}{r^2}\dfrac{\partial}{\partial r}(r^2\sin\theta) = \dfrac{2\sin\theta}{r}$
 
-    $$\nabla^2 u = \frac{2\sin\theta}{r} + \frac{\cos 2\theta}{r\sin\theta} = \frac{2\sin^2\theta + 1 - 2\sin^2\theta}{r\sin\theta} = \boxed{\frac{1}{r\sin\theta}}$$
+        第二项：$\dfrac{1}{r^2\sin\theta}\dfrac{\partial}{\partial\theta}(\sin\theta\cdot r\cos\theta) = \dfrac{\cos 2\theta}{r\sin\theta}$
+
+        $$\nabla^2 u = \frac{2\sin\theta}{r} + \frac{\cos 2\theta}{r\sin\theta} = \frac{2\sin^2\theta + 1 - 2\sin^2\theta}{r\sin\theta} = \boxed{\frac{1}{r\sin\theta}}$$
+
 
 !!! warning "真题"
+
 
     **真题 1.5（来源：2021秋季B卷 二、2）**
     **题目：** 设电场强度和磁场强度分别为 $\mathbf{E} = E_0\cos(\omega t + \varphi_E)$、$\mathbf{H} = H_0\cos(\omega t + \varphi_H)$，求其坡印廷矢量的平均值 $\mathbf{S}_{\mathrm{av}}$。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    先将时域表示式转换为复数表示式：
+        **解：**
 
-    $$\dot{\mathbf{E}} = E_0\,e^{j\varphi_E}, \quad \dot{\mathbf{H}} = H_0\,e^{j\varphi_H}$$
+        先将时域表示式转换为复数表示式：
 
-    由平均坡印廷矢量公式：
+        $$\dot{\mathbf{E}} = E_0\,e^{j\varphi_E}, \quad \dot{\mathbf{H}} = H_0\,e^{j\varphi_H}$$
 
-    $$\mathbf{S}_{\mathrm{av}} = \frac{1}{2}\operatorname{Re}\!\left[\dot{\mathbf{E}} \times \dot{\mathbf{H}}^*\right]$$
+        由平均坡印廷矢量公式：
 
-    代入计算：
+        $$\mathbf{S}_{\mathrm{av}} = \frac{1}{2}\operatorname{Re}\!\left[\dot{\mathbf{E}} \times \dot{\mathbf{H}}^*\right]$$
 
-    $$\mathbf{S}_{\mathrm{av}} = \frac{1}{2}\operatorname{Re}\!\left[E_0\,e^{j\varphi_E} \times H_0\,e^{-j\varphi_H}\right] = \frac{1}{2}E_0 H_0\cos(\varphi_E - \varphi_H)$$
+        代入计算：
+
+        $$\mathbf{S}_{\mathrm{av}} = \frac{1}{2}\operatorname{Re}\!\left[E_0\,e^{j\varphi_E} \times H_0\,e^{-j\varphi_H}\right] = \frac{1}{2}E_0 H_0\cos(\varphi_E - \varphi_H)$$
+
 
 ---
 

@@ -185,20 +185,24 @@ $$\mathbf{D} = \varepsilon \mathbf{E},\quad \mathbf{B} = \mu \mathbf{H},\quad \m
 
 !!! warning "真题"
 
+
     **真题 2.1（来源：2024春季B卷）**
     **题目：** 在金属铜中，电场强度为 $\mathbf{E} = \hat{\mathbf{x}} E_0 \sin(\omega t)$（V/m），铜的电导率为 $\sigma$、介电常数为 $\varepsilon$。求铜中的传导电流密度和位移电流密度。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    **传导电流密度**由欧姆定律给出：
+        **解：**
 
-    $$\mathbf{J}_c = \sigma \mathbf{E} = \hat{\mathbf{x}}\, \sigma E_0 \sin(\omega t) \quad (\text{A/m}^2)$$
+        **传导电流密度**由欧姆定律给出：
 
-    **位移电流密度**由电位移矢量随时间的变化率定义：
+        $$\mathbf{J}_c = \sigma \mathbf{E} = \hat{\mathbf{x}}\, \sigma E_0 \sin(\omega t) \quad (\text{A/m}^2)$$
 
-    $$\mathbf{J}_d = \frac{\partial \mathbf{D}}{\partial t} = \varepsilon \frac{\partial \mathbf{E}}{\partial t} = \hat{\mathbf{x}}\, \varepsilon \omega E_0 \cos(\omega t) \quad (\text{A/m}^2)$$
+        **位移电流密度**由电位移矢量随时间的变化率定义：
 
-    可见传导电流与电场同相位，而位移电流超前电场 $90°$。两者之比为 $|\mathbf{J}_c| / |\mathbf{J}_d| = \sigma / (\omega \varepsilon)$，在良导体中 $\sigma \gg \omega \varepsilon$，传导电流远大于位移电流。
+        $$\mathbf{J}_d = \frac{\partial \mathbf{D}}{\partial t} = \varepsilon \frac{\partial \mathbf{E}}{\partial t} = \hat{\mathbf{x}}\, \varepsilon \omega E_0 \cos(\omega t) \quad (\text{A/m}^2)$$
+
+        可见传导电流与电场同相位，而位移电流超前电场 $90°$。两者之比为 $|\mathbf{J}_c| / |\mathbf{J}_d| = \sigma / (\omega \varepsilon)$，在良导体中 $\sigma \gg \omega \varepsilon$，传导电流远大于位移电流。
+
 
 ### 2.7 电磁场的边界条件
 
@@ -297,171 +301,235 @@ $$\mathbf{D} = \varepsilon \mathbf{E},\quad \mathbf{B} = \mu \mathbf{H},\quad \m
 
 !!! warning "真题"
 
+
     **真题 2.2（来源：2023春季A卷）**
     **题目：** 空气和介质的分界面为 $z = 0$ 平面，介质的相对介电常数 $\varepsilon_r = 4$。已知分界面处靠近空气一侧的电场强度为 $\mathbf{E}_2 = (\hat{\mathbf{x}} + 4\hat{\mathbf{y}} + 5\hat{\mathbf{z}})$ V/m，且分界面上无自由电荷。求靠近介质一侧的电场强度 $\mathbf{E}_1$。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    将电场分解为切向分量（$x$、$y$ 方向）和法向分量（$z$ 方向）。
+        **解：**
 
-    **切向分量**由边界条件 $E_{1t} = E_{2t}$（切向电场连续）：
+        将电场分解为切向分量（$x$、$y$ 方向）和法向分量（$z$ 方向）。
 
-    $$E_{1x} = E_{2x} = 1 \text{ V/m}, \quad E_{1y} = E_{2y} = 4 \text{ V/m}$$
+        **切向分量**由边界条件 $E_{1t} = E_{2t}$（切向电场连续）：
 
-    **法向分量**由边界条件 $D_{1n} = D_{2n}$（无自由电荷时法向电位移连续）：
+        $$E_{1x} = E_{2x} = 1 \text{ V/m}, \quad E_{1y} = E_{2y} = 4 \text{ V/m}$$
 
-    $$\varepsilon_0 E_{1z} = \varepsilon_r \varepsilon_0 E_{2z}$$
+        **法向分量**由边界条件 $D_{1n} = D_{2n}$（无自由电荷时法向电位移连续）：
 
-    因此：
+        $$\varepsilon_0 E_{1z} = \varepsilon_r \varepsilon_0 E_{2z}$$
 
-    $$E_{1z} = \frac{E_{2z}}{\varepsilon_r} = \frac{5}{4} = 1.25 \text{ V/m}$$
+        因此：
 
-    故：
+        $$E_{1z} = \frac{E_{2z}}{\varepsilon_r} = \frac{5}{4} = 1.25 \text{ V/m}$$
 
-    $$\mathbf{E}_1 = \hat{\mathbf{x}} + 4\hat{\mathbf{y}} + 1.25\hat{\mathbf{z}} \quad (\text{V/m})$$
+        故：
 
-    可见电场进入高介电常数介质后，法向分量减小（$D_n$ 保持连续而 $E_n$ 减小），切向分量不变。
+        $$\mathbf{E}_1 = \hat{\mathbf{x}} + 4\hat{\mathbf{y}} + 1.25\hat{\mathbf{z}} \quad (\text{V/m})$$
+
+        可见电场进入高介电常数介质后，法向分量减小（$D_n$ 保持连续而 $E_n$ 减小），切向分量不变。
+
 
 !!! warning "真题"
+
 
     **真题 2.3（来源：2021秋季A卷 一、2）**
     **题目：** 真空中静电场的通量（在曲面上）和环量的积分形式分别为多少？
 
-    **答案：**
+    ??? note "点击查看解答"
 
-    $$\oint_S \mathbf{D}\cdot d\mathbf{S} = q, \qquad \oint_C \mathbf{E}\cdot d\mathbf{l} = 0$$
+        **答案：**
+
+        $$\oint_S \mathbf{D}\cdot d\mathbf{S} = q, \qquad \oint_C \mathbf{E}\cdot d\mathbf{l} = 0$$
+
 
 !!! warning "真题"
+
 
     **真题 2.4（来源：2021秋季A卷 三、2）**
     **题目：** 一个半径为 $a$ 的均匀带电圆盘，电荷面密度为 $\rho_s$，求圆盘轴线上距圆盘中心 $z$ 处 $P$ 点的电场强度 $\mathbf{E}$。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    在圆盘上取半径为 $r$、宽度为 $dr$ 的环形面元，其面积为 $dS = 2\pi r\,dr$，带电荷 $dq = \rho_s\cdot 2\pi r\,dr$。
+        **解：**
 
-    由对称性，$P$ 点电场只有 $z$ 方向分量：
+        在圆盘上取半径为 $r$、宽度为 $dr$ 的环形面元，其面积为 $dS = 2\pi r\,dr$，带电荷 $dq = \rho_s\cdot 2\pi r\,dr$。
 
-    $$dE_z = \frac{dq}{4\pi\varepsilon_0}\cdot\frac{z}{(r^2+z^2)^{3/2}} = \frac{\rho_s z\,r\,dr}{2\varepsilon_0(r^2+z^2)^{3/2}}$$
+        由对称性，$P$ 点电场只有 $z$ 方向分量：
 
-    积分：
+        $$dE_z = \frac{dq}{4\pi\varepsilon_0}\cdot\frac{z}{(r^2+z^2)^{3/2}} = \frac{\rho_s z\,r\,dr}{2\varepsilon_0(r^2+z^2)^{3/2}}$$
 
-    $$E_z = \frac{\rho_s z}{2\varepsilon_0}\int_0^a \frac{r\,dr}{(r^2+z^2)^{3/2}} = \frac{\rho_s z}{2\varepsilon_0}\left[-\frac{1}{\sqrt{r^2+z^2}}\right]_0^a = \frac{\rho_s}{2\varepsilon_0}\left(1 - \frac{z}{\sqrt{z^2+a^2}}\right)$$
+        积分：
 
-    $$\mathbf{E} = \hat{\mathbf{z}}\,\frac{\rho_s}{2\varepsilon_0}\!\left(1 - \frac{z}{\sqrt{z^2+a^2}}\right)$$
+        $$E_z = \frac{\rho_s z}{2\varepsilon_0}\int_0^a \frac{r\,dr}{(r^2+z^2)^{3/2}} = \frac{\rho_s z}{2\varepsilon_0}\left[-\frac{1}{\sqrt{r^2+z^2}}\right]_0^a = \frac{\rho_s}{2\varepsilon_0}\left(1 - \frac{z}{\sqrt{z^2+a^2}}\right)$$
+
+        $$\mathbf{E} = \hat{\mathbf{z}}\,\frac{\rho_s}{2\varepsilon_0}\!\left(1 - \frac{z}{\sqrt{z^2+a^2}}\right)$$
+
 
 !!! warning "真题"
+
 
     **真题 2.5（来源：2021秋季B卷 一、4）**
     **题目：** 在静电场中，电场 $\mathbf{E}$ 用其电位函数 $\varphi$ 表示为？
 
-    **答案：** $\mathbf{E} = -\nabla\varphi$
+    ??? note "点击查看解答"
+
+        **答案：** $\mathbf{E} = -\nabla\varphi$
+
 
 !!! warning "真题"
+
 
     **真题 2.6（来源：2022春季A卷 一、2）**
     **题目：** 反映媒质特性的三个结构方程分别为？
 
-    **答案：**
+    ??? note "点击查看解答"
 
-    $$\mathbf{D} = \varepsilon\mathbf{E}, \qquad \mathbf{B} = \mu\mathbf{H}, \qquad \mathbf{J} = \sigma\mathbf{E}$$
+        **答案：**
+
+        $$\mathbf{D} = \varepsilon\mathbf{E}, \qquad \mathbf{B} = \mu\mathbf{H}, \qquad \mathbf{J} = \sigma\mathbf{E}$$
+
 
 !!! warning "真题"
+
 
     **真题 2.7（来源：2022春季A卷 一、9）**
     **题目：** 双导体系统中，一个导体上的总电荷为 $2\;\text{C}$，两导体之间的电位差为 $1\;\text{V}$，则该双导体系统的电容为？
 
-    **答案：** $C = \dfrac{Q}{U} = \dfrac{2}{1} = 2\;\text{F}$
+    ??? note "点击查看解答"
+
+        **答案：** $C = \dfrac{Q}{U} = \dfrac{2}{1} = 2\;\text{F}$
+
 
 !!! warning "真题"
+
 
     **真题 2.8（来源：2023春季B卷 一、2）**
     **题目：** 外加静电场使介质中的分子电偶极矩整齐排列的物理现象，被称为静电场对介质的\_\_\_作用。
 
-    **答案：** 极化
+    ??? note "点击查看解答"
+
+        **答案：** 极化
+
 
 !!! warning "真题"
+
 
     **真题 2.9（来源：2024春季A卷 一、2）**
     **题目：** 从宏观效应看，在电磁场的作用下，物质会产生\_\_\_、\_\_\_和传导三种效应。其中，在电场力作用下，介质中的束缚电荷只能作微小位移，这种现象称为物质的极化。
 
-    **答案：** 极化、磁化
+    ??? note "点击查看解答"
+
+        **答案：** 极化、磁化
+
 
 !!! warning "真题"
+
 
     **真题 2.10（来源：2024秋季A卷 一、8）**
     **题目：** 导体中存在大量能自由运动的带电粒子，它们受电场力作用而定向运动，形成电流。单位时间内通过某横截面的电量为通过该横截面的\_\_\_，单位为\_\_\_。
 
-    **答案：** 电流强度；安培
+    ??? note "点击查看解答"
+
+        **答案：** 电流强度；安培
+
 
 !!! warning "真题"
+
 
     **真题 2.11（来源：2021秋季A卷 一、3）**
     **题目：** 电流连续性方程的微分形式为？
 
-    **答案：** $\nabla\cdot\mathbf{J} = -\dfrac{\partial\rho}{\partial t}$
+    ??? note "点击查看解答"
+
+        **答案：** $\nabla\cdot\mathbf{J} = -\dfrac{\partial\rho}{\partial t}$
+
 
 !!! warning "真题"
+
 
     **真题 2.12（来源：2021秋季A卷 一、5）**
     **题目：** 磁感应强度 $\mathbf{B}$ 在闭合曲面上的通量为？
 
-    **答案：** $\oint_S \mathbf{B}\cdot d\mathbf{S} = 0$（磁通连续性原理）
+    ??? note "点击查看解答"
+
+        **答案：** $\oint_S \mathbf{B}\cdot d\mathbf{S} = 0$（磁通连续性原理）
+
 
 !!! warning "真题"
+
 
     **真题 2.13（来源：2022春季B卷 一、1）**
     **题目：** 一个区域的电荷密度为 $\rho$，从该区域流出去的电流的密度为 $\mathbf{J}$，该区域中电流连续性方程的积分形式为？
 
-    **答案：**
+    ??? note "点击查看解答"
 
-    $$\oint_S \mathbf{J}\cdot d\mathbf{S} = -\frac{d}{dt}\int_V \rho\,dV$$
+        **答案：**
+
+        $$\oint_S \mathbf{J}\cdot d\mathbf{S} = -\frac{d}{dt}\int_V \rho\,dV$$
+
 
 !!! warning "真题"
+
 
     **真题 2.14（来源：2022秋季B卷 一、1）**
     **题目：** 静磁场的磁场强度 $\mathbf{H}$ 的矢量线称为\_\_\_，它与\_\_\_相互交链，静磁场 $\mathbf{H}$ 的散度为\_\_\_。磁场对媒质的作用称为\_\_\_作用。
 
-    **答案：** 磁力线；电流；$0$；磁化
+    ??? note "点击查看解答"
+
+        **答案：** 磁力线；电流；$0$；磁化
+
 
 !!! warning "真题"
+
 
     **真题 2.15（来源：2023秋季A卷 一、2）**
     **题目：** 在两种媒质的分界面上，若不存在面电流，磁场强度的\_\_\_是连续的，磁感应强度的\_\_\_是连续的。
 
-    **答案：** 切向分量；法向分量
+    ??? note "点击查看解答"
+
+        **答案：** 切向分量；法向分量
+
 
 !!! warning "真题"
+
 
     **真题 2.16（来源：2024春季B卷 一、2）**
     **题目：** 在金属铜中，电场强度大小为 $E_0\sin\omega t\;(\text{V/m})$，铜的电导率为 $\sigma$、介电常数为 $\varepsilon$，求铜中的传导电流密度大小和位移电流密度大小。
 
-    **答案：**
+    ??? note "点击查看解答"
 
-    传导电流密度：$J_c = \sigma E_0\sin\omega t$
+        **答案：**
 
-    位移电流密度：$J_d = \dfrac{\partial D}{\partial t} = \omega\varepsilon E_0\cos\omega t$
+        传导电流密度：$J_c = \sigma E_0\sin\omega t$
+
+        位移电流密度：$J_d = \dfrac{\partial D}{\partial t} = \omega\varepsilon E_0\cos\omega t$
+
 
 !!! warning "真题"
+
 
     **真题 2.17（来源：2023春季B卷 三、2）**
     **题目：** 已知海水的电导率 $\sigma = 4\;\text{S/m}$，相对介电常数 $\varepsilon_r = 81$。假设海水中的电场为 $\mathbf{E} = E_0\cos\omega t\;\hat{\mathbf{x}}\;(\text{V/m})$，其中 $\omega = 2\pi\times10^3\;\text{rad/s}$。计算海水中的位移电流密度和传导电流密度。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    传导电流密度：
+        **解：**
 
-    $$\mathbf{J}_c = \sigma\mathbf{E} = 4E_0\cos\omega t\;\hat{\mathbf{x}}\;\text{(A/m}^2\text{)}$$
+        传导电流密度：
 
-    位移电流密度：
+        $$\mathbf{J}_c = \sigma\mathbf{E} = 4E_0\cos\omega t\;\hat{\mathbf{x}}\;\text{(A/m}^2\text{)}$$
 
-    $$\mathbf{J}_d = \varepsilon\frac{\partial\mathbf{E}}{\partial t} = \varepsilon_r\varepsilon_0\omega E_0\sin\omega t\;\hat{\mathbf{x}} = 81\varepsilon_0\cdot2\pi\times10^3\cdot E_0\sin\omega t\;\hat{\mathbf{x}}\;\text{(A/m}^2\text{)}$$
+        位移电流密度：
 
-    传导电流与位移电流振幅之比：
+        $$\mathbf{J}_d = \varepsilon\frac{\partial\mathbf{E}}{\partial t} = \varepsilon_r\varepsilon_0\omega E_0\sin\omega t\;\hat{\mathbf{x}} = 81\varepsilon_0\cdot2\pi\times10^3\cdot E_0\sin\omega t\;\hat{\mathbf{x}}\;\text{(A/m}^2\text{)}$$
 
-    $$\frac{|\mathbf{J}_c|}{|\mathbf{J}_d|} = \frac{\sigma}{\omega\varepsilon_r\varepsilon_0} = \frac{4}{2\pi\times10^3\times81\times8.85\times10^{-12}} \approx 8.9\times10^5$$
+        传导电流与位移电流振幅之比：
 
-    可见在频率 $f = 1\;\text{kHz}$ 时，海水中传导电流占主导。
+        $$\frac{|\mathbf{J}_c|}{|\mathbf{J}_d|} = \frac{\sigma}{\omega\varepsilon_r\varepsilon_0} = \frac{4}{2\pi\times10^3\times81\times8.85\times10^{-12}} \approx 8.9\times10^5$$
+
+        可见在频率 $f = 1\;\text{kHz}$ 时，海水中传导电流占主导。
+
 
 ---
 

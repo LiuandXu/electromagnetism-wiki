@@ -37,35 +37,39 @@ $$W_e = \frac{1}{2}\int_V \mathbf{D} \cdot \mathbf{E}\,\mathrm{d}V = \frac{1}{2}
 
 !!! warning "真题"
 
+
     **真题 3.1（来源：2021秋季A卷）**
     **题目：** 真空中有一半径为 $a$ 的圆盘，均匀带电，面电荷密度为 $\rho_s$。圆盘位于 $xy$ 平面，圆心在原点。求其轴线上距圆心 $z$ 处的电场强度。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    在圆盘上取半径为 $r$、宽度为 $dr$ 的圆环，其电荷量为 $dq = \rho_s \cdot 2\pi r\, dr$。
+        **解：**
 
-    由对称性，轴线上 $z$ 处的电场仅有 $z$ 分量。圆环上电荷元 $dq$ 在 $z$ 处产生的电场 $z$ 分量为：
+        在圆盘上取半径为 $r$、宽度为 $dr$ 的圆环，其电荷量为 $dq = \rho_s \cdot 2\pi r\, dr$。
 
-    $$dE_z = \frac{1}{4\pi\varepsilon_0} \cdot \frac{dq \cdot z}{(r^2 + z^2)^{3/2}} = \frac{\rho_s z}{2\varepsilon_0} \cdot \frac{r\, dr}{(r^2 + z^2)^{3/2}}$$
+        由对称性，轴线上 $z$ 处的电场仅有 $z$ 分量。圆环上电荷元 $dq$ 在 $z$ 处产生的电场 $z$ 分量为：
 
-    对 $r$ 从 $0$ 到 $a$ 积分：
+        $$dE_z = \frac{1}{4\pi\varepsilon_0} \cdot \frac{dq \cdot z}{(r^2 + z^2)^{3/2}} = \frac{\rho_s z}{2\varepsilon_0} \cdot \frac{r\, dr}{(r^2 + z^2)^{3/2}}$$
 
-    $$E_z = \frac{\rho_s z}{2\varepsilon_0} \int_0^a \frac{r\, dr}{(r^2 + z^2)^{3/2}}$$
+        对 $r$ 从 $0$ 到 $a$ 积分：
 
-    令 $u = r^2 + z^2$，$du = 2r\, dr$：
+        $$E_z = \frac{\rho_s z}{2\varepsilon_0} \int_0^a \frac{r\, dr}{(r^2 + z^2)^{3/2}}$$
 
-    $$E_z = \frac{\rho_s z}{4\varepsilon_0} \int_{z^2}^{a^2+z^2} u^{-3/2}\, du = \frac{\rho_s z}{4\varepsilon_0} \left[-2u^{-1/2}\right]_{z^2}^{a^2+z^2}$$
+        令 $u = r^2 + z^2$，$du = 2r\, dr$：
 
-    $$E_z = \frac{\rho_s z}{2\varepsilon_0}\left(\frac{1}{z} - \frac{1}{\sqrt{a^2 + z^2}}\right) = \frac{\rho_s}{2\varepsilon_0}\left(1 - \frac{z}{\sqrt{a^2 + z^2}}\right)$$
+        $$E_z = \frac{\rho_s z}{4\varepsilon_0} \int_{z^2}^{a^2+z^2} u^{-3/2}\, du = \frac{\rho_s z}{4\varepsilon_0} \left[-2u^{-1/2}\right]_{z^2}^{a^2+z^2}$$
 
-    因此轴线上的电场强度为：
+        $$E_z = \frac{\rho_s z}{2\varepsilon_0}\left(\frac{1}{z} - \frac{1}{\sqrt{a^2 + z^2}}\right) = \frac{\rho_s}{2\varepsilon_0}\left(1 - \frac{z}{\sqrt{a^2 + z^2}}\right)$$
 
-    $$\boxed{\mathbf{E} = \frac{\rho_s}{2\varepsilon_0}\left(1 - \frac{z}{\sqrt{a^2 + z^2}}\right)\hat{\mathbf{z}}}$$
+        因此轴线上的电场强度为：
 
-    **讨论：**
+        $$\boxed{\mathbf{E} = \frac{\rho_s}{2\varepsilon_0}\left(1 - \frac{z}{\sqrt{a^2 + z^2}}\right)\hat{\mathbf{z}}}$$
 
-    - 当 $z \to 0$（圆心处）：$E_z \to \rho_s / (2\varepsilon_0)$，为无限大带电平面的电场。
-    - 当 $z \to \infty$：$E_z \approx \frac{\rho_s}{2\varepsilon_0} \cdot \frac{a^2}{2z^2} = \frac{\rho_s \pi a^2}{4\pi\varepsilon_0 z^2} = \frac{Q}{4\pi\varepsilon_0 z^2}$，退化为点电荷电场。
+        **讨论：**
+
+        - 当 $z \to 0$（圆心处）：$E_z \to \rho_s / (2\varepsilon_0)$，为无限大带电平面的电场。
+        - 当 $z \to \infty$：$E_z \approx \frac{\rho_s}{2\varepsilon_0} \cdot \frac{a^2}{2z^2} = \frac{\rho_s \pi a^2}{4\pi\varepsilon_0 z^2} = \frac{Q}{4\pi\varepsilon_0 z^2}$，退化为点电荷电场。
+
 
 ### 3.2 恒定磁场分析方法
 

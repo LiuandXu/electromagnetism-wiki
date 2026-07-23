@@ -28,57 +28,61 @@ $S = \infty$（$|\Gamma| = 1$）：全反射，纯驻波
 
 !!! warning "真题"
 
+
     **真题 6.1（来源：2022秋季A卷）**
     **题目：** 均匀平面波的电场振幅 $E_0 = 100$ V/m，从空气中垂直入射到无损耗介质表面（$\varepsilon_r = 4$，$\mu_r = 1$，$\sigma = 0$）。求反射波和透射波的电场振幅。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    空气和介质的波阻抗分别为：
+        **解：**
 
-    $$\eta_1 = \eta_0 = 120\pi \;\Omega, \qquad \eta_2 = \frac{\eta_0}{\sqrt{\varepsilon_r}} = \frac{120\pi}{2} = 60\pi \;\Omega$$
+        空气和介质的波阻抗分别为：
 
-    **反射系数：**
+        $$\eta_1 = \eta_0 = 120\pi \;\Omega, \qquad \eta_2 = \frac{\eta_0}{\sqrt{\varepsilon_r}} = \frac{120\pi}{2} = 60\pi \;\Omega$$
 
-    $$\Gamma = \frac{\eta_2 - \eta_1}{\eta_2 + \eta_1} = \frac{60\pi - 120\pi}{60\pi + 120\pi} = \frac{-60}{180} = -\frac{1}{3}$$
+        **反射系数：**
 
-    **透射系数：**
+        $$\Gamma = \frac{\eta_2 - \eta_1}{\eta_2 + \eta_1} = \frac{60\pi - 120\pi}{60\pi + 120\pi} = \frac{-60}{180} = -\frac{1}{3}$$
 
-    $$T = 1 + \Gamma = 1 - \frac{1}{3} = \frac{2}{3}$$
+        **透射系数：**
 
-    **反射波与透射波电场振幅：**
+        $$T = 1 + \Gamma = 1 - \frac{1}{3} = \frac{2}{3}$$
 
-    $$|E_r| = |\Gamma| \cdot E_0 = \frac{1}{3} \times 100 \approx 33.3 \;\text{V/m}$$
+        **反射波与透射波电场振幅：**
 
-    $$|E_t| = T \cdot E_0 = \frac{2}{3} \times 100 \approx 66.7 \;\text{V/m}$$
+        $$|E_r| = |\Gamma| \cdot E_0 = \frac{1}{3} \times 100 \approx 33.3 \;\text{V/m}$$
 
-    反射系数为负表示反射波电场相位反转 $180°$。
+        $$|E_t| = T \cdot E_0 = \frac{2}{3} \times 100 \approx 66.7 \;\text{V/m}$$
 
-    **真题 6.2（来源：2024秋季A卷）**
-    **题目：** 一圆极化波从空气垂直入射到 $z = 0$ 处一无限大的理想介质板上，介质的波阻抗为 $\eta$。入射波电场为 $\dot{\mathbf{E}}_i = E_0(\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,e^{-jk_0 z}$。求反射波和透射波的电场，并判断它们的极化类型。
+        反射系数为负表示反射波电场相位反转 $180°$。
 
-    **解：**
+        **真题 6.2（来源：2024秋季A卷）**
+        **题目：** 一圆极化波从空气垂直入射到 $z = 0$ 处一无限大的理想介质板上，介质的波阻抗为 $\eta$。入射波电场为 $\dot{\mathbf{E}}_i = E_0(\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,e^{-jk_0 z}$。求反射波和透射波的电场，并判断它们的极化类型。
 
-    入射波为**左旋圆极化波**（$E_y$ 超前 $E_x$ 为 $90°$，沿 $+z$ 方向传播）。
+        **解：**
 
-    **反射系数和透射系数：**
+        入射波为**左旋圆极化波**（$E_y$ 超前 $E_x$ 为 $90°$，沿 $+z$ 方向传播）。
 
-    $$\Gamma = \frac{\eta - \eta_0}{\eta + \eta_0}, \qquad T = \frac{2\eta}{\eta + \eta_0} = 1 + \Gamma$$
+        **反射系数和透射系数：**
 
-    由于 $\eta$ 和 $\eta_0$ 均为实数（理想介质），$\Gamma$ 和 $T$ 也为实数，即反射和透射不改变各分量间的相位关系。
+        $$\Gamma = \frac{\eta - \eta_0}{\eta + \eta_0}, \qquad T = \frac{2\eta}{\eta + \eta_0} = 1 + \Gamma$$
 
-    **反射波：**
+        由于 $\eta$ 和 $\eta_0$ 均为实数（理想介质），$\Gamma$ 和 $T$ 也为实数，即反射和透射不改变各分量间的相位关系。
 
-    $$\dot{\mathbf{E}}_r = \Gamma E_0(\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,e^{+jk_0 z}$$
+        **反射波：**
 
-    反射波沿 $-z$ 方向传播。$E_y$ 仍超前 $E_x$ 为 $90°$，但传播方向反向后，观察到的旋向相反。因此反射波为**右旋圆极化波**。
+        $$\dot{\mathbf{E}}_r = \Gamma E_0(\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,e^{+jk_0 z}$$
 
-    **透射波：**
+        反射波沿 $-z$ 方向传播。$E_y$ 仍超前 $E_x$ 为 $90°$，但传播方向反向后，观察到的旋向相反。因此反射波为**右旋圆极化波**。
 
-    $$\dot{\mathbf{E}}_t = T E_0(\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,e^{-jk_2 z}$$
+        **透射波：**
 
-    透射波沿 $+z$ 方向传播，极化旋向不变，仍为**左旋圆极化波**。
+        $$\dot{\mathbf{E}}_t = T E_0(\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,e^{-jk_2 z}$$
 
-    **结论：** 圆极化波经介质面反射后旋向反转（左旋 $\to$ 右旋），透射后旋向保持不变。
+        透射波沿 $+z$ 方向传播，极化旋向不变，仍为**左旋圆极化波**。
+
+        **结论：** 圆极化波经介质面反射后旋向反转（左旋 $\to$ 右旋），透射后旋向保持不变。
+
 
 ### 6.2 对理想介质分界面的斜入射
 
@@ -225,24 +229,29 @@ $\eta_{in} = \eta_2^2/\eta_3$
 
 !!! warning "真题"
 
+
     **真题 6.3（来源：2024秋季B卷 二、2）**
     **题目：** 写出线极化、圆极化均匀平面波之间的相互关系。如果圆极化均匀平面波照射到金属球体上，分析其后向反射波的极化形式。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    **(1) 线极化与圆极化的关系：**
+        **解：**
 
-    圆极化波可以表示为两个正交的等幅、相差 $90°$ 的线极化波的叠加。
+        **(1) 线极化与圆极化的关系：**
 
-    线极化波可以分解为两个幅度相等、旋向相反的圆极化波的叠加。
+        圆极化波可以表示为两个正交的等幅、相差 $90°$ 的线极化波的叠加。
 
-    **(2) 圆极化波照射金属球的后向反射极化：**
+        线极化波可以分解为两个幅度相等、旋向相反的圆极化波的叠加。
 
-    圆极化波可以分解为两个正交线极化分量。金属球具有旋转对称性，两个线极化分量反射后幅值不变、不产生相位差变化，因此反射波仍为圆极化波。
+        **(2) 圆极化波照射金属球的后向反射极化：**
 
-    但由于传播方向反向（后向反射），圆极化波的旋向发生改变：入射的右旋圆极化波变为左旋圆极化波，入射的左旋圆极化波变为右旋圆极化波。
+        圆极化波可以分解为两个正交线极化分量。金属球具有旋转对称性，两个线极化分量反射后幅值不变、不产生相位差变化，因此反射波仍为圆极化波。
+
+        但由于传播方向反向（后向反射），圆极化波的旋向发生改变：入射的右旋圆极化波变为左旋圆极化波，入射的左旋圆极化波变为右旋圆极化波。
+
 
 !!! warning "真题"
+
 
     **真题 6.4（来源：2021秋季B卷 三、3）**
     **题目：** 一左旋圆极化波垂直入射到位于 $z=0$ 的理想导体板上，其电场强度的复数表示式为：
@@ -251,49 +260,53 @@ $\eta_{in} = \eta_2^2/\eta_3$
 
     (1) 确定反射波的极化方式；(2) 求导体板上的感应电流；(3) 总电场强度的瞬时表示式；(4) 总磁场强度的瞬时表示式。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    **(1) 反射波的极化：**
+        **解：**
 
-    理想导体表面反射系数 $\Gamma = -1$，反射波电场为：
+        **(1) 反射波的极化：**
 
-    $$\dot{\mathbf{E}}^r = -(j5\hat{\mathbf{x}} + 5\hat{\mathbf{y}})\,e^{j\beta z} = (-j5\hat{\mathbf{x}} - 5\hat{\mathbf{y}})\,e^{j\beta z}$$
+        理想导体表面反射系数 $\Gamma = -1$，反射波电场为：
 
-    反射波沿 $-z$ 方向传播。入射波为左旋圆极化，反射后旋向改变，反射波为**右旋圆极化波**。
+        $$\dot{\mathbf{E}}^r = -(j5\hat{\mathbf{x}} + 5\hat{\mathbf{y}})\,e^{j\beta z} = (-j5\hat{\mathbf{x}} - 5\hat{\mathbf{y}})\,e^{j\beta z}$$
 
-    **(2) 导体板上的感应电流：**
+        反射波沿 $-z$ 方向传播。入射波为左旋圆极化，反射后旋向改变，反射波为**右旋圆极化波**。
 
-    入射波磁场：
+        **(2) 导体板上的感应电流：**
 
-    $$\dot{\mathbf{H}}^i = \frac{1}{\eta_0}\hat{\mathbf{z}}\times\dot{\mathbf{E}}^i = \frac{5}{\eta_0}(-\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,e^{-j\beta z}$$
+        入射波磁场：
 
-    反射波磁场：
+        $$\dot{\mathbf{H}}^i = \frac{1}{\eta_0}\hat{\mathbf{z}}\times\dot{\mathbf{E}}^i = \frac{5}{\eta_0}(-\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,e^{-j\beta z}$$
 
-    $$\dot{\mathbf{H}}^r = \frac{1}{\eta_0}(-\hat{\mathbf{z}})\times\dot{\mathbf{E}}^r = \frac{5}{\eta_0}(-\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,e^{j\beta z}$$
+        反射波磁场：
 
-    表面总磁场（$z=0$）：
+        $$\dot{\mathbf{H}}^r = \frac{1}{\eta_0}(-\hat{\mathbf{z}})\times\dot{\mathbf{E}}^r = \frac{5}{\eta_0}(-\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,e^{j\beta z}$$
 
-    $$\dot{\mathbf{H}}\big|_{z=0} = \dot{\mathbf{H}}^i + \dot{\mathbf{H}}^r = \frac{10}{\eta_0}(-\hat{\mathbf{x}} + j\hat{\mathbf{y}})$$
+        表面总磁场（$z=0$）：
 
-    感应电流密度：
+        $$\dot{\mathbf{H}}\big|_{z=0} = \dot{\mathbf{H}}^i + \dot{\mathbf{H}}^r = \frac{10}{\eta_0}(-\hat{\mathbf{x}} + j\hat{\mathbf{y}})$$
 
-    $$\mathbf{J}_s = \hat{\mathbf{n}}\times\dot{\mathbf{H}}\big|_{z=0} = \hat{\mathbf{z}}\times\frac{10}{\eta_0}(-\hat{\mathbf{x}} + j\hat{\mathbf{y}}) = \frac{10}{\eta_0}(-\hat{\mathbf{y}} - j\hat{\mathbf{x}})$$
+        感应电流密度：
 
-    **(3) 总电场瞬时表示式：**
+        $$\mathbf{J}_s = \hat{\mathbf{n}}\times\dot{\mathbf{H}}\big|_{z=0} = \hat{\mathbf{z}}\times\frac{10}{\eta_0}(-\hat{\mathbf{x}} + j\hat{\mathbf{y}}) = \frac{10}{\eta_0}(-\hat{\mathbf{y}} - j\hat{\mathbf{x}})$$
 
-    $$\dot{\mathbf{E}} = \dot{\mathbf{E}}^i + \dot{\mathbf{E}}^r = (j5\hat{\mathbf{x}} + 5\hat{\mathbf{y}})(e^{-j\beta z} - e^{j\beta z}) = -2j(j5\hat{\mathbf{x}} + 5\hat{\mathbf{y}})\sin\beta z$$
+        **(3) 总电场瞬时表示式：**
 
-    $$= (10\hat{\mathbf{x}} - 10j\hat{\mathbf{y}})\sin\beta z$$
+        $$\dot{\mathbf{E}} = \dot{\mathbf{E}}^i + \dot{\mathbf{E}}^r = (j5\hat{\mathbf{x}} + 5\hat{\mathbf{y}})(e^{-j\beta z} - e^{j\beta z}) = -2j(j5\hat{\mathbf{x}} + 5\hat{\mathbf{y}})\sin\beta z$$
 
-    $$\mathbf{E}(z,t) = \mathrm{Re}\!\left[\dot{\mathbf{E}}\,e^{j\omega t}\right] = 10\sin\beta z\left[\hat{\mathbf{x}}\cos\omega t + \hat{\mathbf{y}}\sin\omega t\right] \;\text{(V/m)}$$
+        $$= (10\hat{\mathbf{x}} - 10j\hat{\mathbf{y}})\sin\beta z$$
 
-    **(4) 总磁场瞬时表示式：**
+        $$\mathbf{E}(z,t) = \mathrm{Re}\!\left[\dot{\mathbf{E}}\,e^{j\omega t}\right] = 10\sin\beta z\left[\hat{\mathbf{x}}\cos\omega t + \hat{\mathbf{y}}\sin\omega t\right] \;\text{(V/m)}$$
 
-    $$\dot{\mathbf{H}} = \frac{5}{\eta_0}(-\hat{\mathbf{x}} + j\hat{\mathbf{y}})(e^{-j\beta z} + e^{j\beta z}) = \frac{10}{\eta_0}(-\hat{\mathbf{x}} + j\hat{\mathbf{y}})\cos\beta z$$
+        **(4) 总磁场瞬时表示式：**
 
-    $$\mathbf{H}(z,t) = \frac{10}{\eta_0}\cos\beta z\left[-\hat{\mathbf{x}}\cos\omega t - \hat{\mathbf{y}}\sin\omega t\right] \;\text{(A/m)}$$
+        $$\dot{\mathbf{H}} = \frac{5}{\eta_0}(-\hat{\mathbf{x}} + j\hat{\mathbf{y}})(e^{-j\beta z} + e^{j\beta z}) = \frac{10}{\eta_0}(-\hat{\mathbf{x}} + j\hat{\mathbf{y}})\cos\beta z$$
+
+        $$\mathbf{H}(z,t) = \frac{10}{\eta_0}\cos\beta z\left[-\hat{\mathbf{x}}\cos\omega t - \hat{\mathbf{y}}\sin\omega t\right] \;\text{(A/m)}$$
+
 
 !!! warning "真题"
+
 
     **真题 6.5（来源：2022秋季A卷 三、4）**
     **题目：** 频率为 $f = 100\;\text{MHz}$、沿 $y$ 方向极化的均匀平面波从空气（$x<0$ 区域）中垂直入射到位于 $x=0$ 的理想导体板上。设入射波电场 $\mathbf{E}$ 的振幅为 $E_0 = 10\;\text{V/m}$，试求：
@@ -304,232 +317,256 @@ $\eta_{in} = \eta_2^2/\eta_3$
     (4) 距离导体平面最近的合成波电场为零的位置；
     (5) 距离导体平面最近的合成波磁场为零的位置。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    由 $f = 100\;\text{MHz}$ 得：
+        **解：**
 
-    $$\omega = 2\pi f = 2\pi\times10^8\;\text{rad/s},\quad k = \frac{\omega}{c} = \frac{2\pi}{3}\;\text{rad/m},\quad \lambda = \frac{c}{f} = 3\;\text{m}$$
+        由 $f = 100\;\text{MHz}$ 得：
 
-    入射波沿 $+x$ 方向传播，电场沿 $\hat{\mathbf{y}}$ 方向：
+        $$\omega = 2\pi f = 2\pi\times10^8\;\text{rad/s},\quad k = \frac{\omega}{c} = \frac{2\pi}{3}\;\text{rad/m},\quad \lambda = \frac{c}{f} = 3\;\text{m}$$
 
-    $$\dot{\mathbf{E}}^i = E_0\,e^{-jkx}\,\hat{\mathbf{y}} = 10\,e^{-jkx}\,\hat{\mathbf{y}} \;\text{(V/m)}$$
+        入射波沿 $+x$ 方向传播，电场沿 $\hat{\mathbf{y}}$ 方向：
 
-    $$\dot{\mathbf{H}}^i = \frac{E_0}{\eta_0}\,e^{-jkx}\,\hat{\mathbf{z}} = \frac{10}{120\pi}\,e^{-jkx}\,\hat{\mathbf{z}} \;\text{(A/m)}$$
+        $$\dot{\mathbf{E}}^i = E_0\,e^{-jkx}\,\hat{\mathbf{y}} = 10\,e^{-jkx}\,\hat{\mathbf{y}} \;\text{(V/m)}$$
 
-    **(1) 入射波平均坡印廷矢量模值：**
+        $$\dot{\mathbf{H}}^i = \frac{E_0}{\eta_0}\,e^{-jkx}\,\hat{\mathbf{z}} = \frac{10}{120\pi}\,e^{-jkx}\,\hat{\mathbf{z}} \;\text{(A/m)}$$
 
-    $$|\mathbf{S}_{\mathrm{av}}| = \frac{E_0^2}{2\eta_0} = \frac{100}{240\pi} \approx 0.133\;\text{W/m}^2$$
+        **(1) 入射波平均坡印廷矢量模值：**
 
-    **(2) 反射波（$\Gamma = -1$）：**
+        $$|\mathbf{S}_{\mathrm{av}}| = \frac{E_0^2}{2\eta_0} = \frac{100}{240\pi} \approx 0.133\;\text{W/m}^2$$
 
-    $$\dot{\mathbf{E}}^r = -E_0\,e^{jkx}\,\hat{\mathbf{y}} = -10\,e^{jkx}\,\hat{\mathbf{y}} \;\text{(V/m)}$$
+        **(2) 反射波（$\Gamma = -1$）：**
 
-    $$\dot{\mathbf{H}}^r = \frac{E_0}{\eta_0}\,e^{jkx}\,\hat{\mathbf{z}} = \frac{10}{120\pi}\,e^{jkx}\,\hat{\mathbf{z}} \;\text{(A/m)}$$
+        $$\dot{\mathbf{E}}^r = -E_0\,e^{jkx}\,\hat{\mathbf{y}} = -10\,e^{jkx}\,\hat{\mathbf{y}} \;\text{(V/m)}$$
 
-    （反射波 $\mathbf{E}$ 反向、$\mathbf{H}$ 同向，保证 $\mathbf{E}^r\times\mathbf{H}^r$ 指向 $-x$。）
+        $$\dot{\mathbf{H}}^r = \frac{E_0}{\eta_0}\,e^{jkx}\,\hat{\mathbf{z}} = \frac{10}{120\pi}\,e^{jkx}\,\hat{\mathbf{z}} \;\text{(A/m)}$$
 
-    **(3) 合成波：**
+        （反射波 $\mathbf{E}$ 反向、$\mathbf{H}$ 同向，保证 $\mathbf{E}^r\times\mathbf{H}^r$ 指向 $-x$。）
 
-    $$\dot{\mathbf{E}} = \dot{\mathbf{E}}^i + \dot{\mathbf{E}}^r = E_0(e^{-jkx} - e^{jkx})\,\hat{\mathbf{y}} = -2jE_0\sin(kx)\,\hat{\mathbf{y}}$$
+        **(3) 合成波：**
 
-    $$\dot{\mathbf{H}} = \dot{\mathbf{H}}^i + \dot{\mathbf{H}}^r = \frac{E_0}{\eta_0}(e^{-jkx} + e^{jkx})\,\hat{\mathbf{z}} = \frac{2E_0}{\eta_0}\cos(kx)\,\hat{\mathbf{z}}$$
+        $$\dot{\mathbf{E}} = \dot{\mathbf{E}}^i + \dot{\mathbf{E}}^r = E_0(e^{-jkx} - e^{jkx})\,\hat{\mathbf{y}} = -2jE_0\sin(kx)\,\hat{\mathbf{y}}$$
 
-    合成波为**驻波**，电场和磁场在空间上错开 $\lambda/4$。
+        $$\dot{\mathbf{H}} = \dot{\mathbf{H}}^i + \dot{\mathbf{H}}^r = \frac{E_0}{\eta_0}(e^{-jkx} + e^{jkx})\,\hat{\mathbf{z}} = \frac{2E_0}{\eta_0}\cos(kx)\,\hat{\mathbf{z}}$$
 
-    **(4) 电场零点位置：**
+        合成波为**驻波**，电场和磁场在空间上错开 $\lambda/4$。
 
-    $\sin(kx) = 0 \Rightarrow kx = -n\pi \Rightarrow x = -n\lambda/2 = -n\times1.5\;\text{m}$
+        **(4) 电场零点位置：**
 
-    最近导体面（$x<0$）：$x = -1.5\;\text{m}$
+        $\sin(kx) = 0 \Rightarrow kx = -n\pi \Rightarrow x = -n\lambda/2 = -n\times1.5\;\text{m}$
 
-    **(5) 磁场零点位置：**
+        最近导体面（$x<0$）：$x = -1.5\;\text{m}$
 
-    $\cos(kx) = 0 \Rightarrow kx = -(2n+1)\pi/2 \Rightarrow x = -(2n+1)\lambda/4 = -(2n+1)\times0.75\;\text{m}$
+        **(5) 磁场零点位置：**
 
-    最近导体面：$x = -0.75\;\text{m}$
+        $\cos(kx) = 0 \Rightarrow kx = -(2n+1)\pi/2 \Rightarrow x = -(2n+1)\lambda/4 = -(2n+1)\times0.75\;\text{m}$
+
+        最近导体面：$x = -0.75\;\text{m}$
+
 
 !!! warning "真题"
+
 
     **真题 6.6（来源：2022春季A卷 三、1）**
     **题目：** 一平面电磁波从无界理想介质（$\varepsilon_r$，$\mu_r = 1$）向 $z=0$ 处的无限大理想导体平面斜入射，磁场强度为 $\dot{\mathbf{H}}^i = H_0\,e^{-j\mathbf{k}\cdot\mathbf{r}}\;\hat{\mathbf{y}}$。求：(1) 入射角；(2) 入射波电场；(3) 反射波电场和磁场；(4) 合成波的电场和磁场；(5) 导体表面上的感应电流密度。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    **(1) 入射角**
+        **解：**
 
-    由磁场表达式可得波矢量 $\mathbf{k}$。由 $\mathbf{k}\cdot\mathbf{r} = k_x x + k_z z$，且 $k_x = k$，$k_z = k$，则入射角 $\theta_i = 45°$。
+        **(1) 入射角**
 
-    **(2) 入射波电场**
+        由磁场表达式可得波矢量 $\mathbf{k}$。由 $\mathbf{k}\cdot\mathbf{r} = k_x x + k_z z$，且 $k_x = k$，$k_z = k$，则入射角 $\theta_i = 45°$。
 
-    由 $\dot{\mathbf{E}}^i = -\eta\,\hat{\mathbf{k}}\times\dot{\mathbf{H}}^i$，$\eta = 120\pi$（空气）：
+        **(2) 入射波电场**
 
-    $$\dot{\mathbf{E}}^i = -120\pi H_0(\hat{\mathbf{x}} + \hat{\mathbf{z}})\times\hat{\mathbf{y}}\,e^{-j(x+z)}$$
+        由 $\dot{\mathbf{E}}^i = -\eta\,\hat{\mathbf{k}}\times\dot{\mathbf{H}}^i$，$\eta = 120\pi$（空气）：
 
-    入射角 $\theta_i = 45°$，$k_x = k_z = \pi$。
+        $$\dot{\mathbf{E}}^i = -120\pi H_0(\hat{\mathbf{x}} + \hat{\mathbf{z}})\times\hat{\mathbf{y}}\,e^{-j(x+z)}$$
 
-    **(3) 反射波**
+        入射角 $\theta_i = 45°$，$k_x = k_z = \pi$。
 
-    理想导体反射系数 $\Gamma = -1$。反射波传播方向 $k_z \to -k_z$：
+        **(3) 反射波**
 
-    $$\dot{\mathbf{E}}^r = -\dot{\mathbf{E}}^i\big|_{k_z \to -k_z}, \quad \dot{\mathbf{H}}^r = \dot{\mathbf{H}}^i\big|_{k_z \to -k_z}$$
+        理想导体反射系数 $\Gamma = -1$。反射波传播方向 $k_z \to -k_z$：
 
-    **(4) 合成波**
+        $$\dot{\mathbf{E}}^r = -\dot{\mathbf{E}}^i\big|_{k_z \to -k_z}, \quad \dot{\mathbf{H}}^r = \dot{\mathbf{H}}^i\big|_{k_z \to -k_z}$$
 
-    $$\dot{\mathbf{E}} = \dot{\mathbf{E}}^i + \dot{\mathbf{E}}^r$$
+        **(4) 合成波**
 
-    入射波与反射波叠加，$z$ 方向形成驻波。
+        $$\dot{\mathbf{E}} = \dot{\mathbf{E}}^i + \dot{\mathbf{E}}^r$$
 
-    **(5) 感应电流密度**
+        入射波与反射波叠加，$z$ 方向形成驻波。
 
-    $$\mathbf{J}_s = \hat{\mathbf{n}}\times\dot{\mathbf{H}}\big|_{z=0}$$
+        **(5) 感应电流密度**
+
+        $$\mathbf{J}_s = \hat{\mathbf{n}}\times\dot{\mathbf{H}}\big|_{z=0}$$
+
 
 !!! warning "真题"
+
 
     **真题 6.7（来源：2022春季B卷 三、3）**
     **题目：** 一角频率为 $\omega$ 的均匀平面波由空气向 $z=0$ 处的理想导体斜入射，入射角为 $\theta_i$，电场矢量垂直于入射面 $xoz$ 面。求：(1) 导体表面上的感应电流密度；(2) 合成波在空气中的平均坡印廷矢量。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    电场垂直入射面（s 极化），$\dot{\mathbf{E}}^i = \hat{\mathbf{y}}\,E_0\,e^{-j(k_x x + k_z z)}$，其中 $k_x = k\sin\theta_i$，$k_z = k\cos\theta_i$。
+        **解：**
 
-    入射波磁场：
+        电场垂直入射面（s 极化），$\dot{\mathbf{E}}^i = \hat{\mathbf{y}}\,E_0\,e^{-j(k_x x + k_z z)}$，其中 $k_x = k\sin\theta_i$，$k_z = k\cos\theta_i$。
 
-    $$\dot{\mathbf{H}}^i = \frac{E_0}{\eta_0}(\cos\theta_i\,\hat{\mathbf{x}} - \sin\theta_i\,\hat{\mathbf{z}})\,e^{-j(k_x x + k_z z)}$$
+        入射波磁场：
 
-    反射系数 $\Gamma_s = -1$，反射波：
+        $$\dot{\mathbf{H}}^i = \frac{E_0}{\eta_0}(\cos\theta_i\,\hat{\mathbf{x}} - \sin\theta_i\,\hat{\mathbf{z}})\,e^{-j(k_x x + k_z z)}$$
 
-    $$\dot{\mathbf{E}}^r = -\hat{\mathbf{y}}\,E_0\,e^{-j(k_x x - k_z z)}$$
+        反射系数 $\Gamma_s = -1$，反射波：
 
-    $$\dot{\mathbf{H}}^r = \frac{E_0}{\eta_0}(-\cos\theta_i\,\hat{\mathbf{x}} - \sin\theta_i\,\hat{\mathbf{z}})\,e^{-j(k_x x - k_z z)}$$
+        $$\dot{\mathbf{E}}^r = -\hat{\mathbf{y}}\,E_0\,e^{-j(k_x x - k_z z)}$$
 
-    **(1) 感应电流密度**
+        $$\dot{\mathbf{H}}^r = \frac{E_0}{\eta_0}(-\cos\theta_i\,\hat{\mathbf{x}} - \sin\theta_i\,\hat{\mathbf{z}})\,e^{-j(k_x x - k_z z)}$$
 
-    合成波磁场在 $z=0$ 处：
+        **(1) 感应电流密度**
 
-    $$\dot{\mathbf{H}}\big|_{z=0} = \frac{E_0}{\eta_0}\left[\cos\theta_i\,\hat{\mathbf{x}}\left(e^{-jk_x x} - e^{-jk_x x}\right) - 2\sin\theta_i\,\hat{\mathbf{z}}\,e^{-jk_x x}\right]$$
+        合成波磁场在 $z=0$ 处：
 
-    实际上 $H_x$ 分量在 $z=0$ 处为 $0$（驻波节点），$H_z$ 分量加倍：
+        $$\dot{\mathbf{H}}\big|_{z=0} = \frac{E_0}{\eta_0}\left[\cos\theta_i\,\hat{\mathbf{x}}\left(e^{-jk_x x} - e^{-jk_x x}\right) - 2\sin\theta_i\,\hat{\mathbf{z}}\,e^{-jk_x x}\right]$$
 
-    $$\mathbf{J}_s = \hat{\mathbf{z}}\times\dot{\mathbf{H}}\big|_{z=0} = -\hat{\mathbf{x}}\,\frac{2E_0\sin\theta_i}{\eta_0}e^{-jk_x x}$$
+        实际上 $H_x$ 分量在 $z=0$ 处为 $0$（驻波节点），$H_z$ 分量加倍：
 
-    **(2) 平均坡印廷矢量**
+        $$\mathbf{J}_s = \hat{\mathbf{z}}\times\dot{\mathbf{H}}\big|_{z=0} = -\hat{\mathbf{x}}\,\frac{2E_0\sin\theta_i}{\eta_0}e^{-jk_x x}$$
 
-    合成波电场 $z$ 方向为驻波，$x$ 方向有行波分量：
+        **(2) 平均坡印廷矢量**
 
-    $$\mathbf{S}_{\mathrm{av}} = \hat{\mathbf{x}}\,\frac{2E_0^2\sin\theta_i}{\eta_0}\sin^2(k_z z)\;\text{(W/m}^2\text{)}$$
+        合成波电场 $z$ 方向为驻波，$x$ 方向有行波分量：
 
-    （合成波沿 $x$ 方向传播，$z$ 方向为驻波，平均坡印廷矢量沿导体表面方向。）
+        $$\mathbf{S}_{\mathrm{av}} = \hat{\mathbf{x}}\,\frac{2E_0^2\sin\theta_i}{\eta_0}\sin^2(k_z z)\;\text{(W/m}^2\text{)}$$
+
+        （合成波沿 $x$ 方向传播，$z$ 方向为驻波，平均坡印廷矢量沿导体表面方向。）
+
 
 !!! warning "真题"
+
 
     **真题 6.8（来源：2022秋季B卷 三、3）**
     **题目：** 空气中，电场极化方向为 $x$ 方向的均匀平面波（$\mathrm{TEM}$），沿 $+z$ 方向传播，其工作频率为 $0.1\;\text{GHz}$，该波垂直入射置于 $z=0$ 处的理想导体平面。若该波电场 $\mathbf{E}$ 的最大振幅为 $1\;\text{V/m}$，求：(1) 入射电场 $\dot{\mathbf{E}}$ 和磁场 $\dot{\mathbf{H}}$ 的频域和时域表示式；(2) 反射电场 $\dot{\mathbf{E}}^r$ 和磁场 $\dot{\mathbf{H}}^r$ 的频域和时域表示式。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    由 $f = 0.1\;\text{GHz}$ 得：
+        **解：**
 
-    $$\omega = 2\pi f = 2\pi\times10^8\;\text{rad/s}$$
+        由 $f = 0.1\;\text{GHz}$ 得：
 
-    $$k = \frac{\omega}{c} = \frac{2\pi}{3}\;\text{rad/m}$$
+        $$\omega = 2\pi f = 2\pi\times10^8\;\text{rad/s}$$
 
-    $$\eta_0 = 120\pi\;\Omega$$
+        $$k = \frac{\omega}{c} = \frac{2\pi}{3}\;\text{rad/m}$$
 
-    **(1) 入射波**
+        $$\eta_0 = 120\pi\;\Omega$$
 
-    频域：
+        **(1) 入射波**
 
-    $$\dot{\mathbf{E}}^i = e^{-jkz}\,\hat{\mathbf{x}} = e^{-j2\pi z/3}\,\hat{\mathbf{x}}\;\text{(V/m)}$$
+        频域：
 
-    $$\dot{\mathbf{H}}^i = \frac{1}{\eta_0}e^{-jkz}\,\hat{\mathbf{y}} = \frac{1}{120\pi}e^{-j2\pi z/3}\,\hat{\mathbf{y}}\;\text{(A/m)}$$
+        $$\dot{\mathbf{E}}^i = e^{-jkz}\,\hat{\mathbf{x}} = e^{-j2\pi z/3}\,\hat{\mathbf{x}}\;\text{(V/m)}$$
 
-    时域：
+        $$\dot{\mathbf{H}}^i = \frac{1}{\eta_0}e^{-jkz}\,\hat{\mathbf{y}} = \frac{1}{120\pi}e^{-j2\pi z/3}\,\hat{\mathbf{y}}\;\text{(A/m)}$$
 
-    $$\mathbf{E}^i(z,t) = \cos\!\left(2\pi\times10^8 t - \frac{2\pi}{3}z\right)\hat{\mathbf{x}}\;\text{(V/m)}$$
+        时域：
 
-    $$\mathbf{H}^i(z,t) = \frac{1}{120\pi}\cos\!\left(2\pi\times10^8 t - \frac{2\pi}{3}z\right)\hat{\mathbf{y}}\;\text{(A/m)}$$
+        $$\mathbf{E}^i(z,t) = \cos\!\left(2\pi\times10^8 t - \frac{2\pi}{3}z\right)\hat{\mathbf{x}}\;\text{(V/m)}$$
 
-    **(2) 反射波**（$\Gamma = -1$）
+        $$\mathbf{H}^i(z,t) = \frac{1}{120\pi}\cos\!\left(2\pi\times10^8 t - \frac{2\pi}{3}z\right)\hat{\mathbf{y}}\;\text{(A/m)}$$
 
-    频域：
+        **(2) 反射波**（$\Gamma = -1$）
 
-    $$\dot{\mathbf{E}}^r = -e^{jkz}\,\hat{\mathbf{x}}\;\text{(V/m)}$$
+        频域：
 
-    $$\dot{\mathbf{H}}^r = \frac{1}{\eta_0}e^{jkz}\,\hat{\mathbf{y}}\;\text{(A/m)}$$
+        $$\dot{\mathbf{E}}^r = -e^{jkz}\,\hat{\mathbf{x}}\;\text{(V/m)}$$
 
-    时域：
+        $$\dot{\mathbf{H}}^r = \frac{1}{\eta_0}e^{jkz}\,\hat{\mathbf{y}}\;\text{(A/m)}$$
 
-    $$\mathbf{E}^r(z,t) = -\cos\!\left(2\pi\times10^8 t + \frac{2\pi}{3}z\right)\hat{\mathbf{x}}\;\text{(V/m)}$$
+        时域：
 
-    $$\mathbf{H}^r(z,t) = \frac{1}{120\pi}\cos\!\left(2\pi\times10^8 t + \frac{2\pi}{3}z\right)\hat{\mathbf{y}}\;\text{(A/m)}$$
+        $$\mathbf{E}^r(z,t) = -\cos\!\left(2\pi\times10^8 t + \frac{2\pi}{3}z\right)\hat{\mathbf{x}}\;\text{(V/m)}$$
+
+        $$\mathbf{H}^r(z,t) = \frac{1}{120\pi}\cos\!\left(2\pi\times10^8 t + \frac{2\pi}{3}z\right)\hat{\mathbf{y}}\;\text{(A/m)}$$
+
 
 !!! warning "真题"
+
 
     **真题 6.9（来源：2023春季A卷 三、2）**
     **题目：** 一均匀平面电磁波从 $\varepsilon_r = 4$、$\mu_r = 1$ 的半无界理想介质斜入射到与空气相交的平面 $z=0$ 上。已知入射面为 $y=0$，入射场的电场强度为 $\dot{\mathbf{E}}^i = E_0\,e^{-j\mathbf{k}\cdot\mathbf{r}}\;\hat{\mathbf{y}}$。求：(1) 入射波的波长、相速、频率和磁场强度；(2) 入射角、反射角和透射角；(3) 反射波的电场和磁场；(4) 透射波的平均功率密度。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    **(1) 入射波参数**
+        **解：**
 
-    介质中波数 $k = \omega\sqrt{\mu\varepsilon} = \dfrac{\omega}{c}\sqrt{\varepsilon_r} = \dfrac{2\omega}{c}$
+        **(1) 入射波参数**
 
-    波长 $\lambda = \dfrac{2\pi}{k} = \dfrac{\pi c}{\omega}$，相速 $v_p = \dfrac{c}{\sqrt{\varepsilon_r}} = \dfrac{c}{2}$
+        介质中波数 $k = \omega\sqrt{\mu\varepsilon} = \dfrac{\omega}{c}\sqrt{\varepsilon_r} = \dfrac{2\omega}{c}$
 
-    频率 $f = \dfrac{\omega}{2\pi}$
+        波长 $\lambda = \dfrac{2\pi}{k} = \dfrac{\pi c}{\omega}$，相速 $v_p = \dfrac{c}{\sqrt{\varepsilon_r}} = \dfrac{c}{2}$
 
-    磁场：$\dot{\mathbf{H}}^i = \dfrac{1}{\eta}\hat{\mathbf{k}}\times\dot{\mathbf{E}}^i$，$\eta = \dfrac{\eta_0}{\sqrt{\varepsilon_r}} = \dfrac{\eta_0}{2} = 60\pi\;\Omega$
+        频率 $f = \dfrac{\omega}{2\pi}$
 
-    **(2) 入射角、反射角、透射角**
+        磁场：$\dot{\mathbf{H}}^i = \dfrac{1}{\eta}\hat{\mathbf{k}}\times\dot{\mathbf{E}}^i$，$\eta = \dfrac{\eta_0}{\sqrt{\varepsilon_r}} = \dfrac{\eta_0}{2} = 60\pi\;\Omega$
 
-    由 $\mathbf{k}$ 可确定入射角 $\theta_i$。反射角 $\theta_r = \theta_i$。
+        **(2) 入射角、反射角、透射角**
 
-    透射角由 Snell 定律：$\sqrt{\varepsilon_r}\sin\theta_i = \sin\theta_t$，即 $2\sin\theta_i = \sin\theta_t$
+        由 $\mathbf{k}$ 可确定入射角 $\theta_i$。反射角 $\theta_r = \theta_i$。
 
-    **(3) 反射波**
+        透射角由 Snell 定律：$\sqrt{\varepsilon_r}\sin\theta_i = \sin\theta_t$，即 $2\sin\theta_i = \sin\theta_t$
 
-    s 极化（电场垂直入射面），反射系数：
+        **(3) 反射波**
 
-    $$\Gamma_s = \frac{\eta_2\cos\theta_i - \eta_1\cos\theta_t}{\eta_2\cos\theta_i + \eta_1\cos\theta_t}$$
+        s 极化（电场垂直入射面），反射系数：
 
-    其中 $\eta_1 = 60\pi$，$\eta_2 = 120\pi$。
+        $$\Gamma_s = \frac{\eta_2\cos\theta_i - \eta_1\cos\theta_t}{\eta_2\cos\theta_i + \eta_1\cos\theta_t}$$
 
-    **(4) 透射波平均功率密度**
+        其中 $\eta_1 = 60\pi$，$\eta_2 = 120\pi$。
 
-    $$\mathbf{S}_{\mathrm{av}}^t = \hat{\mathbf{k}}_t\,\frac{|E_t|^2}{2\eta_2}$$
+        **(4) 透射波平均功率密度**
 
-    其中 $|E_t| = |T_s|\,|E_0|$，$T_s = 1 + \Gamma_s$。
+        $$\mathbf{S}_{\mathrm{av}}^t = \hat{\mathbf{k}}_t\,\frac{|E_t|^2}{2\eta_2}$$
+
+        其中 $|E_t| = |T_s|\,|E_0|$，$T_s = 1 + \Gamma_s$。
+
 
 !!! warning "真题"
+
 
     **真题 6.10（来源：2023秋季A卷 三、3）**
     **题目：** 一均匀平面电磁波由空气中入射到相对介电常数和磁导率分别为 $\varepsilon_r = 3$ 和 $\mu_r = 1$ 的介质中。已知入射面为 $y=0$，两种介质的分界面为 $x=0$。入射波的电场矢量为 $\dot{\mathbf{E}}^i = E_0\,e^{-j\mathbf{k}\cdot\mathbf{r}}\;\hat{\mathbf{y}}$。试求反射波和折射波的电场强度和磁场强度。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    入射波从空气（$\eta_1 = 120\pi$）入射到介质（$\eta_2 = 120\pi/\sqrt{3}$）。
+        **解：**
 
-    s 极化（电场沿 $\hat{\mathbf{y}}$，垂直入射面 $xoz$），反射系数：
+        入射波从空气（$\eta_1 = 120\pi$）入射到介质（$\eta_2 = 120\pi/\sqrt{3}$）。
 
-    $$\Gamma_s = \frac{\eta_2\cos\theta_i - \eta_1\cos\theta_t}{\eta_2\cos\theta_i + \eta_1\cos\theta_t}$$
+        s 极化（电场沿 $\hat{\mathbf{y}}$，垂直入射面 $xoz$），反射系数：
 
-    透射系数：$T_s = 1 + \Gamma_s$
+        $$\Gamma_s = \frac{\eta_2\cos\theta_i - \eta_1\cos\theta_t}{\eta_2\cos\theta_i + \eta_1\cos\theta_t}$$
 
-    由 Snell 定律：$\sin\theta_t = \dfrac{\sin\theta_i}{\sqrt{\varepsilon_r}} = \dfrac{\sin\theta_i}{\sqrt{3}}$
+        透射系数：$T_s = 1 + \Gamma_s$
 
-    反射波：
+        由 Snell 定律：$\sin\theta_t = \dfrac{\sin\theta_i}{\sqrt{\varepsilon_r}} = \dfrac{\sin\theta_i}{\sqrt{3}}$
 
-    $$\dot{\mathbf{E}}^r = \Gamma_s E_0\,e^{-j\mathbf{k}_r\cdot\mathbf{r}}\,\hat{\mathbf{y}}$$
+        反射波：
 
-    $$\dot{\mathbf{H}}^r = \frac{\Gamma_s E_0}{\eta_1}\,\hat{\mathbf{k}}_r\times\hat{\mathbf{y}}\,e^{-j\mathbf{k}_r\cdot\mathbf{r}}$$
+        $$\dot{\mathbf{E}}^r = \Gamma_s E_0\,e^{-j\mathbf{k}_r\cdot\mathbf{r}}\,\hat{\mathbf{y}}$$
 
-    透射波：
+        $$\dot{\mathbf{H}}^r = \frac{\Gamma_s E_0}{\eta_1}\,\hat{\mathbf{k}}_r\times\hat{\mathbf{y}}\,e^{-j\mathbf{k}_r\cdot\mathbf{r}}$$
 
-    $$\dot{\mathbf{E}}^t = T_s E_0\,e^{-j\mathbf{k}_t\cdot\mathbf{r}}\,\hat{\mathbf{y}}$$
+        透射波：
 
-    $$\dot{\mathbf{H}}^t = \frac{T_s E_0}{\eta_2}\,\hat{\mathbf{k}}_t\times\hat{\mathbf{y}}\,e^{-j\mathbf{k}_t\cdot\mathbf{r}}$$
+        $$\dot{\mathbf{E}}^t = T_s E_0\,e^{-j\mathbf{k}_t\cdot\mathbf{r}}\,\hat{\mathbf{y}}$$
+
+        $$\dot{\mathbf{H}}^t = \frac{T_s E_0}{\eta_2}\,\hat{\mathbf{k}}_t\times\hat{\mathbf{y}}\,e^{-j\mathbf{k}_t\cdot\mathbf{r}}$$
+
 
 !!! warning "真题"
+
 
     **真题 6.11（来源：2024春季A卷 三、2）**
     **题目：** 左旋圆极化波从 $z<0$ 的空气区域垂直入射至位于 $z=0$ 的无限大理想导体板上，其电场强度的瞬时表示式为：
@@ -538,45 +575,49 @@ $\eta_{in} = \eta_2^2/\eta_3$
 
     (1) 确定反射波的极化；(2) 求 $z<0$ 区域中合成波的电场强度的瞬时表示式；(3) 求板上的感应面电流密度的复数表示式。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    **(1) 反射波极化**
+        **解：**
 
-    垂直入射理想导体，反射系数 $\Gamma = -1$。入射波复数形式：
+        **(1) 反射波极化**
 
-    $$\dot{\mathbf{E}}^i = (\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,E_0\,e^{-j\beta z}$$
+        垂直入射理想导体，反射系数 $\Gamma = -1$。入射波复数形式：
 
-    反射波：
+        $$\dot{\mathbf{E}}^i = (\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,E_0\,e^{-j\beta z}$$
 
-    $$\dot{\mathbf{E}}^r = -(\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,E_0\,e^{j\beta z}$$
+        反射波：
 
-    反射波沿 $-z$ 方向传播，$y$ 分量超前 $x$ 分量 $\pi/2$，对于 $-z$ 传播方向，这为**右旋圆极化波**。
+        $$\dot{\mathbf{E}}^r = -(\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,E_0\,e^{j\beta z}$$
 
-    **(2) 合成波电场**
+        反射波沿 $-z$ 方向传播，$y$ 分量超前 $x$ 分量 $\pi/2$，对于 $-z$ 传播方向，这为**右旋圆极化波**。
 
-    $$\dot{\mathbf{E}} = \dot{\mathbf{E}}^i + \dot{\mathbf{E}}^r = (\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,E_0(e^{-j\beta z} - e^{j\beta z}) = -2j(\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,E_0\sin\beta z$$
+        **(2) 合成波电场**
 
-    瞬时形式（以余弦为基准）：
+        $$\dot{\mathbf{E}} = \dot{\mathbf{E}}^i + \dot{\mathbf{E}}^r = (\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,E_0(e^{-j\beta z} - e^{j\beta z}) = -2j(\hat{\mathbf{x}} + j\hat{\mathbf{y}})\,E_0\sin\beta z$$
 
-    $$\mathbf{E}(z,t) = 2E_0\sin\beta z\left[\hat{\mathbf{x}}\sin\omega t - \hat{\mathbf{y}}\cos\omega t\right]\;\text{(V/m)}$$
+        瞬时形式（以余弦为基准）：
 
-    **(3) 感应面电流密度**
+        $$\mathbf{E}(z,t) = 2E_0\sin\beta z\left[\hat{\mathbf{x}}\sin\omega t - \hat{\mathbf{y}}\cos\omega t\right]\;\text{(V/m)}$$
 
-    入射波磁场：
+        **(3) 感应面电流密度**
 
-    $$\dot{\mathbf{H}}^i = \frac{E_0}{\eta_0}(-j\hat{\mathbf{x}} + \hat{\mathbf{y}})\,e^{-j\beta z}$$
+        入射波磁场：
 
-    反射波磁场（$\Gamma_H = 1$）：
+        $$\dot{\mathbf{H}}^i = \frac{E_0}{\eta_0}(-j\hat{\mathbf{x}} + \hat{\mathbf{y}})\,e^{-j\beta z}$$
 
-    $$\dot{\mathbf{H}}^r = \frac{E_0}{\eta_0}(j\hat{\mathbf{x}} + \hat{\mathbf{y}})\,e^{j\beta z}$$
+        反射波磁场（$\Gamma_H = 1$）：
 
-    合成波磁场在 $z=0$：
+        $$\dot{\mathbf{H}}^r = \frac{E_0}{\eta_0}(j\hat{\mathbf{x}} + \hat{\mathbf{y}})\,e^{j\beta z}$$
 
-    $$\dot{\mathbf{H}}\big|_{z=0} = \frac{2E_0}{\eta_0}\,\hat{\mathbf{y}}$$
+        合成波磁场在 $z=0$：
 
-    $$\mathbf{J}_s = \hat{\mathbf{n}}\times\dot{\mathbf{H}}\big|_{z=0} = (-\hat{\mathbf{z}})\times\frac{2E_0}{\eta_0}\hat{\mathbf{y}} = \hat{\mathbf{x}}\,\frac{2E_0}{\eta_0}\;\text{(A/m)}$$
+        $$\dot{\mathbf{H}}\big|_{z=0} = \frac{2E_0}{\eta_0}\,\hat{\mathbf{y}}$$
+
+        $$\mathbf{J}_s = \hat{\mathbf{n}}\times\dot{\mathbf{H}}\big|_{z=0} = (-\hat{\mathbf{z}})\times\frac{2E_0}{\eta_0}\hat{\mathbf{y}} = \hat{\mathbf{x}}\,\frac{2E_0}{\eta_0}\;\text{(A/m)}$$
+
 
 !!! warning "真题"
+
 
     **真题 6.12（来源：2021秋季A卷 三、3）**
     **题目：** 有一均匀平面波由真空（波的相速度为 $c$，波阻抗为 $120\pi$）斜入射到 $z=0$ 的理想导体平面上，其电场强度的复数表示式为：
@@ -585,79 +626,82 @@ $\eta_{in} = \eta_2^2/\eta_3$
 
     求：(1) 波的频率和波长；(2) 写出入射波电场和磁场的瞬时表示式；(3) 确定入射角；(4) 求反射波电场和磁场的复数表示式；(5) 求合成波电场和磁场的复数表示式。
 
-    **解：**
+    ??? note "点击查看解答"
 
-    **(1) 频率和波长**
+        **解：**
 
-    传播矢量分量：$k_x = \dfrac{1}{\sqrt{2}}\;\text{rad/m}$，$k_z = \dfrac{1}{\sqrt{2}}\;\text{rad/m}$
+        **(1) 频率和波长**
 
-    波数：
+        传播矢量分量：$k_x = \dfrac{1}{\sqrt{2}}\;\text{rad/m}$，$k_z = \dfrac{1}{\sqrt{2}}\;\text{rad/m}$
 
-    $$k = \sqrt{k_x^2 + k_z^2} = \sqrt{\frac{1}{2} + \frac{1}{2}} = 1\;\text{rad/m}$$
+        波数：
 
-    角频率：
+        $$k = \sqrt{k_x^2 + k_z^2} = \sqrt{\frac{1}{2} + \frac{1}{2}} = 1\;\text{rad/m}$$
 
-    $$\omega = kc = 1\times3\times10^8 = 3\times10^8\;\text{rad/s}$$
+        角频率：
 
-    频率：
+        $$\omega = kc = 1\times3\times10^8 = 3\times10^8\;\text{rad/s}$$
 
-    $$f = \frac{\omega}{2\pi} = \frac{3\times10^8}{2\pi} \approx 4.77\times10^7\;\text{Hz} = 47.7\;\text{MHz}$$
+        频率：
 
-    波长：
+        $$f = \frac{\omega}{2\pi} = \frac{3\times10^8}{2\pi} \approx 4.77\times10^7\;\text{Hz} = 47.7\;\text{MHz}$$
 
-    $$\lambda = \frac{2\pi}{k} = 2\pi \approx 6.28\;\text{m}$$
+        波长：
 
-    **(2) 入射波瞬时表示式**
+        $$\lambda = \frac{2\pi}{k} = 2\pi \approx 6.28\;\text{m}$$
 
-    传播方向单位矢量：
+        **(2) 入射波瞬时表示式**
 
-    $$\hat{\mathbf{k}}_i = \frac{k_x\hat{\mathbf{x}} + k_z\hat{\mathbf{z}}}{k} = \frac{1}{\sqrt{2}}\hat{\mathbf{x}} + \frac{1}{\sqrt{2}}\hat{\mathbf{z}}$$
+        传播方向单位矢量：
 
-    入射波磁场：
+        $$\hat{\mathbf{k}}_i = \frac{k_x\hat{\mathbf{x}} + k_z\hat{\mathbf{z}}}{k} = \frac{1}{\sqrt{2}}\hat{\mathbf{x}} + \frac{1}{\sqrt{2}}\hat{\mathbf{z}}$$
 
-    $$\dot{\mathbf{H}}_i = \frac{1}{\eta_0}\hat{\mathbf{k}}_i\times\dot{\mathbf{E}}_i = \frac{1}{120\pi}\cdot\frac{\hat{\mathbf{x}}+\hat{\mathbf{z}}}{\sqrt{2}}\times\hat{\mathbf{y}}\,e^{-j(x+z)/\sqrt{2}}$$
+        入射波磁场：
 
-    $$= \frac{1}{120\pi\sqrt{2}}(\hat{\mathbf{z}} - \hat{\mathbf{x}})\,e^{-j(x+z)/\sqrt{2}}\;\text{(A/m)}$$
+        $$\dot{\mathbf{H}}_i = \frac{1}{\eta_0}\hat{\mathbf{k}}_i\times\dot{\mathbf{E}}_i = \frac{1}{120\pi}\cdot\frac{\hat{\mathbf{x}}+\hat{\mathbf{z}}}{\sqrt{2}}\times\hat{\mathbf{y}}\,e^{-j(x+z)/\sqrt{2}}$$
 
-    瞬时形式：
+        $$= \frac{1}{120\pi\sqrt{2}}(\hat{\mathbf{z}} - \hat{\mathbf{x}})\,e^{-j(x+z)/\sqrt{2}}\;\text{(A/m)}$$
 
-    $$\mathbf{E}_i = \hat{\mathbf{y}}\cos\!\left(\omega t - \frac{x+z}{\sqrt{2}}\right)\;\text{(V/m)}$$
+        瞬时形式：
 
-    $$\mathbf{H}_i = \frac{1}{120\pi\sqrt{2}}(\hat{\mathbf{z}} - \hat{\mathbf{x}})\cos\!\left(\omega t - \frac{x+z}{\sqrt{2}}\right)\;\text{(A/m)}$$
+        $$\mathbf{E}_i = \hat{\mathbf{y}}\cos\!\left(\omega t - \frac{x+z}{\sqrt{2}}\right)\;\text{(V/m)}$$
 
-    **(3) 入射角**
+        $$\mathbf{H}_i = \frac{1}{120\pi\sqrt{2}}(\hat{\mathbf{z}} - \hat{\mathbf{x}})\cos\!\left(\omega t - \frac{x+z}{\sqrt{2}}\right)\;\text{(A/m)}$$
 
-    入射面为 $xoz$ 面，入射角为传播矢量与 $z$ 轴的夹角：
+        **(3) 入射角**
 
-    $$\tan\theta_i = \frac{k_x}{k_z} = \frac{1/\sqrt{2}}{1/\sqrt{2}} = 1 \quad\Rightarrow\quad \theta_i = 45°$$
+        入射面为 $xoz$ 面，入射角为传播矢量与 $z$ 轴的夹角：
 
-    **(4) 反射波**
+        $$\tan\theta_i = \frac{k_x}{k_z} = \frac{1/\sqrt{2}}{1/\sqrt{2}} = 1 \quad\Rightarrow\quad \theta_i = 45°$$
 
-    理想导体反射系数 $\Gamma = -1$。反射波传播方向 $k_z \to -k_z$：
+        **(4) 反射波**
 
-    $$\dot{\mathbf{E}}_r = -\hat{\mathbf{y}}\,e^{-j(x/\sqrt{2} - z/\sqrt{2})}\;\text{(V/m)}$$
+        理想导体反射系数 $\Gamma = -1$。反射波传播方向 $k_z \to -k_z$：
 
-    反射波传播方向 $\hat{\mathbf{k}}_r = \dfrac{1}{\sqrt{2}}\hat{\mathbf{x}} - \dfrac{1}{\sqrt{2}}\hat{\mathbf{z}}$：
+        $$\dot{\mathbf{E}}_r = -\hat{\mathbf{y}}\,e^{-j(x/\sqrt{2} - z/\sqrt{2})}\;\text{(V/m)}$$
 
-    $$\dot{\mathbf{H}}_r = \frac{1}{\eta_0}\hat{\mathbf{k}}_r\times\dot{\mathbf{E}}_r = \frac{-1}{120\pi\sqrt{2}}(\hat{\mathbf{z}} + \hat{\mathbf{x}})\,e^{-j(x-z)/\sqrt{2}}\;\text{(A/m)}$$
+        反射波传播方向 $\hat{\mathbf{k}}_r = \dfrac{1}{\sqrt{2}}\hat{\mathbf{x}} - \dfrac{1}{\sqrt{2}}\hat{\mathbf{z}}$：
 
-    **(5) 合成波**
+        $$\dot{\mathbf{H}}_r = \frac{1}{\eta_0}\hat{\mathbf{k}}_r\times\dot{\mathbf{E}}_r = \frac{-1}{120\pi\sqrt{2}}(\hat{\mathbf{z}} + \hat{\mathbf{x}})\,e^{-j(x-z)/\sqrt{2}}\;\text{(A/m)}$$
 
-    $$\dot{\mathbf{E}} = \dot{\mathbf{E}}_i + \dot{\mathbf{E}}_r = \hat{\mathbf{y}}\left[e^{-j(x+z)/\sqrt{2}} - e^{-j(x-z)/\sqrt{2}}\right]$$
+        **(5) 合成波**
 
-    $$= \hat{\mathbf{y}}\,e^{-jx/\sqrt{2}}\left(e^{-jz/\sqrt{2}} - e^{jz/\sqrt{2}}\right) = -2j\,\hat{\mathbf{y}}\sin\!\left(\frac{z}{\sqrt{2}}\right)e^{-jx/\sqrt{2}}$$
+        $$\dot{\mathbf{E}} = \dot{\mathbf{E}}_i + \dot{\mathbf{E}}_r = \hat{\mathbf{y}}\left[e^{-j(x+z)/\sqrt{2}} - e^{-j(x-z)/\sqrt{2}}\right]$$
 
-    $$\dot{\mathbf{H}} = \dot{\mathbf{H}}_i + \dot{\mathbf{H}}_r = \frac{1}{120\pi\sqrt{2}}\left[(\hat{\mathbf{z}}-\hat{\mathbf{x}})e^{-j(x+z)/\sqrt{2}} - (\hat{\mathbf{z}}+\hat{\mathbf{x}})e^{-j(x-z)/\sqrt{2}}\right]$$
+        $$= \hat{\mathbf{y}}\,e^{-jx/\sqrt{2}}\left(e^{-jz/\sqrt{2}} - e^{jz/\sqrt{2}}\right) = -2j\,\hat{\mathbf{y}}\sin\!\left(\frac{z}{\sqrt{2}}\right)e^{-jx/\sqrt{2}}$$
 
-    $x$ 分量：
+        $$\dot{\mathbf{H}} = \dot{\mathbf{H}}_i + \dot{\mathbf{H}}_r = \frac{1}{120\pi\sqrt{2}}\left[(\hat{\mathbf{z}}-\hat{\mathbf{x}})e^{-j(x+z)/\sqrt{2}} - (\hat{\mathbf{z}}+\hat{\mathbf{x}})e^{-j(x-z)/\sqrt{2}}\right]$$
 
-    $$\dot{H}_x = \frac{-1}{120\pi\sqrt{2}}\left[e^{-j(x+z)/\sqrt{2}} + e^{-j(x-z)/\sqrt{2}}\right] = \frac{-2}{120\pi\sqrt{2}}\cos\!\left(\frac{z}{\sqrt{2}}\right)e^{-jx/\sqrt{2}}$$
+        $x$ 分量：
 
-    $z$ 分量：
+        $$\dot{H}_x = \frac{-1}{120\pi\sqrt{2}}\left[e^{-j(x+z)/\sqrt{2}} + e^{-j(x-z)/\sqrt{2}}\right] = \frac{-2}{120\pi\sqrt{2}}\cos\!\left(\frac{z}{\sqrt{2}}\right)e^{-jx/\sqrt{2}}$$
 
-    $$\dot{H}_z = \frac{1}{120\pi\sqrt{2}}\left[e^{-j(x+z)/\sqrt{2}} - e^{-j(x-z)/\sqrt{2}}\right] = \frac{-2j}{120\pi\sqrt{2}}\sin\!\left(\frac{z}{\sqrt{2}}\right)e^{-jx/\sqrt{2}}$$
+        $z$ 分量：
 
-    合成波电场沿 $z$ 方向为驻波（$\sin$ 分布），沿 $x$ 方向为行波（$e^{-jx/\sqrt{2}}$），即合成波沿导体表面 $x$ 方向传播。
+        $$\dot{H}_z = \frac{1}{120\pi\sqrt{2}}\left[e^{-j(x+z)/\sqrt{2}} - e^{-j(x-z)/\sqrt{2}}\right] = \frac{-2j}{120\pi\sqrt{2}}\sin\!\left(\frac{z}{\sqrt{2}}\right)e^{-jx/\sqrt{2}}$$
+
+        合成波电场沿 $z$ 方向为驻波（$\sin$ 分布），沿 $x$ 方向为行波（$e^{-jx/\sqrt{2}}$），即合成波沿导体表面 $x$ 方向传播。
+
 
 ---
 
